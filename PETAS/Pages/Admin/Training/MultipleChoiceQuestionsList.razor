@@ -1,0 +1,231 @@
+﻿@inject IAssessmentSubjectService subjectService
+@inject IAssessmentQuestionPoolService questionService
+@inject IQuestionTypeService questiontypeService
+@inject IObjectiveService oService
+@inject Blazored.LocalStorage.ILocalStorageService Lstore
+
+@inject IJSRuntime js
+
+@using PETAS.Models.Domain
+
+@if(subjects == null)
+{
+    <div class="spinner"><em>Loading...</em></div>
+}
+else
+{
+    <Row>
+        <Column ColumnSize="ColumnSize.Is12">
+                <Autocomplete TItem = "AssessmentSubject"
+                    TValue="int"
+                    Data = "@subjects"
+                
+                    @bind-SelectedText="selectedAutoCompleteText"
+                    TextField="@(( item ) => item.SubjectName)"
+                    ValueField="@(( item ) => item.Id)"
+                    Placeholder="Type to search for subject..."
+                    Filter="AutocompleteFilter.StartsWith"
+                    FreeTyping
+                    SelectedValueChanged = "@changedValueMCANS"
+                    CustomFilter="@(( item, searchValue ) => item.SubjectName.IndexOf( searchValue, 0, StringComparison.CurrentCultureIgnoreCase ) >= 0 )">
+                </Autocomplete>
+        </Column>
+    </Row>
+
+    @if(questionPoolData != null)
+    {
+         <Row>
+            <Column ColumnSize=ColumnSize.Is9>
+                <Alert Color="Color.Light" Visible="true">
+                    <DataGrid TItem="AssessmentQuestionPool" 
+                        Data="@questionPoolData"
+                        @bind-SelectedRow="@que" 
+                        Responsive 
+                        Hoverable = "true"
+                        Striped = "true"
+                        Narrow = "true"
+                        Bordered="true"
+
+                        SelectedRowStyling="@OnSelectedRowStyling"
+                        Virtualize 
+                        VirtualizeOptions="@(new() { DataGridHeight = "500px"})">
+                            <DataGridCommandColumn TItem="AssessmentQuestionPool" />
+                            <DataGridColumn TItem="AssessmentQuestionPool" Field="@nameof(AssessmentQuestionPool.Id)" Caption="ID" Sortable="false" />
+                            <DataGridColumn TItem="AssessmentQuestionPool" Field="@nameof(AssessmentQuestionPool.Question)" Caption="Question" Sortable="false" />
+                    </DataGrid>
+                </Alert>
+            </Column>
+
+            <Column ColumnSize=ColumnSize.Is3>
+                @if(que != null)
+                {
+                    Task.Run(async () =>
+                    {
+                        ob = await oService.GetObjectiveClassAsync(que.Id);  
+                    });
+
+                    
+
+                    <Alert Visible="true" Color="Color.Primary">
+                        <Table Striped="true">
+                            <TableRow>
+                                <TableRowCell>Created Date</TableRowCell>
+                                <TableRowCell>@Convert.ToDateTime(@que.CreatedDate).ToString("dd-MMM-yyyy")</TableRowCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableRowCell>Created By</TableRowCell>
+                                <TableRowCell>@que.CreatedBy</TableRowCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableRowCell>Approved By</TableRowCell>
+                                <TableRowCell>@que.AuthorizedBy</TableRowCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableRowCell>Question No</TableRowCell>
+                                <TableRowCell>@que.Id.ToString()</TableRowCell>
+                            </TableRow>
+
+                            <TableRow>
+                                <TableRowCell>
+                                    <Button Color="Color.Primary" Clicked="ApproveQuestion">Approve</Button>
+                                </TableRowCell>
+                                <TableRowCell>
+                                    <Button Color="Color.Secondary" Clicked="ApprovedAllQuestions">Approve All</Button>
+                                </TableRowCell>
+                            </TableRow>
+                        </Table>
+                    </Alert>
+                    <Divider />
+                    
+                        @if(ob != null)
+                        {
+                            <Card>
+                                <CardTitle><p>Possible answers for @que.Id.ToString()</p></CardTitle>
+                                <ListGroup Flush="true" Mode="ListGroupMode.Selectable" @bind-SelectedItem="selectedListgroupItem">
+                                    <ListGroupItem>@ob.Cobj1</ListGroupItem>
+                                    <ListGroupItem>@ob.Cobj2</ListGroupItem>
+                                    <ListGroupItem>@ob.Cobj3</ListGroupItem>
+                                    <ListGroupItem>@ob.Cobj4</ListGroupItem>
+                                </ListGroup>
+                            </Card>
+                        }
+                    
+                }
+            </Column>
+        </Row>
+    }
+}
+
+@code{
+
+    private string selectedAutoCompleteText{ get; set; }
+    private IEnumerable<AssessmentSubject> subjects { get; set; }
+    private List<AssessmentQuestionPool> questionPoolData { get; set; }
+    private AssessmentQuestionPool que{ get; set;}
+    private int valueSelected{ get; set; }
+    private List<ObjectiveClass> obList{ get; set; }
+    private ObjectiveClass ob{ get; set; }
+
+    private const int MCANS_ANS_ID = 1;  //Lookup Id in the question type table
+    private string selectedListgroupItem{ get; set;}
+    private const string uKey = @"userKey";
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            subjects = await GetSubjectListAsync();
+            await base.OnInitializedAsync();
+        }
+        catch(Exception x)
+        {
+
+        }
+    }
+
+    private async Task changedValueMCANS(int selected)
+    {
+        valueSelected = selected;
+        if (valueSelected > 0)
+        {
+            try
+            {
+                //gets the question type for the grid control
+                var q = await questiontypeService.GetQuestionType(MCANS_ANS_ID);
+                var results = await questionService.GetUnApprovedMCANSAssessmentQuestionPoolAsync(valueSelected);
+                List<AssessmentQuestionPool> lst = new List<AssessmentQuestionPool>();
+
+                if (results != null)
+                {
+                    for(int i = 0; i < results.Count(); i++)
+                    {
+                        if (results.ElementAt(i).QuestionType == q.Id)
+                        {
+                            lst.Add(results.ElementAt(i));
+                        }
+                    }
+
+                    questionPoolData = lst;
+                }
+
+                //objectiveClass list
+                obList = await oService.GetAllObjectiveClassAsync();
+            }
+            catch(Exception x)
+            {
+
+            } 
+        }
+    }
+
+    private async Task<IEnumerable<AssessmentSubject>> GetSubjectListAsync()
+    {
+        return await subjectService.GetAllAssessmentSubjects();
+    }
+
+    private void OnSelectedRowStyling(AssessmentQuestionPool question, DataGridRowStyling styling)
+    {
+        styling.Background = Background.Success;
+    }
+
+    private async Task ApproveQuestion(){
+        //approves the selected question
+
+        try
+        {
+            var currentUser = await Lstore.GetItemAsync<string>(uKey);
+            var bln = await questionService.ApproveQuestionAsync(que, currentUser);
+            if (bln)
+            {
+                questionPoolData.Remove(que);
+                que = null;
+                await js.InvokeVoidAsync("showMsg", "Question " + que.Id.ToString() + " approved!!!");
+                StateHasChanged();
+            }
+        }
+        catch(Exception x)
+        {
+            StateHasChanged();
+        }
+    }
+
+    private async Task ApprovedAllQuestions()
+    {
+        //approves all questions
+        try
+        {
+            var currentUser = await Lstore.GetItemAsync<string>(uKey);
+            string returnString = await questionService.ApproveAllQuestionsAsync(questionPoolData, currentUser);
+            if (returnString != string.Empty)
+            {
+                questionPoolData.Clear();
+                await js.InvokeVoidAsync("showMsg", "All Questions approved");
+                StateHasChanged();
+            }
+        }
+        catch(Exception ex){
+            StateHasChanged();
+        }
+    }
+
+}

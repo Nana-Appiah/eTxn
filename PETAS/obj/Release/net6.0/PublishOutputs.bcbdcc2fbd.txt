@@ -1,0 +1,2 @@
+G:\Dev_Repository\Projects\Copy\repro\PANTrainer\Publish\Connected Services\SecureAccess\ConnectedService.json
+G:\Dev_Repository\Projects\Copy\repro\PANTrainer\Publish\web.config

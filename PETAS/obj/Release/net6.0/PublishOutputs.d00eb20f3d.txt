@@ -1,0 +1,2 @@
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Release\net6.0\browser-wasm\PubTmp\Out\Connected Services\SecureAccess\ConnectedService.json
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Release\net6.0\browser-wasm\PubTmp\Out\web.config

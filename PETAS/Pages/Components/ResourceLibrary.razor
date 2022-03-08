@@ -1,0 +1,141 @@
+﻿@inject ITrainingResourceService tResource
+@using PETAS.Models.Domain
+
+@if(resourceList.Count() == 0)
+{
+    <div class="spinner">Loading...</div>
+}
+else
+{
+    <Table Striped="true" Hoverable="true" Bordered="true">
+            
+        <TableHeader>
+            <TableHeaderCell>#</TableHeaderCell>
+            <TableHeaderCell>Resource Name</TableHeaderCell>
+            <TableHeaderCell>Resource Type</TableHeaderCell>
+            <TableHeaderCell>Size</TableHeaderCell>
+            <TableHeaderCell>Created</TableHeaderCell>
+            <TableHeaderCell>Preview</TableHeaderCell>
+        </TableHeader>
+
+        <TableBody>
+            @foreach(var resource in resourceList)
+            {
+                <TableRow>
+                    <TableRowCell>@resource.Id.ToString()</TableRowCell>
+                    <TableRowCell>@resource.ResourceName.Trim()</TableRowCell>
+                    <TableRowCell>@resource.TrainingResourceNavigation.TrainingResourceExt.Trim()</TableRowCell>
+                    <TableRowCell>@BytesToString(resource.EmbeddedResource.Length)</TableRowCell>
+                    <TableRowCell>@Convert.ToDateTime(@resource.CreatedDate).ToString("dd-MMM-yyyy")</TableRowCell>
+                    <TableRowCell><Button Color="Color.Primary" Clicked="@(()=>ShowPreview(@resource))">Priview</Button></TableRowCell>
+                </TableRow>
+            }
+        </TableBody>
+
+    </Table>
+
+    <Modal @ref="modalRef">
+        <ModalContent Centered Size="ModalSize.ExtraLarge">
+            <ModalHeader>
+                <ModalTitle>@PDFTitle</ModalTitle>
+                <CloseButton />
+            </ModalHeader>
+            <ModalBody>
+                <embed src="@DisplayPDF" width=1100 height=800 visible="false" />
+            </ModalBody>
+            <ModalFooter>
+                <Button Color="Color.Secondary" Clicked="@HideModal">Close</Button>
+            </ModalFooter>
+        </ModalContent>
+    </Modal>
+
+}
+@code{
+    private List<TrainingResource> resourceList = new List<TrainingResource>();
+    private TrainingResource selectedID;
+    private Modal modalRef;
+
+    private string DisplayPDF { get; set; } = string.Empty;
+    private string PDFTitle { get; set; } = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        resourceList = await GetDataAsync();
+        base.OnInitializedAsync();
+    }
+
+    private async Task<List<TrainingResource>> GetDataAsync()
+    {
+        return await tResource.GetTrainingResourcesAsync();
+    }
+
+    private async Task ShowPreview(TrainingResource selected)
+    {
+        //display modal..show PDF form
+        PDFTitle = selected.ResourceName.Trim();
+        DisplayPDF = await GetPDF(selected.EmbeddedResource);
+        modalRef.Show();
+    }
+
+    private Task HideModal()
+    {
+        return modalRef.Hide();
+    }
+
+    private async Task<string> GetPDF(byte[] b)
+    {
+        var f = "data:application/pdf;base64," + Convert.ToBase64String(b);
+        //Response.AppendHeader("content-disposition", "inline; filename=file.pdf");
+        //var f = new FileStreamResult(new MemoryStream(b), "application/pdf");
+        return f;
+
+    }
+
+    private async Task<string> BytesToString(long i)
+    {
+        // Get absolute value
+        long absolute_i = (i < 0 ? -i : i);
+        // Determine the suffix and readable value
+        string suffix;
+        double readable;
+        if (absolute_i >= 0x1000000000000000) // Exabyte
+        {
+            suffix = "EB";
+            readable = (i >> 50);
+        }
+        else if (absolute_i >= 0x4000000000000) // Petabyte
+        {
+            suffix = "PB";
+            readable = (i >> 40);
+        }
+        else if (absolute_i >= 0x10000000000) // Terabyte
+        {
+            suffix = "TB";
+            readable = (i >> 30);
+        }
+        else if (absolute_i >= 0x40000000) // Gigabyte
+        {
+            suffix = "GB";
+            readable = (i >> 20);
+        }
+        else if (absolute_i >= 0x100000) // Megabyte
+        {
+            suffix = "MB";
+            readable = (i >> 10);
+        }
+        else if (absolute_i >= 0x400) // Kilobyte
+        {
+            suffix = "KB";
+            readable = i;
+        }
+        else
+        {
+            return i.ToString("0 B"); // Byte
+        }
+        // Divide by 1024 to get fractional value
+        readable = (readable / 1024);
+        // Return formatted number with suffix
+        return readable.ToString("0.### ") + suffix;
+    }
+
+}
