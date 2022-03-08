@@ -43,10 +43,17 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 string baseAPIAddress = builder.Configuration["BaseApiUrl"].ToString();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(baseAPIAddress) });
 
+//adding HRMS API Service
+builder.Services.AddHttpClient<IHRMSService>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["HRMSApiUrl"].ToString());
+});
+
 //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddScoped<IUserAccountService, UserAccountService>();
 builder.Services.AddScoped<ITrainingDomainService, TrainingDomainService>();
 builder.Services.AddScoped<ICertificationAwardService, CertificationAwardService>();
+builder.Services.AddScoped<ITrainingCertificationService, TrainingCertificationService>();
 builder.Services.AddScoped<ITrainingResourceTypeService, TrainingResourceTypeService>();
 builder.Services.AddScoped<IGroupService, GroupService>();
 builder.Services.AddScoped<IAssessmentSubjectService, AssessmentSubjectService>();
@@ -57,6 +64,8 @@ builder.Services.AddScoped<IFileUploadService, FileUploadService>();
 builder.Services.AddScoped<IAssessmentQuestionPoolService, AssessmentQuestionPoolService>();
 builder.Services.AddScoped<IObjectiveService, ObjectiveService>();
 builder.Services.AddScoped<ITrainingResourceService, TrainingResourceService>();
+builder.Services.AddScoped<ITrainingTypeService, TrainingTypeService>();
+builder.Services.AddScoped<ITrainingService, TrainingService>();
 
 builder.Services.AddBlazoredLocalStorage();
 

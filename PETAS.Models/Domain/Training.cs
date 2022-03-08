@@ -68,19 +68,19 @@ namespace PETAS.Models.Domain
         /// <summary>
         /// the name of the inputter creating the training
         /// </summary>
-        [Column("CreatedByID")]
-        public int? CreatedById { get; set; }
+        [Column("CreatedBy")]
+        public string CreatedBy { get; set; }
         /// <summary>
         /// the name of the authorizer approving the training
         /// </summary>
         [Column(TypeName = "date")]
         public DateTime? AuthorizedDate { get; set; }
-        [Column("AuthorizedByID")]
-        public int? AuthorizedById { get; set; }
+        [Column("AuthorizedBy")]
+        public string AuthorizedBy { get; set; }
         [Column(TypeName = "date")]
         public DateTime? LastUpdatedDate { get; set; }
-        [Column("LastUpdatedByID")]
-        public int? LastUpdatedById { get; set; }
+        [Column("LastUpdatedBy")]
+        public string LastUpdatedBy { get; set; }
 
         [ForeignKey(nameof(TrainingCertificationId))]
         [InverseProperty("Training")]

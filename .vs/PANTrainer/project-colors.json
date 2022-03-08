@@ -40,7 +40,12 @@
       "ProjectGuid": "a18ff4bf-864c-4617-b5da-98807fb8d63b",
       "DisplayName": "SecureAccess",
       "ColorIndex": 6
+    },
+    "5be570fe-938f-4ee7-8fd0-5949151c1ff2": {
+      "ProjectGuid": "5be570fe-938f-4ee7-8fd0-5949151c1ff2",
+      "DisplayName": "HRMS.API",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 8
 }

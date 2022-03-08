@@ -128,7 +128,7 @@ namespace PANTrainerAPI.Data
 
                 entity.Property(e => e.AuthorizedDate).HasComment("the name of the authorizer approving the training");
 
-                entity.Property(e => e.CreatedById).HasComment("the name of the inputter creating the training");
+                entity.Property(e => e.CreatedBy).HasComment("the name of the inputter creating the training");
 
                 entity.Property(e => e.CreatedDate).HasComment("the date the training was created");
 
