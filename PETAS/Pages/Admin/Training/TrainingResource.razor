@@ -8,6 +8,7 @@ else
     <TitleComponent Title="Input the type of resource PASL system should allow" />
     <Row>
         <Column ColumnSize="ColumnSize.Is6">
+            <TitleComponent Title="Training Resource Type" />
             <Alert Color="Color.Primary" Visible="true">
                 <Validations @ref="validations" Mode="ValidationMode.Manual" Model="oResourceType">
                     <Validation Validator="@ValidationRule.IsNotEmpty">
@@ -29,6 +30,7 @@ else
         </Column>
 
         <Column ColumnSize="ColumnSize.Is6">
+            <TitleComponent Title="Training Resource List" />
             <Alert Color="Color.Primary" Visible="true">
                 <DataGrid TItem="TrainingResourceType" Data="@resourceTypes"
                 @bind-SelectedRow="oResourceType" 

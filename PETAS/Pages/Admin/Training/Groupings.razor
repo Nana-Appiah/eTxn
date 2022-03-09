@@ -11,9 +11,9 @@
 else
 {
     <TitleComponent Title="List of Training Groups" />
-    <Divider />
     <Row>
         <Column ColumnSize="ColumnSize.Is6">
+            <TitleComponent Title="Training Group" />
             <Alert Color="Color.Primary" Visible="true">
                 <Validations @ref="validations" Mode="ValidationMode.Manual" Model="@objTrainingGroup">
                     <Validation Validator="@ValidationRule.IsNotEmpty">
@@ -49,6 +49,7 @@ else
         </Column>
 
         <Column ColumnSize="ColumnSize.Is6">
+            <TitleComponent Title="Training Group List" />
             <Alert Color="Color.Primary" Visible="true">
                 <Table Narrow="true" Bordered="true" Hoverable="true" ResizeMode="TableResizeMode.Columns" Responsive="true" Striped="true">
                     <TableHeader ThemeContrast="ThemeContrast.Dark">

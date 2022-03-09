@@ -25,8 +25,8 @@ namespace PETAS.Services
 
         public async Task<bool> SaveTrainingAsync(Training obj, TrainingType ttype, TrainingGrouping tgroup, TrainingCertification tcert)
         {
-            var postBody = new { ttype, tgroup, tcert };
-            var status = await http.PostAsJsonAsync("api/PostTrainingRecord", postBody);
+            var postBody = new { ttype, tgroup, tcert, obj };
+            var status = await http.PostAsJsonAsync("api/Trainings/PostTrainingRecord", postBody);
             return await status.Content.ReadFromJsonAsync<bool>();
         }
 

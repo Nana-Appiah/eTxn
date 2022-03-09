@@ -10,10 +10,10 @@
 else
 {
 <TitleComponent Title="A domain is an identifiable group of human resource for which a training is planned" />
-    <Divider />
     <Row>
 
         <Column ColumnSize="ColumnSize.Is6">
+            <TitleComponent Title="Domain Details" />
             <Alert Color="Color.Primary" Visible="true">
                 <Validations @ref="validations" Mode="ValidationMode.Manual" Model="@model">
                     <Validation Validator="@ValidationRule.IsNotEmpty">
@@ -33,6 +33,7 @@ else
         </Column>
 
         <Column ColumnSize="ColumnSize.Is6">
+            <TitleComponent Title="Domain Records" />
             <Alert Color="Color.Primary" Visible="true">
                 <DataGrid TItem="PETAS.Models.Domain.TrainingDomain" Data="@trainingDomainList"
                 @bind-SelectedRow="@model" 

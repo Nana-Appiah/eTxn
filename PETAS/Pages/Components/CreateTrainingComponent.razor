@@ -5,14 +5,15 @@
 @inject ITrainingService trainingService
 @inject Blazored.LocalStorage.ILocalStorageService storage
 
-@if((trainingTypes.Count() == 0) || (groups.Count() == 0) || (certifications.Count() == 0))
+@if((trainingTypes.Count() == 0) || (groups.Count() == 0) || (certifications.Count() == 0) || (trainingList.Count() == 0))
 {
     <div class="container"><em>Loading...</em></div>
 }
 else
 {
     <Row>
-    <Column ColumnSize="ColumnSize.Is6">
+    <Column ColumnSize="ColumnSize.Is5">
+        <TitleComponent Title="Training Details" />
         <Alert Color="Color.Primary" Visible="true">
                 <Validation Validator="@ValidationRule.IsNotEmpty">
                     <Field>
@@ -135,14 +136,45 @@ else
             <Button Color="Color.Primary" Clicked="@OnSaveTrainingRecord">Save Training</Button>
             </Alert>
     </Column>
-    <Column ColumnSize="ColumnSize.Is6">
+    <Column ColumnSize="ColumnSize.Is7">
+        <TitleComponent Title="Training Records" />
+        <Alert Color="Color.Primary" Visible="true">
+            <Table>
+                <TableHeader>
+                    <TableRow>
+                        <TableHeaderCell>#</TableHeaderCell>
+                        <TableHeaderCell>Type</TableHeaderCell>
+                        <TableHeaderCell>Status</TableHeaderCell>
+                        <TableHeaderCell>Group</TableHeaderCell>
+                        <TableHeaderCell>Certificate</TableHeaderCell>
+                        <TableHeaderCell>Pass Mark</TableHeaderCell>
+                    </TableRow>
+                </TableHeader>
 
+                <TableBody>
+                    @foreach(var item in trainingList)
+                    {
+                        <TableRow>
+                            <TableRowCell>@item.Id.ToString()</TableRowCell>
+                            <TableRowCell>@item.TrainingTypeNavigation.Status</TableRowCell>
+                            <TableRowCell>@item.TrainingStatus.TrainingTypeStatus</TableRowCell>
+                            <TableRowCell>@item.TrainingGroup.GroupName</TableRowCell>
+                            <TableRowCell>@item.TrainingCertification.CertificationName</TableRowCell>
+                            <TableRowCell>@item.MarkToPass.ToString()</TableRowCell>
+                        </TableRow>
+                    }
+                </TableBody>
+            </Table>
+        </Alert>
     </Column>
 </Row>
 }
 
 
 @code{
+    private List<Training> trainingList = new List<Training>();
+    private Training trainingRecord = new Training();
+
     private List<TrainingType> trainingTypes = new List<TrainingType>();
     private List<TrainingGrouping> groups = new List<TrainingGrouping>();
     private List<TrainingCertification> certifications = new List<TrainingCertification>();
@@ -167,6 +199,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        trainingList = await GetTrainingsAsync();
         trainingTypes = await GetTrainingTypes();
         groups = await GetTrainingGroups();
         certifications = await GetCertifications();
@@ -179,6 +212,12 @@ else
     }
 
     #region Private
+
+    private async Task<List<Training>> GetTrainingsAsync()
+    {
+        return await trainingService.GetTrainingsAsync();
+    }
+
     void OnDtFromChanged(DateTime? date)
     {
         dtFrom = date;
@@ -263,17 +302,24 @@ else
     {
         try
         {
-            var usr = storage.GetItemAsync<string>(key);
-
+            var usr = await storage.GetItemAsync<string>(key);
+            
             var ott = new TrainingType { Id = selectedID };
             var otg = new TrainingGrouping{ Id = groupingID};
             var otc = new TrainingCertification { Id = trainCertID };
+            var ots = new TrainingStatusType{ Id = 1}; //pending
+
             model.TrainingType = selectedID;
             model.TrainingGroupId = groupingID;
             model.TrainingCertificationId = trainCertID;
             model.DateFrom = dtFrom;
             model.DateTo = dtTo;
+            model.MarkToPass = markToPass;
+            model.TrainingStatusId = ots.Id;
+            model.CreatedBy = usr;
+            model.CreatedDate = DateTime.Now;
 
+            
             var bln = await trainingService.SaveTrainingAsync(model, ott, otg, otc);
             if (bln)
             {

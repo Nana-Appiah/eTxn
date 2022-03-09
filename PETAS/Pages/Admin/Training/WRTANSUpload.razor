@@ -18,26 +18,30 @@
 }
 else
 {
-    <Field>
-        <FieldLabel>Question upload type</FieldLabel>
-        <TextEdit Disabled="true" Text="Written-answers" Color="Color.Success" />
-    </Field>
+    <TitleComponent Title="Written-Answers upload component" />
+    <Alert Color="Color.Primary" Visible="true">
+        <Field>
+            <FieldLabel>Question upload type</FieldLabel>
+            <TextEdit Disabled="true" Text="Written-answers" Color="Color.Success" />
+        </Field>
 
-    <Field>
-        <Select TValue="int" @bind-SelectedValue="@selectedV">
-            @foreach(var dd in assessmentSubjectList)
-            {
-                <SelectItem Value="dd.Id">@dd.SubjectName</SelectItem>
-            }
-        </Select>
-    </Field> 
+        <Field>
+            <Select TValue="int" @bind-SelectedValue="@selectedV">
+                @foreach(var dd in assessmentSubjectList)
+                {
+                    <SelectItem Value="dd.Id">@dd.SubjectName</SelectItem>
+                }
+            </Select>
+        </Field> 
 
-    <Field>
-        <FileEdit Filter=".xlsx" Changed="@OnChanged" />
-    </Field>
-    <br />
-    <div id="animator"></div>
-    <Button Color="Color.Primary" Clicked="OnValidSubmit">Upload WRTANS Questions</Button>
+        <Field>
+            <FileEdit Filter=".xlsx" Changed="@OnChanged" />
+        </Field>
+        <br />
+        <div id="animator"></div>
+        <Button Color="Color.Primary" Clicked="OnValidSubmit">Upload WRTANS Questions</Button>
+    </Alert>
+    
 }
 
 

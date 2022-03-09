@@ -27,7 +27,11 @@ namespace PANTrainerAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Training>>> GetTraining()
         {
-            return await _context.Training.ToListAsync();
+            var results =  await _context.Training.Include(t => t.TrainingTypeNavigation)
+                                                        .Include(t=>t.TrainingStatus)           
+                                                        .Include(t => t.TrainingGroup)
+                                                        .Include(t => t.TrainingCertification).ToListAsync();
+            return Ok(results);
         }
 
         // GET: api/Trainings/5
@@ -98,12 +102,6 @@ namespace PANTrainerAPI.Controllers
             var trainingGroup = data["tgroup"].ToObject<TrainingGrouping>();
             var trainingCert = data["tcert"].ToObject<TrainingCertification>();
             var obj = data["obj"].ToObject<Training>();
-
-            obj.TrainingType = trainingType.Id;
-            obj.TrainingStatusId = 1;
-            obj.TrainingGroupId = trainingGroup.Id;
-            obj.TrainingCertificationId = trainingCert.Id;
-            obj.CreatedDate = DateTime.Now;
 
             _context.Training.Add(obj);
             await _context.SaveChangesAsync();

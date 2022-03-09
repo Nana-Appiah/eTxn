@@ -20,26 +20,30 @@
 }
 else 
 {
-    <Field>
-        <FieldLabel>Question upload type</FieldLabel>
-        <TextEdit Disabled="true" Text="Multiple-Choice" Color="Color.Success" />
-    </Field>
+    <TitleComponent Title="Multiple-choice questions upload" />
+    <Alert Color="Color.Primary" Visible="true">
+        <Field>
+            <FieldLabel>Question upload type</FieldLabel>
+            <TextEdit Disabled="true" Text="Multiple-Choice" Color="Color.Success" />
+        </Field>
 
-    <Field>
-        <Select TValue="int" @bind-SelectedValue="@selectedValue">
-            @foreach(var d in assessmentSubjectList)
-            {
-                <SelectItem Value="d.Id">@d.SubjectName</SelectItem>
-            }
-        </Select>
-    </Field> 
+        <Field>
+            <Select TValue="int" @bind-SelectedValue="@selectedValue">
+                @foreach(var d in assessmentSubjectList)
+                {
+                    <SelectItem Value="d.Id">@d.SubjectName</SelectItem>
+                }
+            </Select>
+        </Field> 
 
-    <Field>
-        <FileEdit Filter=".xlsx" Changed="@OnChanged" />
-    </Field>
-    <br />
-    <div id="animator"></div>
-    <Button Color="Color.Primary" Clicked="OnValidSubmit">Upload Questions</Button>
+        <Field>
+            <FileEdit Filter=".xlsx" Changed="@OnChanged" />
+        </Field>
+        <br />
+        <div id="animator"></div>
+        <Button Color="Color.Primary" Clicked="OnValidSubmit">Upload Questions</Button>
+    </Alert>
+    
 }
 
 
