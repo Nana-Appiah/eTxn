@@ -14,20 +14,19 @@ else
     <Row>
     <Column ColumnSize="ColumnSize.Is6">
         <Alert Color="Color.Primary" Visible="true">
-                <Fields>
+                <Validation Validator="@ValidationRule.IsNotEmpty">
                     <Field>
-                    <Addons>
-                        <Addon AddonType="AddonType.Start">@@</Addon>
-                        <Addon AddonType="AddonType.Body">
-                            <Validation Validator="@ValidationRule.IsNotEmpty">
+                        <Addons>
+                            <Addon AddonType="AddonType.Start">@@</Addon>
+                            <Addon AddonType="AddonType.Body">
                                 <TextEdit Placeholder="enter name of training" @bind-Text="@model.TrainingName" />
-                            </Validation>
-                            
-                        </Addon>
-                        <Addon AddonType="AddonType.End">@@</Addon>
-                    </Addons>
+                            </Addon>
+                            <Addon AddonType="AddonType.End">@@</Addon>
+                        </Addons>
                     </Field>
-
+                </Validation>
+                    
+                <Validation Validator="@ValidationRule.IsNotEmpty">
                     <Field>
                         <Addons>
                                 <Addon AddonType="AddonType.Start">@@</Addon>
@@ -50,6 +49,9 @@ else
                                 <Addon AddonType="AddonType.End">@@</Addon>
                         </Addons>
                     </Field>
+                </Validation>
+                    
+                <Validation Validator="@ValidationRule.IsNotEmpty">
                     <Field>
                         <Addons>
                             <Addon AddonType="AddonType.Start">@@</Addon>
@@ -71,7 +73,9 @@ else
                             <Addon AddonType="AddonType.End">@@</Addon>
                         </Addons>
                     </Field>
-
+                </Validation>
+                    
+                <Validation Validator="@ValidationRule.IsNotEmpty">
                     <Field>
                         <Addons>
                             <Addon AddonType="AddonType.Start">@@</Addon>
@@ -93,7 +97,9 @@ else
                             <Addon AddonType="AddonType.End">@@</Addon>
                         </Addons>
                     </Field>
-
+                </Validation>
+                    
+                <Validation Validator="@ValidationRule.IsNotEmpty">
                     <Field>
                         <Addons>
                             <Addon AddonType="AddonType.Start">@@</Addon>
@@ -103,7 +109,9 @@ else
                             <Addon AddonType="AddonType.End">@@</Addon>
                         </Addons>
                     </Field>
-
+                </Validation>
+                    
+                <Validation Validator="@ValidationRule.IsNotEmpty">
                     <Field>
                         <Addons>
                             <Addon AddonType="AddonType.Start">@@</Addon>
@@ -113,7 +121,9 @@ else
                             <Addon AddonType="AddonType.End">@@</Addon>
                         </Addons>
                     </Field>
-
+                </Validation>
+                    
+                <Validation Validator="@ValidationRule.IsNotEmpty">
                     <Field>
                         <Addons>
                             <Addon AddonType="AddonType.Start">@@</Addon>
@@ -123,8 +133,10 @@ else
                             <Addon AddonType="AddonType.End">@@</Addon>
                         </Addons>
                     </Field>
+                </Validation>
+                    
 
-                </Fields>  
+                
             <Button Color="Color.Primary" Clicked="@OnSaveTrainingRecord">Save Training</Button>
             </Alert>
     </Column>
@@ -140,7 +152,7 @@ else
     private List<TrainingGrouping> groups = new List<TrainingGrouping>();
     private List<TrainingCertification> certifications = new List<TrainingCertification>();
 
-    private Validations validations;
+    private Validations validations = new Validations();
     private Training model = new Training();
     private int selectedID;
 
@@ -157,7 +169,7 @@ else
     private DateTime? dtTo;
 
     private int markToPass{get;set;}
-
+    
     protected override async Task OnInitializedAsync()
     {
         trainingTypes = await GetTrainingTypes();
