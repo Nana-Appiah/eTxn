@@ -99,49 +99,44 @@ else
                     </Field>
                 </Validation>
                     
-                <Validation Validator="@ValidationRule.IsNotEmpty">
-                    <Field>
-                        <Addons>
-                            <Addon AddonType="AddonType.Start">@@</Addon>
-                            <Addon AddonType="AddonType.Body">
-                                <NumericEdit TValue="int?" Placeholder="input mark to pass Training" TValue="@model.MarkToPass" />
-                            </Addon>
-                            <Addon AddonType="AddonType.End">@@</Addon>
-                        </Addons>
-                    </Field>
-                </Validation>
-                    
-                <Validation Validator="@ValidationRule.IsNotEmpty">
-                    <Field>
-                        <Addons>
-                            <Addon AddonType="AddonType.Start">@@</Addon>
-                            <Addon AddonType="AddonType.Body">
-                                <DateEdit TValue="DateTime?" @bind-Date="@dtFrom" />
-                            </Addon>
-                            <Addon AddonType="AddonType.End">@@</Addon>
-                        </Addons>
-                    </Field>
-                </Validation>
-                    
-                <Validation Validator="@ValidationRule.IsNotEmpty">
-                    <Field>
-                        <Addons>
-                            <Addon AddonType="AddonType.Start">@@</Addon>
-                            <Addon AddonType="AddonType.Body">
-                                <DateEdit TValue="DateTime?" @bind-Date="@dtTo" />
-                            </Addon>
-                            <Addon AddonType="AddonType.End">@@</Addon>
-                        </Addons>
-                    </Field>
-                </Validation>
-                    
 
-                
+                    <Field>
+                        <Addons>
+                            <Addon AddonType="AddonType.Start">@@</Addon>
+                            <Addon AddonType="AddonType.Body">
+                                <NumericEdit TValue="int?" Placeholder="input mark to pass Training" ValueChanged="@OnNumberChanged" />
+                            </Addon>
+                            <Addon AddonType="AddonType.End">@@</Addon>
+                        </Addons>
+                    </Field>
+
+
+                    <Field>
+                        <Addons>
+                            <Addon AddonType="AddonType.Start">@@</Addon>
+                            <Addon AddonType="AddonType.Body">
+                                <DateEdit TValue="DateTime?" Date="@dtFrom" DateChanged="@OnDtFromChanged" />
+                            </Addon>
+                            <Addon AddonType="AddonType.End">@@</Addon>
+                        </Addons>
+                    </Field>
+
+
+                    <Field>
+                        <Addons>
+                            <Addon AddonType="AddonType.Start">@@</Addon>
+                            <Addon AddonType="AddonType.Body">
+                                <DateEdit TValue="DateTime?" Date="@dtTo" DateChanged="@OnDtToChanged" />
+                            </Addon>
+                            <Addon AddonType="AddonType.End">@@</Addon>
+                        </Addons>
+                    </Field>
+
             <Button Color="Color.Primary" Clicked="@OnSaveTrainingRecord">Save Training</Button>
             </Alert>
     </Column>
     <Column ColumnSize="ColumnSize.Is6">
-        
+
     </Column>
 </Row>
 }
@@ -168,18 +163,57 @@ else
     private DateTime? dtFrom;
     private DateTime? dtTo;
 
-    private int markToPass{get;set;}
-    
+    private int? markToPass{get;set;}
+
     protected override async Task OnInitializedAsync()
     {
         trainingTypes = await GetTrainingTypes();
         groups = await GetTrainingGroups();
         certifications = await GetCertifications();
 
+        dtFrom = DateTime.Now;
+        dtTo = DateTime.Now;
         await base.OnInitializedAsync();
+        StateHasChanged();
+
     }
 
     #region Private
+    void OnDtFromChanged(DateTime? date)
+    {
+        dtFrom = date;
+    }
+
+    void OnDtToChanged(DateTime? date)
+    {
+        dtTo = date;
+
+    }
+
+    void OnNumberChanged(int? nom)
+    {
+        markToPass = nom;
+    }
+    void ValidateNumber(ValidatorEventArgs e)
+    {
+        try
+        {
+            if ((int)e.Value <= 0)
+            {
+                e.Status = ValidationStatus.Error;
+                return;
+            }
+
+            if (Int32.TryParse(e.Value.ToString(),out int num))
+            {
+                e.Status = ValidationStatus.Success;
+            }
+        }
+        catch(Exception x)
+        {
+            e.Status = ValidationStatus.Error;
+        }
+    }
 
     private async Task<List<TrainingType>> GetTrainingTypes()
     {
@@ -229,15 +263,21 @@ else
     {
         try
         {
-            if (await validations.ValidateAll())
-            {
-                var usr = storage.GetItemAsync<string>(key);
-                model.TrainingType = selectedID;
-                model.TrainingGroupId = groupingID;
-                model.TrainingCertificationId = trainCertID;
-                model.DateFrom = dtFrom;
-                model.DateTo = dtTo;
+            var usr = storage.GetItemAsync<string>(key);
 
+            var ott = new TrainingType { Id = selectedID };
+            var otg = new TrainingGrouping{ Id = groupingID};
+            var otc = new TrainingCertification { Id = trainCertID };
+            model.TrainingType = selectedID;
+            model.TrainingGroupId = groupingID;
+            model.TrainingCertificationId = trainCertID;
+            model.DateFrom = dtFrom;
+            model.DateTo = dtTo;
+
+            var bln = await trainingService.SaveTrainingAsync(model, ott, otg, otc);
+            if (bln)
+            {
+                StateHasChanged();
             }
         }
         catch(Exception x)
