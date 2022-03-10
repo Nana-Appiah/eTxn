@@ -303,7 +303,7 @@ else
         try
         {
             var usr = await storage.GetItemAsync<string>(key);
-            
+
             var ott = new TrainingType { Id = selectedID };
             var otg = new TrainingGrouping{ Id = groupingID};
             var otc = new TrainingCertification { Id = trainCertID };
@@ -319,19 +319,27 @@ else
             model.CreatedBy = usr;
             model.CreatedDate = DateTime.Now;
 
-            
+
             var bln = await trainingService.SaveTrainingAsync(model, ott, otg, otc);
             if (bln)
             {
+                trainingList.Clear();
+                await ClearFormFields();
                 StateHasChanged();
             }
         }
         catch(Exception x)
         {
-            
+
         }
     }
 
+    private Task ClearFormFields()
+    {
+        model = new Training { };
+
+        return Task.CompletedTask;
+    }
     #endregion
 
 }

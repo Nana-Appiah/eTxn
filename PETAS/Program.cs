@@ -44,9 +44,10 @@ string baseAPIAddress = builder.Configuration["BaseApiUrl"].ToString();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(baseAPIAddress) });
 
 //adding HRMS API Service
-builder.Services.AddHttpClient<IHRMSService>(client =>
+builder.Services.AddHttpClient<HRMSClient>(client =>
 {
     client.BaseAddress = new Uri(builder.Configuration["HRMSApiUrl"].ToString());
+    //client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 });
 
 //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
@@ -66,6 +67,9 @@ builder.Services.AddScoped<IObjectiveService, ObjectiveService>();
 builder.Services.AddScoped<ITrainingResourceService, TrainingResourceService>();
 builder.Services.AddScoped<ITrainingTypeService, TrainingTypeService>();
 builder.Services.AddScoped<ITrainingService, TrainingService>();
+
+builder.Services.AddScoped<IHRMSService, HRMSService>();
+
 
 builder.Services.AddBlazoredLocalStorage();
 

@@ -46,8 +46,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUXVlc3Rpb25zLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Admin/Training/AssignTraining.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVHJhaW5pbmdcQXNzaWduVHJhaW5pbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Admin/Training/Configuration.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVHJhaW5pbmdcQ29uZmlndXJhdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Admin/Training/CreateTraining.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVHJhaW5pbmdcQ3JlYXRlVHJhaW5pbmcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Admin/Training/DownloadTemplate.razor]
@@ -108,6 +116,34 @@ build_metadata.AdditionalFiles.CssScope =
 
 [G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Awardee.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXdhcmRlZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Components/AudioUploadComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xBdWRpb1VwbG9hZENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Components/CreateTrainingComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xDcmVhdGVUcmFpbmluZ0NvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Components/DashboardComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xEYXNoYm9hcmRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Components/PDFUploadComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xQREZVcGxvYWRDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Components/ResourceLibrary.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xSZXNvdXJjZUxpYnJhcnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Components/SelectComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xTZWxlY3RDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/Dashboard/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkXERhc2hib2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [G:/Dev_Repository/Projects/Nana/Apps/PANTrainer/PETAS/Pages/FetchData.razor]

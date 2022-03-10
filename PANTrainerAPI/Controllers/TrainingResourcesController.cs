@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
 using PANTrainerAPI.Data;
 using PETAS.Models.Domain;
 
@@ -44,8 +45,36 @@ namespace PANTrainerAPI.Controllers
             return trainingResource;
         }
 
-        // PUT: api/TrainingResources/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("UpdateTrainingResource/{id}")]
+        public async Task<bool> UpdateTrainingResource(JObject data)
+        {
+            if (data == null)
+            {
+                return false;
+            }
+
+            var obj = data["obj"].ToObject<TrainingResource>();
+            try
+            {
+                _context.Entry(obj).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+            catch(Exception x)
+            {
+                if (!TrainingResourceExists(obj.Id))
+                {
+                    return false;
+                }
+                else
+                {
+                    throw;
+                }
+            }
+        }
+
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTrainingResource(int id, TrainingResource trainingResource)
         {
@@ -72,11 +101,10 @@ namespace PANTrainerAPI.Controllers
                 }
             }
 
-            return NoContent();
+            return NoContent();          
         }
 
-        // POST: api/TrainingResources
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
         [HttpPost]
         public async Task<ActionResult<TrainingResource>> PostTrainingResource(TrainingResource trainingResource)
         {
@@ -84,6 +112,29 @@ namespace PANTrainerAPI.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetTrainingResource", new { id = trainingResource.Id }, trainingResource);
+        }
+
+        [HttpPost("CreateTrainingResourceWithTraining")]
+        public async Task<bool> CreateTrainingResource(JObject data)
+        {
+            if (data == null)
+            {
+                return false;
+            }
+
+            try
+            {
+                var obj = data["obj"].ToObject<TrainingResource>();
+                if (obj == null) { return false; }
+
+                await _context.TrainingResources.AddAsync(obj);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch(Exception x)
+            {
+                return false;
+            }
         }
 
         // DELETE: api/TrainingResources/5

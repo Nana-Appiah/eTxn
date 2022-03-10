@@ -1,18 +1,321 @@
 ﻿@page "/admin/training/assigntraining"
+@inject IHRMSService hrms
 
-<div>
-    <Alert Visible="true">
-    <SelectComponent OnChangeEvent="TriggerChangeEvent" />
-</Alert>
-   
-<div class="col-12">@selectedText</div>
-</div>
+@*<TitleComponent Title="Click on selection criteria below" />*@
+<Row>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <Card Background="Background.Success" @onclick="GetAllStaff">
+                    <Tooltip Text="All Staff">
+                    <CardBody>
+                        <CardText>
+                            <div class="d-flex align-items-center justify-content-center"><p><em><h6>All Staff</h6></em></p></div>
+                        </CardText>
+                    </CardBody>
+                    </Tooltip>
+                </Card>
+            </div>
+            <div class="col-md-4">
+                <Card Background="Background.Danger" @onclick="GetAllDepartments">
+                    <Tooltip Text="By Department">
+                    <CardBody>
+                        <CardText>
+                            <div class="d-flex align-items-center justify-content-center"><p><em><h6>By Department</h6></em></p></div>
+                        </CardText>
+                    </CardBody>
+                    </Tooltip>
+                </Card>
+            </div>
+            <div class="col-md-4">
+                <Card Background="Background.Secondary" @onclick="GetGrades">
+                    <Tooltip Text="By Grade">
+                    <CardBody>
+                        <CardText>
+                            <div class="d-flex align-items-center justify-content-center"><p><em><h6>By Grade</h6></em></p></div>
+                        </CardText>
+                    </CardBody>
+                    </Tooltip>
+                </Card>
+            </div>
+        
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <Card Background="Background.Info" @onclick="GetGroups">
+                    <Tooltip Text="By Group">
+                    <CardBody>
+                        <CardText>
+                            <div class="d-flex align-items-center justify-content-center"><p><em><h6>By Group</h6></em></p></div>
+                        </CardText>
+                    </CardBody>
+                    </Tooltip>
+                </Card>
+            </div>
+            <div class="col-md-4">
+                <Card Background="Background.Info" @onclick="GetJobTitles">
+                    <Tooltip Text="By Job Title">
+                    <CardBody>
+                        <CardText>
+                            <div class="d-flex align-items-center justify-content-center"><p><em><h6>By Job Title</h6></em></p></div>
+                        </CardText>
+                    </CardBody>
+                    </Tooltip>
+                </Card>
+            </div>
+            <div class="col-md-4">
+                <Card Background="Background.Info">
+                    <Tooltip Text="By Employee ID">
+                    <CardBody>
+                        <CardText>
+                            <div class="d-flex align-items-center justify-content-center"><p><em><h6>By Employee ID</h6></em></p></div>
+                        </CardText>
+                    </CardBody>
+                    </Tooltip>
+                </Card>
+            </div>
+        </div>
+    </div>
+</Row>
+<Divider />
+<Row>
+    <Column ColumnSize="ColumnSize.Is3">
+        @if(departments.Count() > 0)
+        {
+            <Alert Color="Color.Primary" Visible="true">
+                <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
+                    <TableHeader>
+                        <TableRow>
+                            <TableRowCell>Department</TableRowCell>
+                            @*<TableRowCell>Code</TableRowCell>*@
+                        </TableRow>
+                    </TableHeader>
+
+                    <TableBody>
+                        @foreach(var d in departments)
+                        {
+                            <TableRow>
+                                <TableRowCell>@d.Name</TableRowCell>
+                                @*<TableRowCell>@d.Head.ToString()</TableRowCell>*@
+                            </TableRow>
+                        }
+                    </TableBody>
+                </Table>
+            </Alert>
+        }
+
+        @if(employees.Count() > 0)
+        {
+            <Alert Color="Color.Primary" Visible="true">
+                <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
+                    <TableHeader>
+                        <TableRow>
+                            <TableRowCell>ID</TableRowCell>
+                            <TableRowCell>Name</TableRowCell>
+                        </TableRow>
+                    </TableHeader>
+
+                    <TableBody>
+                        @foreach(var e in employees)
+                        {
+                            <TableRow>
+                                <TableRowCell>@e.EmployeeId.ToString()</TableRowCell>
+                                <TableRowCell>@e.FirstName.Trim() @e.LastName.Trim()</TableRowCell>
+                            </TableRow>
+                        }
+                    </TableBody>
+                </Table>
+            </Alert>
+        }
+
+        @if(grades.Count() > 0)
+        {
+            <Alert Color="Color.Primary" Visible="true">
+                <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
+                    <TableHeader>
+                        <TableRow>
+                            <TableRowCell>ID</TableRowCell>
+                            <TableRowCell>GradeLetter</TableRowCell>
+                        </TableRow>
+                    </TableHeader>
+
+                    <TableBody>
+                        @foreach(var g in grades)
+                        {
+                            <TableRow>
+                                <TableRowCell>@g.GradeId.ToString()</TableRowCell>
+                                <TableRowCell>@g.Letter</TableRowCell>
+                            </TableRow>
+                        }
+                    </TableBody>
+                </Table>
+            </Alert>
+        }
+
+        @if(groups.Count() > 0)
+        {
+            <Alert Color="Color.Primary" Visible="true">
+                <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
+                    <TableHeader>
+                        <TableRow>
+                            <TableRowCell>ID</TableRowCell>
+                            <TableRowCell>Group Name</TableRowCell>
+                        </TableRow>
+                    </TableHeader>
+
+                    <TableBody>
+                        @foreach(var g in groups)
+                        {
+                            <TableRow>
+                                <TableRowCell>@g.GroupId.ToString()</TableRowCell>
+                                <TableRowCell>@g.Name.Trim()</TableRowCell>
+                            </TableRow>
+                        }
+                    </TableBody>
+                </Table>
+            </Alert>
+        }
+
+        @if(jobTitles.Count() > 0)
+        {
+            <Alert Color="Color.Primary" Visible="true">
+                <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
+                    <TableHeader>
+                        <TableRow>
+                            @*<TableRowCell>ID</TableRowCell>*@
+                            <TableRowCell>Job Title</TableRowCell>
+                        </TableRow>
+                    </TableHeader>
+
+                    <TableBody>
+                        @foreach(var jt in jobTitles)
+                        {
+                            <TableRow>
+                                @*<TableRowCell>@jt.JobTitleId.ToString()</TableRowCell>*@
+                                <TableRowCell>@jt.Name.Trim()</TableRowCell>
+                            </TableRow>
+                        }
+                    </TableBody>
+                </Table>
+            </Alert>
+        }
+    </Column>
+    <Column ColumnSize="ColumnSize.Is6">
+        <Alert Color="Color.Primary" Visible>
+            Is6
+        </Alert>
+    </Column>
+    <Column ColumnSize="ColumnSize.Is3">
+        <Alert Color="Color.Primary" Visible>
+            Is3
+        </Alert>
+    </Column>
+</Row>
+
 
 @code{
-    private string? selectedText { get; set; } = string.Empty;
-    private void TriggerChangeEvent(ChangeEventArgs e)
+    private List<Department> departments = new List<Department>();
+    private List<Employee> employees = new List<Employee>();
+    private List<Grade> grades = new List<Grade>();
+    private List<Group> groups =new List<Group>();
+    private List<JobTitle> jobTitles = new List<JobTitle>();
+
+    private async Task GetAllDepartments()
     {
-        selectedText = (string)e.Value;
+        try
+        {
+            departments = await hrms.GetDepartmentsAsync();
+            if (departments.Count() > 0){
+                employees.Clear();
+                grades.Clear();
+                groups.Clear();
+                jobTitles.Clear();
+            }
+        }
+        catch(Exception x)
+        {
+
+        }
+    }
+
+    private async Task GetAllStaff()
+    {
+        try
+        {
+            employees = await hrms.GetEmployeeAsync();
+            if (employees.Count() > 0)
+            {
+                //clear the other lists and place the employee control in their place
+                departments.Clear();
+                grades.Clear();
+                groups.Clear();
+                jobTitles.Clear();
+            }
+        }
+        catch(Exception x)
+        {
+
+        }
+    }
+
+    private async Task GetGrades()
+    {
+        try
+        {
+            grades = await hrms.GetGradeAsync();
+            if (grades.Count() > 0)
+            {
+                departments.Clear();
+                employees.Clear();
+                groups.Clear();
+                jobTitles.Clear();
+            }
+        }
+        catch(Exception x)
+        {
+
+        }
+    }
+
+    private async Task GetGroups()
+    {
+        try
+        {
+            groups = await hrms.GetGroupAsync();
+            if (groups.Count() > 0)
+            {
+                departments.Clear();
+                employees.Clear();
+                grades.Clear();
+                jobTitles.Clear();
+            }
+        }
+        catch(Exception x)
+        {
+
+        }
+    }
+
+    private async Task GetJobTitles()
+    {
+        try
+        {
+            jobTitles = await hrms.GetJobTitlesAsync();
+            if (jobTitles.Count() > 0)
+            {
+                departments.Clear();
+                employees.Clear();
+                grades.Clear();
+                groups.Clear();
+            }
+        }
+        catch(Exception x)
+        {
+            
+        }
     }
 
 }

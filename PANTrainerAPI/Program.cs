@@ -12,7 +12,7 @@ builder.Services.AddMvc(option => option.EnableEndpointRouting = false)
          .SetCompatibilityVersion(CompatibilityVersion.Latest)
          .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -31,7 +31,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<PantrainerContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("PanTrainerConn"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PanamString"));
 });
 
 var app = builder.Build();

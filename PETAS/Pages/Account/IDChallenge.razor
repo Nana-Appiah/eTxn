@@ -122,7 +122,7 @@
             {
                 await notifier.Success(string.Format("{0} logged in successfully", model.userName), @"Login Success");
                 await localStore.SetItemAsync(userKey, model.userName);
-                navManager.NavigateTo(@"admin/training/configuration");
+                navManager.NavigateTo(@"dashboard/");
             }
             else
             {
