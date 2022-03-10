@@ -5785,12 +5785,6 @@ C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.csproj.CopyComplete
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.dll
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\ref\PETAS.dll
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.pdb
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.csproj.AssemblyReference.cache
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.GeneratedMSBuildEditorConfig.editorconfig
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfoInputs.cache
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfo.cs
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.csproj.CoreCompileInputs.cache
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.MvcApplicationPartsAssemblyInfo.cache
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
@@ -6592,6 +6586,12 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\PETAS.Mod
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\SecureAccess.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\PETAS.Models.pdb
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\SecureAccess.pdb
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.csproj.AssemblyReference.cache
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.GeneratedMSBuildEditorConfig.editorconfig
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfoInputs.cache
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfo.cs
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.csproj.CoreCompileInputs.cache
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.MvcApplicationPartsAssemblyInfo.cache
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Rd8p8us8.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\504sucqR.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\9RjxRpa+.gz

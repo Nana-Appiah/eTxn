@@ -98,7 +98,7 @@
                         @foreach(var d in departments)
                         {
                             <TableRow>
-                                <TableRowCell><Check TValue="bool" CheckedChanged="@OnRememberMeChanged"></Check></TableRowCell>
+                                <TableRowCell><Check TValue="Department" onclick="@ClickedMe" onchange="@OnRememberMeChanged"></Check></TableRowCell>
                                 <TableRowCell>@d.Name</TableRowCell>
                             </TableRow>
                         }
@@ -322,8 +322,15 @@
         }
     }
 
-    void OnRememberMeChanged(bool value)
+    void OnRememberMeChanged(ChangeEventArgs e)
     {
-        rowChecked = value;
+        //rowChecked
+        int _id = department.DepartmentId;
+        var str = e.Value;
+    }
+
+    void ClickedMe(EventArgs e)
+    {
+        int _id = int.Parse(e.ToString());
     }
 }
