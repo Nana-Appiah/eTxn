@@ -1,6 +1,18 @@
 ﻿@page "/admin/training/assigntraining"
-<h3>AssignTraining</h3>
 
-@code {
+<div>
+    <Alert Visible="true">
+    <SelectComponent OnChangeEvent="TriggerChangeEvent" />
+</Alert>
+   
+<div class="col-12">@selectedText</div>
+</div>
+
+@code{
+    private string? selectedText { get; set; } = string.Empty;
+    private void TriggerChangeEvent(ChangeEventArgs e)
+    {
+        selectedText = (string)e.Value;
+    }
 
 }
