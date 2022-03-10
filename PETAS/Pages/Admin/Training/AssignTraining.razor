@@ -82,15 +82,15 @@
 </Row>
 <Divider />
 <Row>
-    <Column ColumnSize="ColumnSize.Is3">
+    <Column ColumnSize="ColumnSize.Is4">
         @if(departments.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
                 <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
                     <TableHeader>
                         <TableRow>
+                            <TableRowCell>#</TableRowCell>
                             <TableRowCell>Department</TableRowCell>
-                            @*<TableRowCell>Code</TableRowCell>*@
                         </TableRow>
                     </TableHeader>
 
@@ -98,8 +98,8 @@
                         @foreach(var d in departments)
                         {
                             <TableRow>
+                                <TableRowCell><Check TValue="bool" CheckedChanged="@OnRememberMeChanged"></Check></TableRowCell>
                                 <TableRowCell>@d.Name</TableRowCell>
-                                @*<TableRowCell>@d.Head.ToString()</TableRowCell>*@
                             </TableRow>
                         }
                     </TableBody>
@@ -208,7 +208,7 @@
             Is6
         </Alert>
     </Column>
-    <Column ColumnSize="ColumnSize.Is3">
+    <Column ColumnSize="ColumnSize.Is2">
         <Alert Color="Color.Primary" Visible>
             Is3
         </Alert>
@@ -218,10 +218,14 @@
 
 @code{
     private List<Department> departments = new List<Department>();
+    private Department department = new Department();
+
     private List<Employee> employees = new List<Employee>();
     private List<Grade> grades = new List<Grade>();
     private List<Group> groups =new List<Group>();
     private List<JobTitle> jobTitles = new List<JobTitle>();
+
+    private bool rowChecked;
 
     private async Task GetAllDepartments()
     {
@@ -314,8 +318,12 @@
         }
         catch(Exception x)
         {
-            
+
         }
     }
 
+    void OnRememberMeChanged(bool value)
+    {
+        rowChecked = value;
+    }
 }

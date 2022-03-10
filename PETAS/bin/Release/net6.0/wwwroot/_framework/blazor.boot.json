@@ -263,7 +263,7 @@
       "System.Private.CoreLib.dll": "sha256-9NtEbYixyog7vUmeYXyyqzfBXUYl8wxoVQ26Ji7sNRg=",
       "PETAS.Models.dll": "sha256-1pg9HZ\/uB5rcqyy5XZgPxD3eZKGxiQobguNfq7P6Yfo=",
       "SecureAccess.dll": "sha256-Mhx2HpFD4omRASwQndjVELfU80sOyp0cVCbLuva\/EcU=",
-      "PETAS.dll": "sha256-xntQKFwRd+9bKFgXWWx3remKrsuovY9jB5Fsbmahyh0="
+      "PETAS.dll": "sha256-HXE9QydfmUVLU4uqJhM2B9ky\/g446TKrBUtScXhNo6g="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -271,7 +271,7 @@
     "pdb": {
       "PETAS.Models.pdb": "sha256-8mdNKt0yrbI8\/sMhv7DChvpnbgCzvIIk12C0rOQ9LXk=",
       "SecureAccess.pdb": "sha256-sLoXKh58enEXZo\/\/AJXr4s+WV86zVXBA+pgC6iJHnIg=",
-      "PETAS.pdb": "sha256-O4ztJXrQ7t0GxQEBwTNDpeRKzb\/KDgu0QLYu3u8iFOE="
+      "PETAS.pdb": "sha256-Gw5QEnMys67DT7LCGsAL1e3RYiOCsPBLRC9Ylzp+ttc="
     },
     "runtime": {
       "dotnet.6.0.1.ykymvr902e.js": "sha256-awQsJ\/WxYhouHPuE+i3eJqjA4XClQlr2rD6nKvW80ww=",

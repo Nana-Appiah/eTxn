@@ -21,12 +21,13 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(Cors,
-                builder => builder.AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .SetPreflightMaxAge(TimeSpan.FromSeconds(5000))
-                .SetIsOriginAllowed(x => true)
+options.AddPolicy(Cors,
+            builder => builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .SetPreflightMaxAge(TimeSpan.FromSeconds(5000))
+            .SetIsOriginAllowed(x => true)
+            .WithExposedHeaders("*")
     );
 });
 
