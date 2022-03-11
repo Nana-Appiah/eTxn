@@ -44,10 +44,12 @@ C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\SecureAccess.csproj.C
 C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\SecureAccess.dll
 C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\ref\SecureAccess.dll
 C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\SecureAccess.pdb
+C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\SecureAccess.csproj.AssemblyReference.cache
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\bin\Debug\net6.0\SecureAccess.deps.json
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\bin\Debug\net6.0\SecureAccess.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\bin\Debug\net6.0\ref\SecureAccess.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\bin\Debug\net6.0\SecureAccess.pdb
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\SecureAccess.csproj.AssemblyReference.cache
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\SecureAccess.GeneratedMSBuildEditorConfig.editorconfig
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\SecureAccess.AssemblyInfoInputs.cache
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\SecureAccess.AssemblyInfo.cs
@@ -55,4 +57,3 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\Se
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\SecureAccess.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\ref\SecureAccess.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\SecureAccess.pdb
-C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\SecureAccess.csproj.AssemblyReference.cache

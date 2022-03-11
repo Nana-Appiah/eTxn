@@ -73,25 +73,30 @@ else
 <Divider Background="Background.Success" />
 
 <div class="container">
-    <Table Striped="true" Bordered="true" Hoverable="true">
+    <Table Striped="true" Bordered="true" Hoverable="true" Width="Width.Auto">
         <TableHeader>
-            <TableHeaderCell>Training Name</TableHeaderCell>
-            <TableHeaderCell>From</TableHeaderCell>
-            <TableHeaderCell>To</TableHeaderCell>
-            <TableHeaderCell>Type</TableHeaderCell>
-            <TableHeaderCell>Status</TableHeaderCell>
+            <TableRow>
+                <TableHeaderCell>Training Name</TableHeaderCell>
+                <TableHeaderCell>From</TableHeaderCell>
+                <TableHeaderCell>To</TableHeaderCell>
+                <TableHeaderCell>Status</TableHeaderCell>
+                <TableHeaderCell>Grouping</TableHeaderCell>
+                <TableHeaderCell>Pass Mark</TableHeaderCell>
+                <TableHeaderCell>Type</TableHeaderCell>
+            </TableRow>
         </TableHeader>
 
         <TableBody>
             @foreach(var item in trainings)
             {
                 <TableRow>
-                    <TableRowCell>@item.Id.ToString()</TableRowCell>
-                    <TableRowCell>@item.TrainingTypeNavigation.Status</TableRowCell>
+                    <TableRowCell>@item.TrainingName</TableRowCell>
+                    <TableRowCell>@Convert.ToDateTime(item.DateFrom).ToString("dd-MM-yyyy")</TableRowCell>
+                    <TableRowCell>@Convert.ToDateTime(item.DateTo).ToString("dd-MM-yyyy")</TableRowCell>
                     <TableRowCell>@item.TrainingStatus.TrainingTypeStatus</TableRowCell>
                     <TableRowCell>@item.TrainingGroup.GroupName</TableRowCell>
-                    <TableRowCell>@item.TrainingCertification.CertificationName</TableRowCell>
                     <TableRowCell>@item.MarkToPass.ToString()</TableRowCell>
+                    <TableRowCell>@item.TrainingTypeNavigation.Status</TableRowCell>
                 </TableRow>
             }
         </TableBody>

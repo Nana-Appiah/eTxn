@@ -25,7 +25,7 @@ namespace HRMS.API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Employee>>> GetEmployees()
         {
-            return await config.Employees.ToListAsync();
+            return await config.Employees.Where(x => x.StatusId == 1).ToListAsync();
         }
     }
 }

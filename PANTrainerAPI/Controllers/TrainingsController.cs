@@ -27,8 +27,8 @@ namespace PANTrainerAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Training>>> GetTraining()
         {
-            var results =  await _context.Training.Include(t => t.TrainingTypeNavigation)
-                                                        .Include(t=>t.TrainingStatus)           
+            var results = await _context.Training.Include(t => t.TrainingTypeNavigation)
+                                                        .Include(t => t.TrainingStatus)
                                                         .Include(t => t.TrainingGroup)
                                                         .Include(t => t.TrainingCertification).ToListAsync();
             return Ok(results);

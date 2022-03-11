@@ -1,5 +1,6 @@
 ﻿@page "/admin/training/assigntraining"
 @inject IHRMSService hrms
+@inject ITrainingService trainingService
 
 @*<TitleComponent Title="Click on selection criteria below" />*@
 <Row>
@@ -83,129 +84,140 @@
 <Divider />
 <Row>
     <Column ColumnSize="ColumnSize.Is4">
+        <TitleComponent Title="Criteria" />
         @if(departments.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
-                    <TableHeader>
-                        <TableRow>
-                            <TableRowCell>#</TableRowCell>
-                            <TableRowCell>Department</TableRowCell>
-                        </TableRow>
-                    </TableHeader>
-
-                    <TableBody>
-                        @foreach(var d in departments)
-                        {
-                            <TableRow>
-                                <TableRowCell><Check TValue="Department" onclick="@ClickedMe" onchange="@OnRememberMeChanged"></Check></TableRowCell>
-                                <TableRowCell>@d.Name</TableRowCell>
-                            </TableRow>
-                        }
-                    </TableBody>
-                </Table>
+                <DataGrid TItem="Department" Data="@departments"
+                @bind-SelectedRow="@department" 
+                Responsive 
+                Hoverable = "true"
+                Striped = "true"
+                Narrow = "true"
+                Bordered="true"
+                
+                SelectedRowStyling="@OnSelectedDepartmentRowStyling"
+                Virtualize 
+                VirtualizeOptions="@(new() { DataGridHeight = "700px"})">
+                    <DataGridCommandColumn TItem="Department" />
+                    <DataGridColumn TItem="Department" Field="@nameof(Department.DepartmentId)" Caption="#" Sortable="false" />
+                    <DataGridColumn TItem="Department" Field="@nameof(Department.Name)" Caption="Department" Sortable="false" />
+                </DataGrid>
             </Alert>
         }
 
         @if(employees.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
-                    <TableHeader>
-                        <TableRow>
-                            <TableRowCell>ID</TableRowCell>
-                            <TableRowCell>Name</TableRowCell>
-                        </TableRow>
-                    </TableHeader>
-
-                    <TableBody>
-                        @foreach(var e in employees)
-                        {
-                            <TableRow>
-                                <TableRowCell>@e.EmployeeId.ToString()</TableRowCell>
-                                <TableRowCell>@e.FirstName.Trim() @e.LastName.Trim()</TableRowCell>
-                            </TableRow>
-                        }
-                    </TableBody>
-                </Table>
+                <DataGrid TItem="Employee" Data="@employees"
+                @bind-SelectedRow="@employee" 
+                Responsive 
+                Hoverable = "true"
+                Striped = "true"
+                Narrow = "true"
+                Bordered="true"
+                
+                SelectedRowStyling="@OnSelectedEmployeeRowStyling"
+                Virtualize 
+                VirtualizeOptions="@(new() { DataGridHeight = "700px"})">
+                    <DataGridCommandColumn TItem="Employee" />
+                    <DataGridColumn TItem="Employee" Field="@nameof(Employee.EmployeeId)" Caption="#" Sortable="false" />
+                    <DataGridColumn TItem="Employee" Field="@nameof(Employee.FirstName)" Caption="FirstName" Sortable="false" />
+                    <DataGridColumn TItem="Employee" Field="@nameof(Employee.LastName)" Caption="LastName" Sortable="false" />
+                </DataGrid>
             </Alert>
         }
 
         @if(grades.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
-                    <TableHeader>
-                        <TableRow>
-                            <TableRowCell>ID</TableRowCell>
-                            <TableRowCell>GradeLetter</TableRowCell>
-                        </TableRow>
-                    </TableHeader>
-
-                    <TableBody>
-                        @foreach(var g in grades)
-                        {
-                            <TableRow>
-                                <TableRowCell>@g.GradeId.ToString()</TableRowCell>
-                                <TableRowCell>@g.Letter</TableRowCell>
-                            </TableRow>
-                        }
-                    </TableBody>
-                </Table>
+                <DataGrid TItem="Grade" Data="@grades"
+                @bind-SelectedRow="@grade" 
+                Responsive 
+                Hoverable = "true"
+                Striped = "true"
+                Narrow = "true"
+                Bordered="true"
+                
+                SelectedRowStyling="@OnSelectedGradeRowStyling"
+                Virtualize 
+                VirtualizeOptions="@(new() { DataGridHeight = "700px"})">
+                    <DataGridCommandColumn TItem="Grade" />
+                    <DataGridColumn TItem="Grade" Field="@nameof(Grade.GradeId)" Caption="#" Sortable="false" />
+                    <DataGridColumn TItem="Grade" Field="@nameof(Grade.Letter)" Caption="GradeLetter" Sortable="false" />
+                </DataGrid>
             </Alert>
         }
 
         @if(groups.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
-                    <TableHeader>
-                        <TableRow>
-                            <TableRowCell>ID</TableRowCell>
-                            <TableRowCell>Group Name</TableRowCell>
-                        </TableRow>
-                    </TableHeader>
-
-                    <TableBody>
-                        @foreach(var g in groups)
-                        {
-                            <TableRow>
-                                <TableRowCell>@g.GroupId.ToString()</TableRowCell>
-                                <TableRowCell>@g.Name.Trim()</TableRowCell>
-                            </TableRow>
-                        }
-                    </TableBody>
-                </Table>
+                <DataGrid TItem="Group" Data="@groups"
+                @bind-SelectedRow="@group" 
+                Responsive 
+                Hoverable = "true"
+                Striped = "true"
+                Narrow = "true"
+                Bordered="true"
+                
+                SelectedRowStyling="@OnSelectedGroupRowStyling"
+                Virtualize 
+                VirtualizeOptions="@(new() { DataGridHeight = "700px"})">
+                    <DataGridCommandColumn TItem="Group" />
+                    <DataGridColumn TItem="Group" Field="@nameof(Group.GroupId)" Caption="#" Sortable="false" />
+                    <DataGridColumn TItem="Group" Field="@nameof(Group.Name)" Caption="Group Name" Sortable="false" />
+                </DataGrid>
             </Alert>
         }
 
         @if(jobTitles.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <Table Striped="true" Hoverable="true" Bordered="false" Responsive="true">
-                    <TableHeader>
-                        <TableRow>
-                            @*<TableRowCell>ID</TableRowCell>*@
-                            <TableRowCell>Job Title</TableRowCell>
-                        </TableRow>
-                    </TableHeader>
-
-                    <TableBody>
-                        @foreach(var jt in jobTitles)
-                        {
-                            <TableRow>
-                                @*<TableRowCell>@jt.JobTitleId.ToString()</TableRowCell>*@
-                                <TableRowCell>@jt.Name.Trim()</TableRowCell>
-                            </TableRow>
-                        }
-                    </TableBody>
-                </Table>
+                <DataGrid TItem="JobTitle" Data="@jobTitles"
+                @bind-SelectedRow="@jobTitle" 
+                Responsive 
+                Hoverable = "true"
+                Striped = "true"
+                Narrow = "true"
+                Bordered="true"
+                
+                SelectedRowStyling="@OnSelectedJobTitleRowStyling"
+                Virtualize 
+                VirtualizeOptions="@(new() { DataGridHeight = "400px"})">
+                    <DataGridCommandColumn TItem="JobTitle" />
+                    <DataGridColumn TItem="Group" Field="@nameof(JobTitle.Name)" Caption="Job Title" Sortable="false" />
+                </DataGrid>
             </Alert>
         }
     </Column>
     <Column ColumnSize="ColumnSize.Is6">
+        <TitleComponent Title="Open Trainings" />
         <Alert Color="Color.Primary" Visible>
-            Is6
+            @if(trainings.Count() > 0)
+            {
+                <Table Striped="true" Hoverable="true" Responsive="true">
+                    <TableHeader>
+                        <TableRow>
+                            <TableHeaderCell>#</TableHeaderCell>
+                            <TableHeaderCell>Name</TableHeaderCell>
+                            <TableHeaderCell>Grouping</TableHeaderCell>
+                            <TableHeaderCell>Status</TableHeaderCell>
+                        </TableRow>
+                    </TableHeader>
+
+                    <TableBody>
+                        @foreach(var t in trainings)
+                        {
+                            <TableRow>
+                                <TableRowCell>@t.Id</TableRowCell>
+                                <TableRowCell>@t.TrainingName</TableRowCell>
+                                <TableRowCell>@t.TrainingGroup.GroupName</TableRowCell>
+                                <TableRowCell>@t.TrainingStatus.TrainingTypeStatus</TableRowCell>
+                            </TableRow>
+                        }
+                    </TableBody>
+                </Table>
+            }
         </Alert>
     </Column>
     <Column ColumnSize="ColumnSize.Is2">
@@ -221,11 +233,33 @@
     private Department department = new Department();
 
     private List<Employee> employees = new List<Employee>();
+    private Employee employee = new Employee();
+
     private List<Grade> grades = new List<Grade>();
+    private Grade grade = new Grade();
+
     private List<Group> groups =new List<Group>();
+    private Group group = new Group();
+
     private List<JobTitle> jobTitles = new List<JobTitle>();
+    private JobTitle jobTitle = new JobTitle();
+
+    private List<Training> trainings = new List<Training>();
 
     private bool rowChecked;
+    private string msg = string.Empty;
+    private string msgTraining = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        trainings = await GetTrainings();
+        await base.OnInitializedAsync();
+    }
+
+    private async Task<List<Training>> GetTrainings()
+    {
+        return await trainingService.GetTrainingsAsync();
+    }
 
     private async Task GetAllDepartments()
     {
@@ -333,4 +367,32 @@
     {
         int _id = int.Parse(e.ToString());
     }
+
+    #region selectedRowStyling
+
+    private void OnSelectedDepartmentRowStyling(Department department, DataGridRowStyling styling)
+    {
+        styling.Background = Background.Success;
+    }
+
+    private void OnSelectedEmployeeRowStyling(Employee employee, DataGridRowStyling styling)
+    {
+        styling.Background = Background.Success;
+    }
+
+    private void OnSelectedGradeRowStyling(Grade grade, DataGridRowStyling styling)
+    {
+        styling.Background = Background.Success;
+    }
+
+    private void OnSelectedGroupRowStyling(Group group, DataGridRowStyling styling)
+    {
+        styling.Background = Background.Success;
+    }
+
+    private void OnSelectedJobTitleRowStyling(JobTitle jobTitle, DataGridRowStyling styling)
+    {
+        styling.Background = Background.Success;
+    }
+    #endregion
 }
