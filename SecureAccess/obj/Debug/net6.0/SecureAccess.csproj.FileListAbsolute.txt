@@ -55,3 +55,4 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\Se
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\SecureAccess.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\ref\SecureAccess.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\SecureAccess\obj\Debug\net6.0\SecureAccess.pdb
+C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\SecureAccess.csproj.AssemblyReference.cache
