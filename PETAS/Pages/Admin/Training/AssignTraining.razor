@@ -87,8 +87,31 @@
         <TitleComponent Title="Criteria" />
         @if(departments.Count() > 0)
         {
+            
             <Alert Color="Color.Primary" Visible="true">
-                <DataGrid TItem="Department" Data="@departments"
+                <Table Striped="true" Hoverable="true" Bordered="true">
+                <TableHeader>
+                    <TableRow>
+                        <TableRowCell>#</TableRowCell>
+                        <TableRowCell>Department</TableRowCell>
+                    </TableRow>
+                </TableHeader>
+
+                <TableBody>
+                        @foreach(var d in departments)
+                        {
+                            <TableRow>
+                                <TableRowCell>
+                                    @*<input type="checkbox" checked=@Checked @onchange="@(async (e)=> await OnRememberMeChanged(@Checked,d))" />*@
+                                    <Check TValue="bool" Checked="@(Checked?true:false)" CheckedChanged="@(async (e)=> await OnRememberMeChanged(@Checked,d))"></Check>
+                                </TableRowCell>
+                                <TableRowCell>@d.Name</TableRowCell>
+                            </TableRow>
+                        }
+                    </TableBody>
+            </Table>
+
+                @*<DataGrid TItem="Department" Data="@departments"
                 @bind-SelectedRow="@department" 
                 Responsive 
                 Hoverable = "true"
@@ -102,7 +125,7 @@
                     <DataGridCommandColumn TItem="Department" />
                     <DataGridColumn TItem="Department" Field="@nameof(Department.DepartmentId)" Caption="#" Sortable="false" />
                     <DataGridColumn TItem="Department" Field="@nameof(Department.Name)" Caption="Department" Sortable="false" />
-                </DataGrid>
+                </DataGrid>*@
             </Alert>
         }
 
@@ -246,9 +269,12 @@
 
     private List<Training> trainings = new List<Training>();
 
-    private bool rowChecked;
+    bool Checked;
+
     private string msg = string.Empty;
     private string msgTraining = string.Empty;
+
+    private int rowIndex = 0;
 
     protected override async Task OnInitializedAsync()
     {
@@ -356,11 +382,14 @@
         }
     }
 
-    void OnRememberMeChanged(ChangeEventArgs e)
+    async Task OnRememberMeChanged(bool value, Department selected)
     {
         //rowChecked
-        int _id = department.DepartmentId;
-        var str = e.Value;
+        if (Checked)
+        {
+            int _id = selected.DepartmentId;
+            var str = selected.Name;
+        }
     }
 
     void ClickedMe(EventArgs e)

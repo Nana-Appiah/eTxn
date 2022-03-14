@@ -5785,6 +5785,8 @@ C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.csproj.CopyComplete
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.dll
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\ref\PETAS.dll
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.pdb
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\icudt.dat
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Xsv6lIg9.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
@@ -6578,7 +6580,6 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\System.Pr
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\dotnet.js
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\dotnet.timezones.blat
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\dotnet.wasm
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\icudt.dat
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\icudt_CJK.dat
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\icudt_EFIGS.dat
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\icudt_no_CJK.dat
@@ -6853,7 +6854,6 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\0M4DrzLf.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Uike9Tjf.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\EpmFD+yh.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Xsv6lIg9.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\mHYx6U4J.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\sNKY8YaU.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\k5jQeNGu.gz
