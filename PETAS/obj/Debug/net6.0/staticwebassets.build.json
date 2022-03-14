@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Jc+akIUFUQfWr5wMRj1qcYddrCRnUSm+7tgRBcb+YYU=",
+  "Hash": "IuS32/wfGJGWUmLSvzLCX1Hhd4s5CDhAIY7Zzl8cbkw=",
   "Source": "PETAS",
   "BasePath": "PETAS",
   "Mode": "Root",
@@ -932,7 +932,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.0\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
+      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.1\\lib\\net6.0\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.Policy.dll",
@@ -966,7 +966,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.0\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
+      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.1\\lib\\net6.0\\Microsoft.AspNetCore.Components.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
@@ -983,7 +983,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.0\\lib\\net6.0\\Microsoft.AspNetCore.Components.Forms.dll"
+      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\6.0.1\\lib\\net6.0\\Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
@@ -1000,7 +1000,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.0\\lib\\net6.0\\Microsoft.AspNetCore.Components.Web.dll"
+      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnetcore.components.web\\6.0.1\\lib\\net6.0\\Microsoft.AspNetCore.Components.Web.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.dll",
@@ -1136,7 +1136,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.0\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
+      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnetcore.metadata\\6.0.1\\lib\\net6.0\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Mvc.Abstractions.dll",
@@ -1816,7 +1816,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.jsinterop\\6.0.0\\lib\\net6.0\\Microsoft.JSInterop.dll"
+      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.jsinterop\\6.0.1\\lib\\net6.0\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll",
@@ -2055,6 +2055,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net6.0\\PETAS.pdb"
+    },
+    {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Plk.Blazor.DragDrop.dll",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/Plk.Blazor.DragDrop.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\blazor-dragdrop\\2.4.0\\lib\\net6.0\\Plk.Blazor.DragDrop.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\SecureAccess.dll",
@@ -3006,7 +3023,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\system.io.pipelines\\6.0.0\\lib\\net6.0\\System.IO.Pipelines.dll"
+      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\system.io.pipelines\\6.0.1\\lib\\net6.0\\System.IO.Pipelines.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipes.AccessControl.dll",
@@ -5117,6 +5134,23 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.ServicePoint.dll"
     },
     {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\+29czZqg.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
+    },
+    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\+50LZUIv.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -5712,6 +5746,23 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazorise.dll"
     },
     {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\5K1kkHVe.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
+    },
+    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\5zFB88Gx.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -5933,6 +5984,23 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.dll"
     },
     {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\9+QSv9US.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
+    },
+    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\9bF0ceu1.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -6084,6 +6152,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Abstractions.dll"
+    },
+    {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\AXLFhxN9.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\aYoWbxDn.gz",
@@ -6511,23 +6596,6 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.ServiceModel.Primitives.dll"
     },
     {
-      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\Da3M8NmZ.gz",
-      "SourceId": "PETAS",
-      "SourceType": "Computed",
-      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "PETAS",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Web.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Web.dll"
-    },
-    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\dkmjl5LW.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -6834,23 +6902,6 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\ExcelDataReader.dll"
     },
     {
-      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\Fl6lPAdB.gz",
-      "SourceId": "PETAS",
-      "SourceType": "Computed",
-      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "PETAS",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.dll"
-    },
-    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\FL7Xowod.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -7004,6 +7055,23 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Security.Claims.dll"
     },
     {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\Ga8OckJB.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/Plk.Blazor.DragDrop.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Plk.Blazor.DragDrop.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Plk.Blazor.DragDrop.dll"
+    },
+    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\GLmyC0SB.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -7036,6 +7104,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.FileSystem.Primitives.dll"
+    },
+    {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\GuZSgYfz.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\H++PBUFj.gz",
@@ -7242,23 +7327,6 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Linq.Expressions.dll"
     },
     {
-      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\HzvHPpt+.gz",
-      "SourceId": "PETAS",
-      "SourceType": "Computed",
-      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "PETAS",
-      "RelativePath": "_framework/Microsoft.JSInterop.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll"
-    },
-    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\iA0ZMcpr.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -7461,23 +7529,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Linq.Queryable.dll"
-    },
-    {
-      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\jRx9iolG.gz",
-      "SourceId": "PETAS",
-      "SourceType": "Computed",
-      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "PETAS",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Metadata.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Metadata.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\JvJMAqIZ.gz",
@@ -8039,23 +8090,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.dll"
-    },
-    {
-      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\Oki8Rstj.gz",
-      "SourceId": "PETAS",
-      "SourceType": "Computed",
-      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "PETAS",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Authorization.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\oMKbaSBX.gz",
@@ -8721,6 +8755,23 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.EntityFrameworkCore.dll"
     },
     {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\TDJfo7j1.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/System.IO.Pipelines.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll"
+    },
+    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\TegZeTL4.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -9025,6 +9076,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.ValueTuple.dll"
+    },
+    {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\viKzL9k5.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Forms.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\vKKeQBwi.gz",
@@ -9520,23 +9588,6 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Reflection.DispatchProxy.dll"
     },
     {
-      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\yYdDqwWr.gz",
-      "SourceId": "PETAS",
-      "SourceType": "Computed",
-      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "PETAS",
-      "RelativePath": "_framework/System.IO.Pipelines.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll"
-    },
-    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\z+K9vI7z.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -9603,23 +9654,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Data.Common.dll"
-    },
-    {
-      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\ZvYlHDBf.gz",
-      "SourceId": "PETAS",
-      "SourceType": "Computed",
-      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "PETAS",
-      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Forms.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PETAS.styles.css",

@@ -87,129 +87,115 @@
         <TitleComponent Title="Criteria" />
         @if(departments.Count() > 0)
         {
-            
             <Alert Color="Color.Primary" Visible="true">
-                <Table Striped="true" Hoverable="true" Bordered="true">
-                <TableHeader>
-                    <TableRow>
-                        <TableRowCell>#</TableRowCell>
-                        <TableRowCell>Department</TableRowCell>
-                    </TableRow>
-                </TableHeader>
-
-                <TableBody>
-                        @foreach(var d in departments)
-                        {
-                            <TableRow>
-                                <TableRowCell>
-                                    @*<input type="checkbox" checked=@Checked @onchange="@(async (e)=> await OnRememberMeChanged(@Checked,d))" />*@
-                                    <Check TValue="bool" Checked="@(Checked?true:false)" CheckedChanged="@(async (e)=> await OnRememberMeChanged(@Checked,d))"></Check>
-                                </TableRowCell>
-                                <TableRowCell>@d.Name</TableRowCell>
-                            </TableRow>
-                        }
-                    </TableBody>
-            </Table>
-
-                @*<DataGrid TItem="Department" Data="@departments"
-                @bind-SelectedRow="@department" 
-                Responsive 
-                Hoverable = "true"
-                Striped = "true"
-                Narrow = "true"
-                Bordered="true"
-                
-                SelectedRowStyling="@OnSelectedDepartmentRowStyling"
-                Virtualize 
-                VirtualizeOptions="@(new() { DataGridHeight = "700px"})">
-                    <DataGridCommandColumn TItem="Department" />
-                    <DataGridColumn TItem="Department" Field="@nameof(Department.DepartmentId)" Caption="#" Sortable="false" />
-                    <DataGridColumn TItem="Department" Field="@nameof(Department.Name)" Caption="Department" Sortable="false" />
-                </DataGrid>*@
+                <ListGroup>
+                    @foreach(var d in departments)
+                    {
+                        <div draggable="true" @ondragstart="@OnDragStart" @ondrag="@Drag" @ondrop="@Drop">
+                            <ListGroupItem Name="@d.Name">@d.Name</ListGroupItem>
+                        </div>
+                    }
+                </ListGroup>
             </Alert>
         }
 
         @if(employees.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <DataGrid TItem="Employee" Data="@employees"
-                @bind-SelectedRow="@employee" 
-                Responsive 
-                Hoverable = "true"
-                Striped = "true"
-                Narrow = "true"
-                Bordered="true"
-                
-                SelectedRowStyling="@OnSelectedEmployeeRowStyling"
-                Virtualize 
-                VirtualizeOptions="@(new() { DataGridHeight = "700px"})">
-                    <DataGridCommandColumn TItem="Employee" />
-                    <DataGridColumn TItem="Employee" Field="@nameof(Employee.EmployeeId)" Caption="#" Sortable="false" />
-                    <DataGridColumn TItem="Employee" Field="@nameof(Employee.FirstName)" Caption="FirstName" Sortable="false" />
-                    <DataGridColumn TItem="Employee" Field="@nameof(Employee.LastName)" Caption="LastName" Sortable="false" />
-                </DataGrid>
+                <Table Striped="true" Hoverable="true" Bordered="true" Responsive="true">
+                    <TableHeader>
+                        <TableRow>
+                            <TableRowCell>#</TableRowCell>
+                            <TableRowCell>LastName</TableRowCell>
+                            <TableRowCell>Other names</TableRowCell>
+                        </TableRow>
+                    </TableHeader>
+
+                    <TableBody>
+                        @foreach(var e in employees)
+                        {
+                            <TableRow>
+                                <TableRowCell>
+                                    <input type="checkbox" checked=@Checked @onchange="eventArgs => { OnRememberEmpChanged(e, eventArgs.Value); }" />
+                                </TableRowCell>
+                                <TableRowCell>@e.LastName</TableRowCell>
+                                <TableRowCell>@e.FirstName.Trim() @e.OtherNames.Trim()</TableRowCell>
+                            </TableRow>
+                        }
+                    </TableBody>
+                </Table>
             </Alert>
         }
 
         @if(grades.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <DataGrid TItem="Grade" Data="@grades"
-                @bind-SelectedRow="@grade" 
-                Responsive 
-                Hoverable = "true"
-                Striped = "true"
-                Narrow = "true"
-                Bordered="true"
-                
-                SelectedRowStyling="@OnSelectedGradeRowStyling"
-                Virtualize 
-                VirtualizeOptions="@(new() { DataGridHeight = "700px"})">
-                    <DataGridCommandColumn TItem="Grade" />
-                    <DataGridColumn TItem="Grade" Field="@nameof(Grade.GradeId)" Caption="#" Sortable="false" />
-                    <DataGridColumn TItem="Grade" Field="@nameof(Grade.Letter)" Caption="GradeLetter" Sortable="false" />
-                </DataGrid>
+                <Table Striped="true" Hoverable="true" Bordered="true" Responsive="true">
+                    <TableHeader>
+                        <TableRow>
+                            <TableHeaderCell>#</TableHeaderCell>
+                            <TableHeaderCell>GradeLetter</TableHeaderCell>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        @foreach(var gd in grades){
+                            <TableRow>
+                                <TableRowCell>
+                                    <input type="checkbox" checked=@Checked @onchange="eventArgs => { OnRememberGradeChanged(gd, eventArgs.Value); }" />
+                                </TableRowCell>
+                                <TableRowCell>@gd.Letter</TableRowCell>
+                            </TableRow>
+                        }
+                    </TableBody>
+                </Table>
             </Alert>
         }
 
         @if(groups.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <DataGrid TItem="Group" Data="@groups"
-                @bind-SelectedRow="@group" 
-                Responsive 
-                Hoverable = "true"
-                Striped = "true"
-                Narrow = "true"
-                Bordered="true"
-                
-                SelectedRowStyling="@OnSelectedGroupRowStyling"
-                Virtualize 
-                VirtualizeOptions="@(new() { DataGridHeight = "700px"})">
-                    <DataGridCommandColumn TItem="Group" />
-                    <DataGridColumn TItem="Group" Field="@nameof(Group.GroupId)" Caption="#" Sortable="false" />
-                    <DataGridColumn TItem="Group" Field="@nameof(Group.Name)" Caption="Group Name" Sortable="false" />
-                </DataGrid>
+                <Table Striped="true" Hoverable="true" Bordered="true" Responsive="true">
+                    <TableHeader>
+                        <TableRow>
+                            <TableHeaderCell>#</TableHeaderCell>
+                            <TableHeaderCell>Group Name</TableHeaderCell>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        @foreach(var gr in groups)
+                        {
+                            <TableRow>
+                                <TableRowCell>
+                                    <input type="checkbox" checked=@Checked @onchange="eventArgs => { OnRememberGroupChanged(gr, eventArgs.Value); }" />
+                                </TableRowCell>
+                                <TableRowCell>@gr.Name</TableRowCell>
+                            </TableRow>
+                        }
+                    </TableBody>
+                </Table>
             </Alert>
         }
 
         @if(jobTitles.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <DataGrid TItem="JobTitle" Data="@jobTitles"
-                @bind-SelectedRow="@jobTitle" 
-                Responsive 
-                Hoverable = "true"
-                Striped = "true"
-                Narrow = "true"
-                Bordered="true"
-                
-                SelectedRowStyling="@OnSelectedJobTitleRowStyling"
-                Virtualize 
-                VirtualizeOptions="@(new() { DataGridHeight = "400px"})">
-                    <DataGridCommandColumn TItem="JobTitle" />
-                    <DataGridColumn TItem="Group" Field="@nameof(JobTitle.Name)" Caption="Job Title" Sortable="false" />
-                </DataGrid>
+                <Table Striped="true" Hoverable="true" Bordered="true" Responsive="true">
+                    <TableHeader>
+                        <TableRow>
+                            <TableHeaderCell></TableHeaderCell>
+                            <TableHeaderCell>Job Title</TableHeaderCell>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        @foreach(var jt in jobTitles)
+                        {
+                            <TableRowCell>
+                                <input type="checkbox" checked=@Checked @onchange="eventArgs => { OnRememberJobTitleChanged(jt, eventArgs.Value); }" />
+                            </TableRowCell>
+                            <TableRowCell>@jt.Name</TableRowCell>
+                        }
+                    </TableBody>
+                </Table>
             </Alert>
         }
     </Column>
@@ -218,6 +204,7 @@
         <Alert Color="Color.Primary" Visible>
             @if(trainings.Count() > 0)
             {
+                <div ondragover="event.preventDefault()" @ondrop="(e => OnDropTarget(e))">
                 <Table Striped="true" Hoverable="true" Responsive="true">
                     <TableHeader>
                         <TableRow>
@@ -228,18 +215,24 @@
                         </TableRow>
                     </TableHeader>
 
+                    
                     <TableBody>
                         @foreach(var t in trainings)
                         {
-                            <TableRow>
+                           
+                           <TableRow>
                                 <TableRowCell>@t.Id</TableRowCell>
                                 <TableRowCell>@t.TrainingName</TableRowCell>
                                 <TableRowCell>@t.TrainingGroup.GroupName</TableRowCell>
                                 <TableRowCell>@t.TrainingStatus.TrainingTypeStatus</TableRowCell>
                             </TableRow>
+                           
+                            
                         }
                     </TableBody>
+                    
                 </Table>
+                </div>
             }
         </Alert>
     </Column>
@@ -269,13 +262,33 @@
 
     private List<Training> trainings = new List<Training>();
 
-    bool Checked;
+    bool Checked = false;
 
     private string msg = string.Empty;
     private string msgTraining = string.Empty;
 
     private int rowIndex = 0;
 
+    void OnDropTarget(DragEventArgs dragEventArgs)
+    {
+
+        var _files = dragEventArgs.DataTransfer.Files[0];
+        var items = string.Empty;
+
+
+    }
+    void OnDragStart()
+    {
+
+    }
+    void Drag(DragEventArgs e)
+    {
+
+    }
+    void Drop()
+    {
+        
+    }
     protected override async Task OnInitializedAsync()
     {
         trainings = await GetTrainings();
@@ -382,14 +395,49 @@
         }
     }
 
-    async Task OnRememberMeChanged(bool value, Department selected)
+    Task OnRememberDepChanged(Department selected, object value)
     {
         //rowChecked
-        if (Checked)
+        if ((bool)value)
         {
             int _id = selected.DepartmentId;
             var str = selected.Name;
         }
+
+        return Task.CompletedTask;
+    }
+
+    Task OnRememberEmpChanged(Employee emp, object value)
+    {
+        if ((bool)value)
+        {
+
+        }
+        return Task.CompletedTask;
+    }
+
+    Task OnRememberGradeChanged(Grade g, object value){
+        if ((bool)value)
+        {
+
+        }
+        return Task.CompletedTask;
+    }
+
+    Task OnRememberGroupChanged(Group g, object value){
+        if ((bool)value)
+        {
+
+        }
+        return Task.CompletedTask;
+    }
+
+    Task OnRememberJobTitleChanged(JobTitle jt, object value){
+        if ((bool)value)
+        {
+
+        }
+        return Task.CompletedTask;
     }
 
     void ClickedMe(EventArgs e)

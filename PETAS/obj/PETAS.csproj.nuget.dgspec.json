@@ -199,6 +199,10 @@
             "System.Text.Encoding.CodePages": {
               "target": "Package",
               "version": "[7.0.0-preview.1.22076.8, )"
+            },
+            "blazor-dragdrop": {
+              "target": "Package",
+              "version": "[2.4.0, )"
             }
           },
           "imports": [

@@ -5785,8 +5785,12 @@ C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.csproj.CopyComplete
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.dll
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\ref\PETAS.dll
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.pdb
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\icudt.dat
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Xsv6lIg9.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.csproj.AssemblyReference.cache
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.GeneratedMSBuildEditorConfig.editorconfig
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfoInputs.cache
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfo.cs
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.csproj.CoreCompileInputs.cache
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.MvcApplicationPartsAssemblyInfo.cache
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
@@ -5875,6 +5879,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\PETAS.Models.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\PETAS.Models.pdb
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\PETAS.pdb
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Plk.Blazor.DragDrop.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\SecureAccess.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\SecureAccess.pdb
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.AppContext.dll
@@ -6055,6 +6060,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Xml.XPath.XDocument.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\WindowsBase.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Net.ServicePoint.dll.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\mscorlib.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\dotnet.wasm.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.VisualBasic.dll.gz
@@ -6090,6 +6096,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Net.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Web.HttpUtility.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Blazorise.dll.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Metadata.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.ServiceModel.NetTcp.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.Loader.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Diagnostics.Tools.dll.gz
@@ -6103,6 +6110,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Security.SecureString.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Net.Security.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Http.dll.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.ComponentModel.Primitives.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Blazorise.Bootstrap.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Options.dll.gz
@@ -6112,6 +6120,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Security.Cryptography.Encoding.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Security.Cryptography.Primitives.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Abstractions.dll.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.JSInterop.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Collections.Immutable.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Net.Requests.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.ObjectPool.dll.gz
@@ -6137,7 +6146,6 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Linq.Parallel.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Http.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.ServiceModel.Primitives.dll.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Web.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Drawing.Common.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Hosting.Abstractions.dll.gz
@@ -6156,7 +6164,6 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Web.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Net.Primitives.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\ExcelDataReader.dll.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\WindowsBase.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.IdentityModel.Protocols.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Security.Principal.Windows.dll.gz
@@ -6166,8 +6173,10 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\icudt.dat.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Globalization.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Security.Claims.dll.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Plk.Blazor.DragDrop.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Reflection.TypeExtensions.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.IO.FileSystem.Primitives.dll.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.Caching.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Hosting.Abstractions.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Drawing.dll.gz
@@ -6180,7 +6189,6 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.IO.Compression.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.Policy.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Linq.Expressions.dll.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.JSInterop.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Security.Permissions.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Dynamic.Runtime.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.EntityFrameworkCore.Abstractions.dll.gz
@@ -6193,7 +6201,6 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Threading.ThreadPool.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Diagnostics.TraceSource.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Linq.Queryable.dll.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Metadata.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Win32.SystemEvents.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.Extensions.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Windows.Extensions.dll.gz
@@ -6227,7 +6234,6 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.CompilerServices.VisualC.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.CSharp.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.VisualBasic.Core.dll.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Mvc.Core.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Resources.Reader.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Reflection.Primitives.dll.gz
@@ -6267,6 +6273,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Xml.XPath.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.IO.MemoryMappedFiles.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.EntityFrameworkCore.dll.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.IO.Pipelines.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Text.Encodings.Web.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Net.Quic.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Net.WebSockets.Client.dll.gz
@@ -6285,6 +6292,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.IO.Compression.Brotli.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Net.Sockets.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.ValueTuple.dll.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Xml.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Extensions.dll.gz
@@ -6314,17 +6322,16 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.Handles.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Net.NameResolution.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Reflection.DispatchProxy.dll.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.IO.Pipelines.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\dotnet.6.0.1.ykymvr902e.js.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Diagnostics.DiagnosticSource.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Binder.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\System.Data.Common.dll.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.dll.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\Connected Services\SecureAccess\ConnectedService.json
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\PETAS.staticwebassets.runtime.json
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\PETAS.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\ref\PETAS.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\PETAS.pdb
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\Plk.Blazor.DragDrop.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\Blazored.LocalStorage.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\Blazorise.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\Blazorise.Bootstrap.dll
@@ -6580,6 +6587,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\System.Pr
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\dotnet.js
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\dotnet.timezones.blat
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\dotnet.wasm
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\icudt.dat
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\icudt_CJK.dat
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\icudt_EFIGS.dat
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\icudt_no_CJK.dat
@@ -6587,12 +6595,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\PETAS.Mod
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\SecureAccess.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\PETAS.Models.pdb
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\SecureAccess.pdb
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.csproj.AssemblyReference.cache
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.GeneratedMSBuildEditorConfig.editorconfig
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfoInputs.cache
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfo.cs
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.csproj.CoreCompileInputs.cache
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.MvcApplicationPartsAssemblyInfo.cache
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Ga8OckJB.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Rd8p8us8.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\504sucqR.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\9RjxRpa+.gz
@@ -6605,11 +6608,11 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\rjQnFABZ.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\x+nC2oDD.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\cYLMw93u.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Oki8Rstj.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\GuZSgYfz.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\HSK5KH0a.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Fl6lPAdB.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\ZvYlHDBf.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Da3M8NmZ.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\+29czZqg.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\viKzL9k5.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\9+QSv9US.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\yg4tl6kg.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\h5bUXWPm.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\DLUMd7N+.gz
@@ -6617,7 +6620,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Av4cdlo9.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\VrWveknR.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\TLuPIgSm.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\jRx9iolG.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\5K1kkHVe.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\01kqI4CR.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\oMKbaSBX.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\+ttUS1Hh.gz
@@ -6656,7 +6659,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\futonq0Y.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\f4KIgS3D.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\j5uCsZLe.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\HzvHPpt+.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\AXLFhxN9.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\q24zRBMw.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\yF+b7FVJ.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\JvJMAqIZ.gz
@@ -6666,7 +6669,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\dkmjl5LW.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\KAlCUsbJ.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\xg7dTUNs.gz
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\yYdDqwWr.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\TDJfo7j1.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\WZ7lg8n1.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\H++PBUFj.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\MicrVp+D.gz
@@ -6854,6 +6857,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\0M4DrzLf.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Uike9Tjf.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\EpmFD+yh.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\Xsv6lIg9.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\mHYx6U4J.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\sNKY8YaU.gz
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\k5jQeNGu.gz

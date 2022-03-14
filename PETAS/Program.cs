@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using PETAS;
 using PETAS.Services;
 using Microsoft.Extensions.Http;
+using Plk.Blazor.DragDrop;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
@@ -70,6 +71,7 @@ builder.Services.AddScoped<ITrainingService, TrainingService>();
 
 builder.Services.AddScoped<IHRMSService, HRMSService>();
 
+builder.Services.AddBlazorDragDrop();
 
 builder.Services.AddBlazoredLocalStorage();
 
