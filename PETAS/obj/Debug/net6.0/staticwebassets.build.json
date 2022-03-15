@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IuS32/wfGJGWUmLSvzLCX1Hhd4s5CDhAIY7Zzl8cbkw=",
+  "Hash": "CZrl40s8KgF7Lk9r/faZVUyiWUkAsyMj5rwBtlD2WZ8=",
   "Source": "PETAS",
   "BasePath": "PETAS",
   "Mode": "Root",
@@ -1987,6 +1987,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib\\netstandard2.0\\Newtonsoft.Json.dll"
+    },
+    {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\PETAS.Data.dll",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/PETAS.Data.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\bin\\Debug\\net6.0\\PETAS.Data.dll"
+    },
+    {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\PETAS.Data.pdb",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/PETAS.Data.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\bin\\Debug\\net6.0\\PETAS.Data.pdb"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\PETAS.dll",
@@ -7735,6 +7769,23 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Buffers.dll"
     },
     {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\ld+muk+i.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/PETAS.Data.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\PETAS.Data.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\PETAS.Data.dll"
+    },
+    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\LHqQReOL.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -9042,6 +9093,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Compression.Brotli.dll"
+    },
+    {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\VeIge+a8.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/PETAS.Data.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\PETAS.Data.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\PETAS.Data.pdb"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\vF8s1dam.gz",

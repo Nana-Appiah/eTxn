@@ -34,7 +34,7 @@ namespace PETAS.Services
             var employeeData = await obj.GetTraineeList();
 
             //send the data to the api for mail sending
-
+            return true;
         }
     }
 
