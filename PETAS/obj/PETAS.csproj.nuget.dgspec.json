@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Blessings\\Desktop\\e\\PETAS\\PETAS.csproj": {}
+    "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\PETAS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj": {
+    "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj",
+        "projectUniqueName": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj",
         "projectName": "PETAS.Models",
-        "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj",
-        "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\obj\\",
+        "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj",
+        "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
+        "outputPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aonana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,21 +72,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Blessings\\Desktop\\e\\PETAS\\PETAS.csproj": {
+    "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\PETAS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Blessings\\Desktop\\e\\PETAS\\PETAS.csproj",
+        "projectUniqueName": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\PETAS.csproj",
         "projectName": "PETAS",
-        "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS\\PETAS.csproj",
-        "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS\\obj\\",
+        "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\PETAS.csproj",
+        "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
+        "outputPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aonana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,11 +104,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj": {
-                "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj"
+              "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj": {
+                "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj"
               },
-              "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\SecureAccess.csproj": {
-                "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\SecureAccess.csproj"
+              "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\SecureAccess\\SecureAccess.csproj": {
+                "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\SecureAccess\\SecureAccess.csproj"
               }
             }
           }
@@ -207,12 +215,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.1, 6.0.1]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
@@ -221,17 +235,21 @@
         }
       }
     },
-    "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\SecureAccess.csproj": {
+    "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\SecureAccess\\SecureAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\SecureAccess.csproj",
+        "projectUniqueName": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\SecureAccess\\SecureAccess.csproj",
         "projectName": "SecureAccess",
-        "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\SecureAccess.csproj",
-        "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\obj\\",
+        "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\SecureAccess\\SecureAccess.csproj",
+        "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
+        "outputPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\SecureAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aonana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -277,7 +295,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

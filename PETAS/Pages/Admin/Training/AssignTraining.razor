@@ -6,18 +6,8 @@
 <Row>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <Card Background="Background.Success" @onclick="GetAllStaff">
-                    <Tooltip Text="All Staff">
-                    <CardBody>
-                        <CardText>
-                            <div class="d-flex align-items-center justify-content-center"><p><em><h6>All Staff</h6></em></p></div>
-                        </CardText>
-                    </CardBody>
-                    </Tooltip>
-                </Card>
-            </div>
-            <div class="col-md-4">
+            
+            <div class="col-md-3">
                 <Card Background="Background.Danger" @onclick="GetAllDepartments">
                     <Tooltip Text="By Department">
                     <CardBody>
@@ -28,7 +18,7 @@
                     </Tooltip>
                 </Card>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <Card Background="Background.Secondary" @onclick="GetGrades">
                     <Tooltip Text="By Grade">
                     <CardBody>
@@ -39,13 +29,8 @@
                     </Tooltip>
                 </Card>
             </div>
-        
-        </div>
-    </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <Card Background="Background.Info" @onclick="GetGroups">
                     <Tooltip Text="By Group">
                     <CardBody>
@@ -56,7 +41,7 @@
                     </Tooltip>
                 </Card>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <Card Background="Background.Info" @onclick="GetJobTitles">
                     <Tooltip Text="By Job Title">
                     <CardBody>
@@ -67,19 +52,9 @@
                     </Tooltip>
                 </Card>
             </div>
-            <div class="col-md-4">
-                <Card Background="Background.Info">
-                    <Tooltip Text="By Employee ID">
-                    <CardBody>
-                        <CardText>
-                            <div class="d-flex align-items-center justify-content-center"><p><em><h6>By Employee ID</h6></em></p></div>
-                        </CardText>
-                    </CardBody>
-                    </Tooltip>
-                </Card>
-            </div>
         </div>
     </div>
+
 </Row>
 <Divider />
 <Row>
@@ -91,7 +66,7 @@
                 <ListGroup>
                     @foreach(var d in departments)
                     {
-                        <div draggable="true" @ondragstart="@OnDragStart" @ondrag="@Drag" @ondrop="@Drop">
+                        <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, d); }">
                             <ListGroupItem Name="@d.Name">@d.Name</ListGroupItem>
                         </div>
                     }
@@ -99,103 +74,45 @@
             </Alert>
         }
 
-        @if(employees.Count() > 0)
-        {
-            <Alert Color="Color.Primary" Visible="true">
-                <Table Striped="true" Hoverable="true" Bordered="true" Responsive="true">
-                    <TableHeader>
-                        <TableRow>
-                            <TableRowCell>#</TableRowCell>
-                            <TableRowCell>LastName</TableRowCell>
-                            <TableRowCell>Other names</TableRowCell>
-                        </TableRow>
-                    </TableHeader>
-
-                    <TableBody>
-                        @foreach(var e in employees)
-                        {
-                            <TableRow>
-                                <TableRowCell>
-                                    <input type="checkbox" checked=@Checked @onchange="eventArgs => { OnRememberEmpChanged(e, eventArgs.Value); }" />
-                                </TableRowCell>
-                                <TableRowCell>@e.LastName</TableRowCell>
-                                <TableRowCell>@e.FirstName.Trim() @e.OtherNames.Trim()</TableRowCell>
-                            </TableRow>
-                        }
-                    </TableBody>
-                </Table>
-            </Alert>
-        }
-
         @if(grades.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <Table Striped="true" Hoverable="true" Bordered="true" Responsive="true">
-                    <TableHeader>
-                        <TableRow>
-                            <TableHeaderCell>#</TableHeaderCell>
-                            <TableHeaderCell>GradeLetter</TableHeaderCell>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        @foreach(var gd in grades){
-                            <TableRow>
-                                <TableRowCell>
-                                    <input type="checkbox" checked=@Checked @onchange="eventArgs => { OnRememberGradeChanged(gd, eventArgs.Value); }" />
-                                </TableRowCell>
-                                <TableRowCell>@gd.Letter</TableRowCell>
-                            </TableRow>
-                        }
-                    </TableBody>
-                </Table>
+                <ListGroup>
+                    @foreach(var gd in grades)
+                    {
+                        <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, gd); }">
+                            <ListGroupItem Name="@gd.Letter">@gd.Letter</ListGroupItem>
+                        </div>
+                    }
+                </ListGroup>
             </Alert>
         }
 
         @if(groups.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <Table Striped="true" Hoverable="true" Bordered="true" Responsive="true">
-                    <TableHeader>
-                        <TableRow>
-                            <TableHeaderCell>#</TableHeaderCell>
-                            <TableHeaderCell>Group Name</TableHeaderCell>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        @foreach(var gr in groups)
-                        {
-                            <TableRow>
-                                <TableRowCell>
-                                    <input type="checkbox" checked=@Checked @onchange="eventArgs => { OnRememberGroupChanged(gr, eventArgs.Value); }" />
-                                </TableRowCell>
-                                <TableRowCell>@gr.Name</TableRowCell>
-                            </TableRow>
-                        }
-                    </TableBody>
-                </Table>
+                <ListGroup>
+                    @foreach(var gr in groups)
+                    {
+                        <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, gr); }">
+                            <ListGroupItem id="@gr.GroupId" Name="@gr.Name">@gr.Name</ListGroupItem>
+                        </div>
+                    }
+                </ListGroup>
             </Alert>
         }
 
         @if(jobTitles.Count() > 0)
         {
             <Alert Color="Color.Primary" Visible="true">
-                <Table Striped="true" Hoverable="true" Bordered="true" Responsive="true">
-                    <TableHeader>
-                        <TableRow>
-                            <TableHeaderCell></TableHeaderCell>
-                            <TableHeaderCell>Job Title</TableHeaderCell>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        @foreach(var jt in jobTitles)
-                        {
-                            <TableRowCell>
-                                <input type="checkbox" checked=@Checked @onchange="eventArgs => { OnRememberJobTitleChanged(jt, eventArgs.Value); }" />
-                            </TableRowCell>
-                            <TableRowCell>@jt.Name</TableRowCell>
-                        }
-                    </TableBody>
-                </Table>
+                <ListGroup>
+                    @foreach(var jt in jobTitles)
+                    {
+                        <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, jt); }">
+                            <ListGroupItem id="@jt.JobTitleId" Name="@jt.Name">@jt.Name</ListGroupItem>
+                        </div>
+                    }
+                </ListGroup>
             </Alert>
         }
     </Column>
@@ -204,7 +121,6 @@
         <Alert Color="Color.Primary" Visible>
             @if(trainings.Count() > 0)
             {
-                <div ondragover="event.preventDefault()" @ondrop="(e => OnDropTarget(e))">
                 <Table Striped="true" Hoverable="true" Responsive="true">
                     <TableHeader>
                         <TableRow>
@@ -215,24 +131,18 @@
                         </TableRow>
                     </TableHeader>
 
-                    
                     <TableBody>
                         @foreach(var t in trainings)
                         {
-                           
-                           <TableRow>
+                           <TableRow dropzone="move" ondragover="event.preventDefault();" @ondrop="(e => OnDropTarget(e,t))">
                                 <TableRowCell>@t.Id</TableRowCell>
                                 <TableRowCell>@t.TrainingName</TableRowCell>
                                 <TableRowCell>@t.TrainingGroup.GroupName</TableRowCell>
                                 <TableRowCell>@t.TrainingStatus.TrainingTypeStatus</TableRowCell>
-                            </TableRow>
-                           
-                            
+                            </TableRow>  
                         }
                     </TableBody>
-                    
                 </Table>
-                </div>
             }
         </Alert>
     </Column>
@@ -247,9 +157,6 @@
 @code{
     private List<Department> departments = new List<Department>();
     private Department department = new Department();
-
-    private List<Employee> employees = new List<Employee>();
-    private Employee employee = new Employee();
 
     private List<Grade> grades = new List<Grade>();
     private Grade grade = new Grade();
@@ -269,29 +176,62 @@
 
     private int rowIndex = 0;
 
-    void OnDropTarget(DragEventArgs dragEventArgs)
+    private string dragType { get; set; } = string.Empty;
+
+    void OnDropTarget(DragEventArgs ev, object obj)
     {
+        try
+        {
+            var s = dragType;
 
-        var _files = dragEventArgs.DataTransfer.Files[0];
-        var items = string.Empty;
-
-
+            var _files = ev.DataTransfer.Files;
+            var items = string.Empty;
+        }
+        catch(Exception xx)
+        {
+            
+        }
     }
-    void OnDragStart()
+    void OnDragStart(DragEventArgs e, object o)
     {
+        try
+        {
+            e.DataTransfer.EffectAllowed = "move";
+            var type = o.GetType().Name;
 
+            switch (type)
+            {
+                case @"Department":
+                    this.department = (Department) o;
+                    break;
+                case @"Group":
+                    this.group = (Group) o;
+                    break;
+                case @"Grade":
+                    this.grade = (Grade) o; 
+                    break;
+                case "JobTitle":
+                    this.jobTitle = (JobTitle) o;
+                    break;
+            }
+        }
+        catch(Exception x)
+        {
+            
+        }
+        
     }
     void Drag(DragEventArgs e)
     {
 
     }
-    void Drop()
-    {
-        
-    }
+
     protected override async Task OnInitializedAsync()
     {
         trainings = await GetTrainings();
+        //trigger and load departments data first
+        await GetAllDepartments();
+
         await base.OnInitializedAsync();
     }
 
@@ -306,10 +246,13 @@
         {
             departments = await hrms.GetDepartmentsAsync();
             if (departments.Count() > 0){
-                employees.Clear();
+                //employees.Clear();
                 grades.Clear();
                 groups.Clear();
                 jobTitles.Clear();
+
+                dragType = @"Department";
+                StateHasChanged();
             }
         }
         catch(Exception x)
@@ -318,25 +261,28 @@
         }
     }
 
-    private async Task GetAllStaff()
-    {
-        try
-        {
-            employees = await hrms.GetEmployeeAsync();
-            if (employees.Count() > 0)
-            {
-                //clear the other lists and place the employee control in their place
-                departments.Clear();
-                grades.Clear();
-                groups.Clear();
-                jobTitles.Clear();
-            }
-        }
-        catch(Exception x)
-        {
+    //private async Task GetAllStaff()
+    //{
+    //    try
+    //    {
+    //        employees = await hrms.GetEmployeeAsync();
+    //        if (employees.Count() > 0)
+    //        {
+    //            //clear the other lists and place the employee control in their place
+    //            departments.Clear();
+    //            grades.Clear();
+    //            groups.Clear();
+    //            jobTitles.Clear();
 
-        }
-    }
+    //            dragType = @"Employee";
+    //            StateHasChanged();
+    //        }
+    //    }
+    //    catch(Exception x)
+    //    {
+
+    //    }
+    //}
 
     private async Task GetGrades()
     {
@@ -346,9 +292,12 @@
             if (grades.Count() > 0)
             {
                 departments.Clear();
-                employees.Clear();
+                //employees.Clear();
                 groups.Clear();
                 jobTitles.Clear();
+
+                dragType = @"Grade";
+                StateHasChanged();
             }
         }
         catch(Exception x)
@@ -365,9 +314,12 @@
             if (groups.Count() > 0)
             {
                 departments.Clear();
-                employees.Clear();
+                //employees.Clear();
                 grades.Clear();
                 jobTitles.Clear();
+
+                dragType = @"Group";
+                StateHasChanged();
             }
         }
         catch(Exception x)
@@ -384,9 +336,12 @@
             if (jobTitles.Count() > 0)
             {
                 departments.Clear();
-                employees.Clear();
+                //employees.Clear();
                 grades.Clear();
                 groups.Clear();
+
+                dragType = @"JobTitle";
+                StateHasChanged();
             }
         }
         catch(Exception x)
