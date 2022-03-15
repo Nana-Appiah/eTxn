@@ -1,0 +1,95 @@
+﻿@inject ICertificationAwardService certificationService
+
+@if(certificationAwardList == null)
+{
+    <Div Class="spinner">Loading...</Div>
+}
+else
+{
+<Row>
+    <Column ColumnSize="ColumnSize.Is6">
+        <TitleComponent Title="Create Certification" />
+        <Alert Color="Color.Primary" Visible="true">
+            <Fields>
+                <Validation Validator="ValidationRule.IsNotEmpty">
+                    <Field>
+                        <FieldLabel>Certification</FieldLabel>
+                        <Addons>
+                            <Addon AddonType="AddonType.Start">#</Addon>
+                            <Addon AddonType="AddonType.Body">
+                                <TextEdit Placeholder="enter certification name" />
+                            </Addon>
+                            <Addon AddonType="AddonType.Start">#</Addon>
+                        </Addons>
+                    </Field>
+
+                    <Field>
+                        <FieldLabel>Certification Body</FieldLabel>
+                        <Addons>
+                            <Addon AddonType="AddonType.Start">@@</Addon>
+                                <Addon AddonType="AddonType.Body">
+                                    <Autocomplete TItem="CertificationAwarder"
+                                                TValue="int"
+                                                Data="@certificationAwardList"
+                                                TextField="@(( item ) => item.Awarder)"
+                                                ValueField="@(( item ) => item.Id)"
+                                                @bind-SelectedValue="@objCertificationAwarder.Id"
+                                                @bind-SelectedText="@objCertificationAwarder.Awarder"
+                                                Placeholder="Select Training Type"
+                                                Filter="AutocompleteFilter.StartsWith"
+                                                FreeTyping
+                                                CustomFilter="@(( item, searchValue ) => item.Awarder.IndexOf( searchValue, 0, StringComparison.CurrentCultureIgnoreCase ) >= 0 )">
+                                        <NotFoundContent> Sorry... @context was not found! :( </NotFoundContent>
+                                    </Autocomplete>
+                                </Addon>
+                            
+                                <Addon AddonType="AddonType.End">@@</Addon>
+                        </Addons>
+                    </Field>
+
+                    <Field>
+                        <FieldLabel>Certification Year</FieldLabel>
+                        <Addons>
+                            <Addon AddonType="AddonType.Start">#</Addon>
+                            <Addon AddonType="AddonType.Body">
+                                <NumericEdit TValue="int" Min="2022" Max="2023" Placeholder="year of certification" />
+                            </Addon>
+                            <Addon AddonType="AddonType.End">#</Addon>
+                        </Addons>
+                    </Field>
+                </Validation>
+                
+            </Fields>
+        </Alert>
+    </Column>
+    <Column ColumnSize="ColumnSize.Is6">
+        <TitleComponent Title="Create Certification" />
+        <Alert Color="Color.Primary" Visible="true">
+
+        </Alert>
+    </Column>
+</Row>
+}
+
+@code{
+    private IEnumerable<CertificationAwarder> certificationAwardList;
+    private CertificationAwarder objCertificationAwarder;
+
+    protected override async Task OnInitializedAsync()
+    {
+        certificationAwardList = await GetTrainingCertifications();
+        await base.OnInitializedAsync();
+    }
+
+    private async Task<IEnumerable<CertificationAwarder>> GetTrainingCertifications()
+    {
+        try
+        {
+            return await certificationService.GetCertificationAwarders();
+        }
+        catch(Exception x)
+        {
+            throw x;
+        }
+    }
+}

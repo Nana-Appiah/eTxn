@@ -1,2 +1,0 @@
-C:\Users\Blessings\Desktop\today\PANTrainer\PETAS\obj\Release\net6.0\browser-wasm\PubTmp\Out\Connected Services\SecureAccess\ConnectedService.json
-C:\Users\Blessings\Desktop\today\PANTrainer\PETAS\obj\Release\net6.0\browser-wasm\PubTmp\Out\web.config
