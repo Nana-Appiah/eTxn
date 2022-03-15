@@ -1913,6 +1913,21 @@
           }
         }
       },
+      "PETAS.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.1",
+          "PETAS.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PETAS.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PETAS.Data.dll": {}
+        }
+      },
       "PETAS.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3866,6 +3881,21 @@
         },
         "runtime": {
           "lib/netcoreapp3.0/System.Windows.Extensions.dll": {}
+        }
+      },
+      "PETAS.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.1",
+          "PETAS.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PETAS.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PETAS.Data.dll": {}
         }
       },
       "PETAS.Models/1.0.0": {
@@ -8692,6 +8722,11 @@
         "version.txt"
       ]
     },
+    "PETAS.Data/1.0.0": {
+      "type": "project",
+      "path": "../PETAS.Data/PETAS.Data.csproj",
+      "msbuildProject": "../PETAS.Data/PETAS.Data.csproj"
+    },
     "PETAS.Models/1.0.0": {
       "type": "project",
       "path": "../PETAS.Models/PETAS.Models.csproj",
@@ -8719,6 +8754,7 @@
       "Microsoft.EntityFrameworkCore >= 6.0.2",
       "Microsoft.Extensions.Http >= 6.0.2-mauipre.1.22054.8",
       "Newtonsoft.Json >= 13.0.1",
+      "PETAS.Data >= 1.0.0",
       "PETAS.Models >= 1.0.0",
       "SecureAccess >= 1.0.0",
       "System.ServiceModel.Duplex >= 4.8.*",
@@ -8761,6 +8797,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj": {
+              "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj"
+            },
             "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj": {
               "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj"
             },

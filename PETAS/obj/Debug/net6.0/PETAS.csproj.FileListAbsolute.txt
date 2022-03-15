@@ -1,3 +1,4 @@
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\dotnet.wasm
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
@@ -10,7 +11,6 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\DocumentFormat.OpenXml.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\dotnet.6.0.1.ykymvr902e.js
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\dotnet.timezones.blat
-G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\dotnet.wasm
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\ExcelDataReader.DataSet.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\ExcelDataReader.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\icudt.dat

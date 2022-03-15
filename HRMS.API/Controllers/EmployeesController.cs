@@ -27,5 +27,7 @@ namespace HRMS.API.Controllers
         {
             return await config.Employees.Where(x => x.StatusId == 1).ToListAsync();
         }
+
+
     }
 }

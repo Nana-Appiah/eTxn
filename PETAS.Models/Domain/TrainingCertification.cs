@@ -35,8 +35,8 @@ namespace PETAS.Models.Domain
         public int? CertifiedYear { get; set; }
         [Column(TypeName = "date")]
         public DateTime? CreatedDate { get; set; }
-        [Column("CreatedByID")]
-        public int? CreatedById { get; set; }
+        [Column("CreatedBy")]
+        public string CreatedBy { get; set; }
 
         [ForeignKey(nameof(CertificationAwardedId))]
         [InverseProperty(nameof(CertificationAwarder.TrainingCertifications))]

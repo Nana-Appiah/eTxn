@@ -279,7 +279,7 @@ else
     private async Task<List<TrainingCertification>> GetCertifications()
     {
         var data = new List<TrainingCertification>();
-        var result = await _trainCertificationService.GetTrainingCertificatiosAsync();
+        var result = await _trainCertificationService.GetTrainingCertificationsAsync();
         if (result != null)
         {
             for(int i = 0; i < result.Count(); i++)

@@ -27,7 +27,8 @@ namespace PANTrainerAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TrainingCertification>>> GetTrainingCertifications()
         {
-            return await _context.TrainingCertifications.ToListAsync();
+            return await _context.TrainingCertifications
+                                    .Include(c => c.CertificationAwarded).ToListAsync();
         }
 
         //GET: api/TrainingCertifications/id

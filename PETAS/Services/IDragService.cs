@@ -3,12 +3,15 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Diagnostics;
+using PETAS.Classes;
+using PETAS.Models.Domain;
+using PETAS.Data.Data;
 
 namespace PETAS.Services
 {
     public interface IDragService
     {
-        public Task<bool> AssignTrainingAsync();
+        public Task<bool> AssignTrainingAsync(string source, Training t, object _Data);
     }
 
     public class DragService: IDragService
@@ -19,9 +22,19 @@ namespace PETAS.Services
             http = _httpclient;
         }
 
-        public async Task<bool> AssignTrainingAsync()
+        public async Task<bool> AssignTrainingAsync(string source, Training t, object _Data)
         {
-            return true;
+            HRMSContext _context = new HRMSContext();
+            var obj = new DragHelper(_context) { 
+                Source = source,
+                Target = t,
+                Data = _Data
+            };
+
+            var employeeData = await obj.GetTraineeList();
+
+            //send the data to the api for mail sending
+
         }
     }
 
