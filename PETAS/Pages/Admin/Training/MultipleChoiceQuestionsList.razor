@@ -37,34 +37,33 @@ else
          <Row>
             <Column ColumnSize=ColumnSize.Is9>
                 <Alert Color="Color.Light" Visible="true">
-                    <DataGrid TItem="AssessmentQuestionPool" 
-                        Data="@questionPoolData"
-                        @bind-SelectedRow="@que" 
-                        Responsive 
-                        Hoverable = "true"
-                        Striped = "true"
-                        Narrow = "true"
-                        Bordered="true"
-
-                        SelectedRowStyling="@OnSelectedRowStyling"
-                        Virtualize 
-                        VirtualizeOptions="@(new() { DataGridHeight = "500px"})">
-                            <DataGridCommandColumn TItem="AssessmentQuestionPool" />
-                            <DataGridColumn TItem="AssessmentQuestionPool" Field="@nameof(AssessmentQuestionPool.Id)" Caption="ID" Sortable="false" />
-                            <DataGridColumn TItem="AssessmentQuestionPool" Field="@nameof(AssessmentQuestionPool.Question)" Caption="Question" Sortable="false" />
-                    </DataGrid>
+                    <Table Striped="true" Hoverable="true" Responsive="true">
+                        <TableHeader>
+                            <TableRowCell>#</TableRowCell>
+                            <TableRowCell>Question</TableRowCell>
+                        </TableHeader>
+                        <TableBody>
+                            @foreach(var q in questionPoolData)
+                            {
+                                <TableRow>
+                                    <TableRowCell><Check unchecked TValue="int?" @onchange="eventArgs=>{OnQuestionSelected(eventArgs,q);}"></Check></TableRowCell>
+                                    <TableRowCell>@q.Question</TableRowCell>
+                                </TableRow>
+                            }
+                        </TableBody>
+                    </Table>
+                    
                 </Alert>
             </Column>
 
-            <Column ColumnSize=ColumnSize.Is3>
-                @if(que != null)
+            <Column ColumnSize=ColumnSize.Is3>  
+                @if (que != null)
                 {
+
                     Task.Run(async () =>
                     {
                         ob = await oService.GetObjectiveClassAsync(que.Id);  
                     });
-
-                    
 
                     <Alert Visible="true" Color="Color.Primary">
                         <Table Striped="true">
@@ -95,21 +94,20 @@ else
                             </TableRow>
                         </Table>
                     </Alert>
+
                     <Divider />
-                    
-                        @if(ob != null)
-                        {
-                            <Card>
-                                <CardTitle><p>Possible answers for @que.Id.ToString()</p></CardTitle>
-                                <ListGroup Flush="true" Mode="ListGroupMode.Selectable" @bind-SelectedItem="selectedListgroupItem">
-                                    <ListGroupItem>@ob.Cobj1</ListGroupItem>
-                                    <ListGroupItem>@ob.Cobj2</ListGroupItem>
-                                    <ListGroupItem>@ob.Cobj3</ListGroupItem>
-                                    <ListGroupItem>@ob.Cobj4</ListGroupItem>
-                                </ListGroup>
-                            </Card>
-                        }
-                    
+                    @if (ob != null)
+                    {
+                        <Card>
+                            <CardTitle><p>Possible answers for @que.Id.ToString()</p></CardTitle>
+                            <ListGroup Flush="true" Mode="ListGroupMode.Selectable" @bind-SelectedItem="selectedListgroupItem">
+                                <ListGroupItem>@ob.Cobj1</ListGroupItem>
+                                <ListGroupItem>@ob.Cobj2</ListGroupItem>
+                                <ListGroupItem>@ob.Cobj3</ListGroupItem>
+                                <ListGroupItem>@ob.Cobj4</ListGroupItem>
+                            </ListGroup>
+                        </Card>
+                    }
                 }
             </Column>
         </Row>
@@ -121,15 +119,16 @@ else
     private string selectedAutoCompleteText{ get; set; }
     private IEnumerable<AssessmentSubject> subjects { get; set; }
     private List<AssessmentQuestionPool> questionPoolData { get; set; }
-    private AssessmentQuestionPool que{ get; set;}
+    private AssessmentQuestionPool que = null;
     private int valueSelected{ get; set; }
     private List<ObjectiveClass> obList{ get; set; }
-    private ObjectiveClass ob{ get; set; }
+    private ObjectiveClass ob = null;
 
     private const int MCANS_ANS_ID = 1;  //Lookup Id in the question type table
     private string selectedListgroupItem{ get; set;}
     private const string uKey = @"userKey";
 
+    private List<AssessmentQuestionPool> selectedQuestions = new List<AssessmentQuestionPool>();
     protected override async Task OnInitializedAsync()
     {
         try
@@ -186,6 +185,47 @@ else
     private void OnSelectedRowStyling(AssessmentQuestionPool question, DataGridRowStyling styling)
     {
         styling.Background = Background.Success;
+    }
+
+    void OnQuestionSelected(ChangeEventArgs e, AssessmentQuestionPool o)
+    {
+        try
+        {
+            ob = null;
+            que = o;
+            if ((bool) e.Value)
+            {
+                try
+                {
+                    if (selectedQuestions.Count() >= 0)
+                    {
+                        //AssessmentQuestionPool obj = selectedQuestions.Contains(que))
+                        if (!selectedQuestions.Contains(que))
+                        {
+                            selectedQuestions.Add(que);
+                        }
+                    }
+                    else
+                    {
+                        selectedQuestions.Add(que);
+                    }
+                }
+                catch(Exception ee)
+                {
+                    selectedQuestions.Add(que);
+                }
+            }
+
+            if (!(bool)e.Value)
+            {
+                que = o;
+                selectedQuestions.Remove(que);
+            }
+        }
+        catch(Exception x)
+        {
+            
+        }
     }
 
     private async Task ApproveQuestion(){

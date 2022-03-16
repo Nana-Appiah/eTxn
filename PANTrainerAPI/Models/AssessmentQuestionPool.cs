@@ -33,8 +33,14 @@ namespace PANTrainerAPI.Models
         public int? SubjectId { get; set; }
         [Column(TypeName = "date")]
         public DateTime? CreatedDate { get; set; }
-        [Column("CreatedByID")]
-        public int? CreatedById { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string CreatedBy { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? AuthorizedDate { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string AuthorizedBy { get; set; }
 
         [ForeignKey(nameof(QuestionType))]
         [InverseProperty("AssessmentQuestionPools")]

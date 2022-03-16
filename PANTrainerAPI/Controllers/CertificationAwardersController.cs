@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PANTrainerAPI.Data;
+using PETAS.Data.Data;
 //using PANTrainerAPI.Models;
 using PETAS.Models.Domain;
 

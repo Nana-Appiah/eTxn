@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Diagnostics;
 using PETAS.Models.Domain;
+using PETAS.Models.Domain.HRMS;
 
 namespace PETAS.Services
 {
@@ -12,6 +13,7 @@ namespace PETAS.Services
         public Task<List<Training>> GetTrainingsAsync();
 
         public Task<bool> SaveTrainingAsync(Training obj, TrainingType ttype, TrainingGrouping tgroup, TrainingCertification tcert);
+        public Task<string> AssignTrainingAsync(Training training, List<Employee> empList, string user);
     }
 
     public class TrainingService: ITrainingService
@@ -34,6 +36,37 @@ namespace PETAS.Services
         {
             return await http.GetFromJsonAsync<List<Training>>("api/Trainings");
         }
+
+        public async Task<string> AssignTrainingAsync(Training training, List<Employee> empList, string user)
+        {
+            int success = 0;
+            int failed = 0;
+
+            try
+            {
+                if (empList.Count() > 0)
+                {
+                    foreach(var emp in empList)
+                    {
+                        var postBody = new { training, emp, user };
+                        var posted = await http.PostAsJsonAsync("api/Trainings/AssignTrainingToEmployee", postBody);
+                        var status = await posted.Content.ReadFromJsonAsync<bool>();
+                        if (status) 
+                        {
+                            success += 1; 
+                        } else { failed += 1; }
+                    }
+
+                    return $"Total records {(success + failed).ToString()} notified with {failed.ToString()} fails";
+                }
+                else { return @"No data"; }
+            }
+            catch(Exception x)
+            {
+                return @"No data";
+            }
+        }
+
     }
 
 }

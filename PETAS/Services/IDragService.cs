@@ -11,7 +11,8 @@ namespace PETAS.Services
 {
     public interface IDragService
     {
-        public Task<bool> AssignTrainingAsync(string source, Training t, object _Data);
+        public Task<List<Employee>> GetEmployeesForTrainingAsync(string source, Training t, object _Data);
+       
     }
 
     public class DragService: IDragService, IHRMSService
@@ -23,26 +24,12 @@ namespace PETAS.Services
             http = _hrmsclient.http;
         }
 
-        public async Task<bool> AssignTrainingAsync(string source, Training t, object _Data)
+        public async Task<List<Employee>> GetEmployeesForTrainingAsync(string source, Training t, object _Data)
         {
-<<<<<<< HEAD
-            
             var employeeData = await GetTraineeList(_Data);
 
             //get the employee data, persist record and notifiy employees of the training programme
-=======
-            HRMSContext _context = new HRMSContext();
-            var obj = new DragHelper(_context) { 
-                Source = source,
-                Target = t,
-                Data = _Data
-            };
-
-            var employeeData = await obj.GetTraineeList();
-
-            //send the data to the api for mail sending
->>>>>>> 58570de38b21f84fbd50354a8535d031d37fa97a
-            return true;
+            return employeeData;
         }
 
         #region Private Methods

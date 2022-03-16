@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
-using PANTrainerAPI.Data;
+using PETAS.Data.Data;
 using PETAS.Models.Domain;
 
 namespace PANTrainerAPI.Controllers

@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
-//using PANTrainerAPI.Models;
-using PANTrainerAPI.Data;
+using PETAS.Data.Data;
 using Microsoft.EntityFrameworkCore;
 using PETAS.Models.Domain;
 

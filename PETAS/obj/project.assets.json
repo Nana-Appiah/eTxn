@@ -602,10 +602,10 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/6.0.2": {
+      "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.2",
+          "Microsoft.EntityFrameworkCore": "6.0.1",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
         },
         "compile": {
@@ -615,11 +615,11 @@
           "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/6.0.2": {
+      "Microsoft.EntityFrameworkCore.SqlServer/6.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.1.4",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.2"
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.1"
         },
         "compile": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
@@ -1942,19 +1942,6 @@
         "runtime": {
           "bin/placeholder/PETAS.Models.dll": {}
         }
-      },
-      "SecureAccess/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2"
-        },
-        "compile": {
-          "bin/placeholder/SecureAccess.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SecureAccess.dll": {}
-        }
       }
     },
     "net6.0/browser-wasm": {
@@ -2530,10 +2517,10 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/6.0.2": {
+      "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.2",
+          "Microsoft.EntityFrameworkCore": "6.0.1",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
         },
         "compile": {
@@ -2543,11 +2530,11 @@
           "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/6.0.2": {
+      "Microsoft.EntityFrameworkCore.SqlServer/6.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.1.4",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.2"
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.1"
         },
         "compile": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
@@ -3912,19 +3899,6 @@
         "runtime": {
           "bin/placeholder/PETAS.Models.dll": {}
         }
-      },
-      "SecureAccess/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2"
-        },
-        "compile": {
-          "bin/placeholder/SecureAccess.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SecureAccess.dll": {}
-        }
       }
     }
   },
@@ -4815,31 +4789,31 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational/6.0.2": {
-      "sha512": "yZARjY5P+jtCpoAogk5mOfdplATHow5gQugMje6F3cZFPKtF1UtJLGRyxVsNX4hCEWbSq/W+1AbXLCMQ1jOiSw==",
+    "Microsoft.EntityFrameworkCore.Relational/6.0.1": {
+      "sha512": "abaCEEeeB0xlMYDD+m9kmhQh5aipJ5s3UbyQVBfMaZeCiZHXST0eWuJRX63E3e7K/mju5WEHiybV/hizng7q/w==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.relational/6.0.2",
+      "path": "microsoft.entityframeworkcore.relational/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll",
         "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.xml",
-        "microsoft.entityframeworkcore.relational.6.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.6.0.1.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/6.0.2": {
-      "sha512": "ghYelO6ipPSnW06rmj4HDhvOZX1of3tNZoDuc4RUC/yT9vdg24Fq0iamJiQSFYHskePkHvhABdrTVuyxPVGN7w==",
+    "Microsoft.EntityFrameworkCore.SqlServer/6.0.1": {
+      "sha512": "bXmFi9F7GHT0dMUvuT2b5Pf8TtPnU6sQxZ5pvf3UElva+cD0YqsGI5bJGTx21pcMdw3bVhqzCLrpfA/zgHFyMw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlserver/6.0.2",
+      "path": "microsoft.entityframeworkcore.sqlserver/6.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll",
         "lib/net6.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
-        "microsoft.entityframeworkcore.sqlserver.6.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.6.0.1.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
@@ -8731,11 +8705,6 @@
       "type": "project",
       "path": "../PETAS.Models/PETAS.Models.csproj",
       "msbuildProject": "../PETAS.Models/PETAS.Models.csproj"
-    },
-    "SecureAccess/1.0.0": {
-      "type": "project",
-      "path": "../SecureAccess/SecureAccess.csproj",
-      "msbuildProject": "../SecureAccess/SecureAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8756,7 +8725,6 @@
       "Newtonsoft.Json >= 13.0.1",
       "PETAS.Data >= 1.0.0",
       "PETAS.Models >= 1.0.0",
-      "SecureAccess >= 1.0.0",
       "System.ServiceModel.Duplex >= 4.8.*",
       "System.ServiceModel.Http >= 4.8.*",
       "System.ServiceModel.NetTcp >= 4.8.*",
@@ -8766,19 +8734,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Blessings\\.nuget\\packages\\": {}
+    "C:\\Users\\aonana\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Blessings\\Desktop\\e\\PETAS\\PETAS.csproj",
+      "projectUniqueName": "C:\\Users\\aonana\\Desktop\\publish\\PETAS\\PETAS.csproj",
       "projectName": "PETAS",
-      "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS\\PETAS.csproj",
-      "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS\\obj\\",
+      "projectPath": "C:\\Users\\aonana\\Desktop\\publish\\PETAS\\PETAS.csproj",
+      "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aonana\\Desktop\\publish\\PETAS\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aonana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8792,14 +8765,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\PETAS.Data.csproj": {
-              "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\PETAS.Data.csproj"
+            "C:\\Users\\aonana\\Desktop\\publish\\PETAS.Data\\PETAS.Data.csproj": {
+              "projectPath": "C:\\Users\\aonana\\Desktop\\publish\\PETAS.Data\\PETAS.Data.csproj"
             },
-            "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj": {
-              "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj"
-            },
-            "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\SecureAccess.csproj": {
-              "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\SecureAccess.csproj"
+            "C:\\Users\\aonana\\Desktop\\publish\\PETAS.Models\\PETAS.Models.csproj": {
+              "projectPath": "C:\\Users\\aonana\\Desktop\\publish\\PETAS.Models\\PETAS.Models.csproj"
             }
           }
         }
@@ -8906,12 +8876,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+            "version": "[6.0.1, 6.0.1]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

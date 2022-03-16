@@ -35,8 +35,9 @@ namespace PANTrainerAPI.Models
         public int? CertifiedYear { get; set; }
         [Column(TypeName = "date")]
         public DateTime? CreatedDate { get; set; }
-        [Column("CreatedByID")]
-        public int? CreatedById { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string CreatedBy { get; set; }
 
         [ForeignKey(nameof(CertificationAwardedId))]
         [InverseProperty(nameof(CertificationAwarder.TrainingCertifications))]

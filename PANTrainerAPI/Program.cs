@@ -1,4 +1,4 @@
-using PANTrainerAPI.Data;
+using PETAS.Data.Data;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
@@ -31,7 +31,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<PantrainerContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("PanTrainerConn"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PanamString"));
 });
 
 var app = builder.Build();

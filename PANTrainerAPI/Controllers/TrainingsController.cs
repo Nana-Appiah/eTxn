@@ -7,8 +7,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
-using PANTrainerAPI.Data;
+using PETAS.Data.Data;
 using PETAS.Models.Domain;
+using PETAS.Models.Domain.HRMS;
 
 namespace PANTrainerAPI.Controllers
 {
@@ -49,7 +50,6 @@ namespace PANTrainerAPI.Controllers
         }
 
         // PUT: api/Trainings/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTraining(int id, Training training)
         {
@@ -80,7 +80,6 @@ namespace PANTrainerAPI.Controllers
         }
 
         // POST: api/Trainings
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Training>> PostTraining(Training training)
         {
@@ -129,5 +128,36 @@ namespace PANTrainerAPI.Controllers
         {
             return _context.Training.Any(e => e.Id == id);
         }
+    
+        [HttpPost("AssignTrainingToEmployee")]
+        public async Task<bool> AssignTraining(JObject data)
+        {
+            if (data == null)
+            {
+                return false;
+            }
+
+            var objTraining = data["training"].ToObject<Training>();
+            var objEmployee = data["emp"].ToObject<Employee>();
+            var strUser = data["user"].ToString();
+
+            var obj = new AssignedTraining() {
+                EmployeeId = (int?)objEmployee.EmployeeId,
+                FirstName = objEmployee.FirstName,
+                LastName = objEmployee.LastName,
+                EmailAddress = objEmployee.EmailAddress,
+                TrainingId = (int?)objTraining.Id,
+                AssignedBy = strUser,
+                AssignedDate = DateTime.Now,
+                ApprovedBy = strUser,
+                ApprovedDate = DateTime.Now
+            };
+
+            await _context.AssignedTrainings.AddAsync(obj);
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
+
     }
 }

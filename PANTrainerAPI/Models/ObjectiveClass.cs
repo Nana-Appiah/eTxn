@@ -13,29 +13,14 @@ namespace PANTrainerAPI.Models
     {
         [Key]
         public int Id { get; set; }
-        /// <summary>
-        /// the Id of the question
-        /// </summary>
         [Column("QuestionID")]
         public int? QuestionId { get; set; }
-        /// <summary>
-        /// objective 1
-        /// </summary>
         [Column(TypeName = "text")]
         public string Cobj1 { get; set; }
-        /// <summary>
-        /// objective 2
-        /// </summary>
         [Column(TypeName = "text")]
         public string Cobj2 { get; set; }
-        /// <summary>
-        /// objective 3
-        /// </summary>
         [Column(TypeName = "text")]
         public string Cobj3 { get; set; }
-        /// <summary>
-        /// objective 4
-        /// </summary>
         [Column(TypeName = "text")]
         public string Cobj4 { get; set; }
     }

@@ -23,6 +23,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.2",
+          "PETAS.Data": "1.0.0",
           "PETAS.Models": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3",
           "System.Data.SqlClient": "4.8.3",
@@ -2275,6 +2276,16 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "PETAS.Data/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2",
+          "PETAS.Models": "1.0.0"
+        },
+        "runtime": {
+          "PETAS.Data.dll": {}
+        }
+      },
       "PETAS.Models/1.0.0": {
         "dependencies": {
           "ExcelDataReader": "3.7.0-develop00310",
@@ -3517,6 +3528,11 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "PETAS.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "PETAS.Models/1.0.0": {
       "type": "project",

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PANTrainerAPI.Data;
+using PETAS.Data.Data;
 using PETAS.Models.Domain;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;

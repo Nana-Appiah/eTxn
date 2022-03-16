@@ -2,6 +2,12 @@
 @inject IHRMSService hrms
 @inject ITrainingService trainingService
 @inject IDragService dragService
+@inject IMailService mailService
+@inject Blazored.LocalStorage.ILocalStorageService localStore
+@inject INotificationService notify
+@inject IMessageService messageService
+
+@using PETAS.Classes
 
 @*<TitleComponent Title="Click on selection criteria below" />*@
 <Row>
@@ -216,9 +222,18 @@
         try
         {
             //send action to the dragService
-            var bln = await dragService.AssignTrainingAsync(dragType, (Training)objT, DraggedObject);
-            if (bln)
+            var emps = await dragService.GetEmployeesForTrainingAsync(dragType, (Training)objT, DraggedObject);
+            if (emps.Count() > 0)
             {
+                //save data to the data store and push email alerts to all of them
+                var usr = await localStore.GetItemAsync<string>(Storage.userKey);
+                var respCode = await trainingService.AssignTrainingAsync((Training)objT, emps,usr);
+                if (respCode.Length > 0)
+                {
+                    await mailService.SendMailNotification(emps, (Training)objT);
+                    //notify.Warning(respCode, @"Status");
+                    messageService.Info(respCode,@"Status");
+                }
                 StateHasChanged();
             }
         }

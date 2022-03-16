@@ -16,9 +16,6 @@ namespace PANTrainerAPI.Models
             TrainingGroupings = new HashSet<TrainingGrouping>();
         }
 
-        /// <summary>
-        /// primary key of the table
-        /// </summary>
         [Key]
         public int Id { get; set; }
         /// <summary>

@@ -21,6 +21,7 @@ namespace PETAS.Data.Data
 
         public virtual DbSet<AssessmentQuestionPool> AssessmentQuestionPools { get; set; }
         public virtual DbSet<AssessmentSubject> AssessmentSubjects { get; set; }
+        public virtual DbSet<AssignedTraining> AssignedTrainings { get; set; }
         public virtual DbSet<CertificationAwarder> CertificationAwarders { get; set; }
         public virtual DbSet<ObjectiveClass> ObjectiveClasses { get; set; }
         public virtual DbSet<Qalloted> Qalloteds { get; set; }
@@ -28,6 +29,9 @@ namespace PETAS.Data.Data
         public virtual DbSet<StaffQuestionAssessment> StaffQuestionAssessments { get; set; }
         public virtual DbSet<Training> Training { get; set; }
         public virtual DbSet<TrainingAssessment> TrainingAssessments { get; set; }
+        public virtual DbSet<TrainingCertification> TrainingCertifications { get; set; }
+        public virtual DbSet<TrainingDomain> TrainingDomains { get; set; }
+        public virtual DbSet<TrainingGrouping> TrainingGroupings { get; set; }
         public virtual DbSet<TrainingResource> TrainingResources { get; set; }
         public virtual DbSet<TrainingResourceType> TrainingResourceTypes { get; set; }
         public virtual DbSet<TrainingStatusType> TrainingStatusTypes { get; set; }
@@ -56,9 +60,19 @@ namespace PETAS.Data.Data
                     .HasConstraintName("FK_AssessmentQuestionPool_AssessmentSubject");
             });
 
-            modelBuilder.Entity<AssessmentSubject>(entity =>
+            modelBuilder.Entity<AssignedTraining>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.AssignedTrainingId).HasComment("the Id for the table entity");
+
+                entity.Property(e => e.ApprovedBy).HasComment("the one doing the approval of the training");
+
+                entity.Property(e => e.ApprovedDate).HasComment("the date of approval");
+
+                entity.Property(e => e.AssignedBy).HasComment("the one doing the assignment");
+
+                entity.Property(e => e.AssignedDate).HasComment("the assigned date");
+
+                entity.Property(e => e.TrainingId).HasComment("the ID of the scheduled training");
             });
 
             modelBuilder.Entity<CertificationAwarder>(entity =>
@@ -66,19 +80,6 @@ namespace PETAS.Data.Data
                 entity.Property(e => e.Id).HasComment("the Id of the awarder");
 
                 entity.Property(e => e.Awarder).HasComment("the name of the awarder");
-            });
-
-            modelBuilder.Entity<ObjectiveClass>(entity =>
-            {
-                entity.Property(e => e.Cobj1).HasComment("objective 1");
-
-                entity.Property(e => e.Cobj2).HasComment("objective 2");
-
-                entity.Property(e => e.Cobj3).HasComment("objective 3");
-
-                entity.Property(e => e.Cobj4).HasComment("objective 4");
-
-                entity.Property(e => e.QuestionId).HasComment("the Id of the question");
             });
 
             modelBuilder.Entity<Qalloted>(entity =>
@@ -148,6 +149,16 @@ namespace PETAS.Data.Data
 
                 entity.Property(e => e.TrainingType).HasComment("foreign key to dbo.TrainingType");
 
+                entity.HasOne(d => d.TrainingCertification)
+                    .WithMany(p => p.Training)
+                    .HasForeignKey(d => d.TrainingCertificationId)
+                    .HasConstraintName("FK_Training_TrainingCertification");
+
+                entity.HasOne(d => d.TrainingGroup)
+                    .WithMany(p => p.Training)
+                    .HasForeignKey(d => d.TrainingGroupId)
+                    .HasConstraintName("FK_Training_TrainingGrouping");
+
                 entity.HasOne(d => d.TrainingStatus)
                     .WithMany(p => p.Training)
                     .HasForeignKey(d => d.TrainingStatusId)
@@ -183,11 +194,48 @@ namespace PETAS.Data.Data
                     .HasConstraintName("FK_TrainingAssessment_Training");
             });
 
+            modelBuilder.Entity<TrainingCertification>(entity =>
+            {
+                entity.Property(e => e.CertificationAwardedId).HasComment("the Id of the institution AWARDING the certificate");
+
+                entity.Property(e => e.CertificationName).HasComment("the name of the certification");
+
+                entity.Property(e => e.CertifiedYear).HasComment("year of certification");
+
+                entity.HasOne(d => d.CertificationAwarded)
+                    .WithMany(p => p.TrainingCertifications)
+                    .HasForeignKey(d => d.CertificationAwardedId)
+                    .HasConstraintName("FK_TrainingCertification_CertificationAwarder");
+            });
+
+            modelBuilder.Entity<TrainingDomain>(entity =>
+            {
+                entity.Property(e => e.DomainDescription).HasComment("the description of the domain");
+
+                entity.Property(e => e.DomainName).HasComment("the name of the domain");
+            });
+
+            modelBuilder.Entity<TrainingGrouping>(entity =>
+            {
+                entity.Property(e => e.Id).HasComment("primary key");
+
+                entity.Property(e => e.CreatedById).HasComment("the user creating the group");
+
+                entity.Property(e => e.CreatedDate).HasComment("the date group was created");
+
+                entity.Property(e => e.GroupDescription).HasComment("description of the group");
+
+                entity.Property(e => e.GroupName).HasComment("name of group");
+
+                entity.HasOne(d => d.Domain)
+                    .WithMany(p => p.TrainingGroupings)
+                    .HasForeignKey(d => d.DomainId)
+                    .HasConstraintName("FK_TrainingGrouping_TrainingDomain");
+            });
+
             modelBuilder.Entity<TrainingResource>(entity =>
             {
-                entity.Property(e => e.EmbeddedResource)
-                    .IsFixedLength()
-                    .HasComment("holds the resource if it happens to be embedded");
+                entity.Property(e => e.EmbeddedResource).HasComment("holds the resource if it happens to be embedded");
 
                 entity.Property(e => e.IsEmbedded).HasComment("flag determining if the resource is embedded in the database or not");
 

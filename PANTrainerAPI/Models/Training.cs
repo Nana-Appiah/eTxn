@@ -68,19 +68,22 @@ namespace PANTrainerAPI.Models
         /// <summary>
         /// the name of the inputter creating the training
         /// </summary>
-        [Column("CreatedByID")]
-        public int? CreatedById { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string CreatedBy { get; set; }
         /// <summary>
         /// the name of the authorizer approving the training
         /// </summary>
         [Column(TypeName = "date")]
         public DateTime? AuthorizedDate { get; set; }
-        [Column("AuthorizedByID")]
-        public int? AuthorizedById { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string AuthorizedBy { get; set; }
         [Column(TypeName = "date")]
         public DateTime? LastUpdatedDate { get; set; }
-        [Column("LastUpdatedByID")]
-        public int? LastUpdatedById { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string LastUpdatedBy { get; set; }
 
         [ForeignKey(nameof(TrainingCertificationId))]
         [InverseProperty("Training")]

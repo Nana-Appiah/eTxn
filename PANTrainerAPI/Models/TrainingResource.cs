@@ -42,12 +42,17 @@ namespace PANTrainerAPI.Models
         /// <summary>
         /// holds the resource if it happens to be embedded
         /// </summary>
-        [MaxLength(50)]
         public byte[] EmbeddedResource { get; set; }
         [Column(TypeName = "date")]
         public DateTime? CreatedDate { get; set; }
-        [Column("CreatedByID")]
-        public int? CreatedById { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string CreatedBy { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? AuthorizedDate { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string AuthorizedBy { get; set; }
 
         [ForeignKey(nameof(TrainingId))]
         [InverseProperty("TrainingResources")]

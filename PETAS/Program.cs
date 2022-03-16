@@ -48,7 +48,17 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(baseAPIA
 builder.Services.AddHttpClient<HRMSClient>(client =>
 {
     client.BaseAddress = new Uri(builder.Configuration["HRMSApiUrl"].ToString());
-    //client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+    client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+});
+
+//adding a mail notification API Service
+builder.Services.AddHttpClient<MailClient>(mclient =>
+{
+    mclient.BaseAddress = new Uri(builder.Configuration["MailClientApiUrl"].ToString());
+    mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[POST]");
+    mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[GET]");
+    mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[PUT]");
+    mclient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 });
 
 //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
@@ -71,6 +81,7 @@ builder.Services.AddScoped<ITrainingService, TrainingService>();
 
 builder.Services.AddScoped<IHRMSService, HRMSService>();
 builder.Services.AddScoped<IDragService, DragService>();
+builder.Services.AddScoped<IMailService, MailService>();
 
 builder.Services.AddBlazorDragDrop();
 

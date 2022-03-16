@@ -2,6 +2,27 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "ExcelDataReader/3.7.0-develop00310": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ExcelDataReader.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExcelDataReader.dll": {}
+        }
+      },
+      "ExcelDataReader.DataSet/3.7.0-develop00310": {
+        "type": "package",
+        "dependencies": {
+          "ExcelDataReader": "3.7.0-develop00310"
+        },
+        "compile": {
+          "lib/netstandard2.0/ExcelDataReader.DataSet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ExcelDataReader.DataSet.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -594,10 +615,68 @@
             "rid": "win"
           }
         }
+      },
+      "PETAS.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ExcelDataReader": "3.7.0-develop00310",
+          "ExcelDataReader.DataSet": "3.7.0-develop00310",
+          "Microsoft.EntityFrameworkCore": "6.0.1"
+        },
+        "compile": {
+          "bin/placeholder/PETAS.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PETAS.Models.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "ExcelDataReader/3.7.0-develop00310": {
+      "sha512": "ox77cjWP8h1z0cH1VR/hsvGYHng/9o6uxaE/Ui14xphEUU1Ovluipcn7gJE5ZmXSBCzT2x6c2OTBwyMBk+ysDw==",
+      "type": "package",
+      "path": "exceldatareader/3.7.0-develop00310",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "exceldatareader.3.7.0-develop00310.nupkg.sha512",
+        "exceldatareader.nuspec",
+        "lib/net20/ExcelDataReader.dll",
+        "lib/net20/ExcelDataReader.pdb",
+        "lib/net20/ExcelDataReader.xml",
+        "lib/net45/ExcelDataReader.dll",
+        "lib/net45/ExcelDataReader.pdb",
+        "lib/net45/ExcelDataReader.xml",
+        "lib/netstandard1.3/ExcelDataReader.dll",
+        "lib/netstandard1.3/ExcelDataReader.pdb",
+        "lib/netstandard1.3/ExcelDataReader.xml",
+        "lib/netstandard2.0/ExcelDataReader.dll",
+        "lib/netstandard2.0/ExcelDataReader.pdb",
+        "lib/netstandard2.0/ExcelDataReader.xml"
+      ]
+    },
+    "ExcelDataReader.DataSet/3.7.0-develop00310": {
+      "sha512": "FaHmT/X9naMmfVT64Kis7kJQYnD8swrsPFRCHVtqIghVOFkjU7OuAVme+UVXxkZePmJw+ZJ0Zn6v+IXUDweckQ==",
+      "type": "package",
+      "path": "exceldatareader.dataset/3.7.0-develop00310",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "exceldatareader.dataset.3.7.0-develop00310.nupkg.sha512",
+        "exceldatareader.dataset.nuspec",
+        "lib/net20/ExcelDataReader.DataSet.dll",
+        "lib/net20/ExcelDataReader.DataSet.pdb",
+        "lib/net20/ExcelDataReader.DataSet.xml",
+        "lib/net35/ExcelDataReader.DataSet.dll",
+        "lib/net35/ExcelDataReader.DataSet.pdb",
+        "lib/net35/ExcelDataReader.DataSet.xml",
+        "lib/netstandard2.0/ExcelDataReader.DataSet.dll",
+        "lib/netstandard2.0/ExcelDataReader.DataSet.pdb",
+        "lib/netstandard2.0/ExcelDataReader.DataSet.xml"
+      ]
+    },
     "Microsoft.CSharp/4.5.0": {
       "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
@@ -1758,27 +1837,38 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "PETAS.Models/1.0.0": {
+      "type": "project",
+      "path": "../PETAS.Models/PETAS.Models.csproj",
+      "msbuildProject": "../PETAS.Models/PETAS.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.2"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.2",
+      "PETAS.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Blessings\\.nuget\\packages\\": {}
+    "C:\\Users\\aonana\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\SecureAccess.csproj",
+      "projectUniqueName": "C:\\Users\\aonana\\Desktop\\publish\\SecureAccess\\SecureAccess.csproj",
       "projectName": "SecureAccess",
-      "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\SecureAccess.csproj",
-      "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Blessings\\Desktop\\e\\SecureAccess\\obj\\",
+      "projectPath": "C:\\Users\\aonana\\Desktop\\publish\\SecureAccess\\SecureAccess.csproj",
+      "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\aonana\\Desktop\\publish\\SecureAccess\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aonana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1791,7 +1881,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\aonana\\Desktop\\publish\\PETAS.Models\\PETAS.Models.csproj": {
+              "projectPath": "C:\\Users\\aonana\\Desktop\\publish\\PETAS.Models\\PETAS.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1824,7 +1918,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

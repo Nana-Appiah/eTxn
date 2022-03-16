@@ -55,3 +55,14 @@ C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\SecureAccess.csproj.C
 C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\SecureAccess.dll
 C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\ref\SecureAccess.dll
 C:\Users\Blessings\Desktop\e\SecureAccess\obj\Debug\net6.0\SecureAccess.pdb
+C:\Users\aonana\Desktop\publish\SecureAccess\bin\Debug\net6.0\SecureAccess.deps.json
+C:\Users\aonana\Desktop\publish\SecureAccess\bin\Debug\net6.0\SecureAccess.dll
+C:\Users\aonana\Desktop\publish\SecureAccess\bin\Debug\net6.0\ref\SecureAccess.dll
+C:\Users\aonana\Desktop\publish\SecureAccess\bin\Debug\net6.0\SecureAccess.pdb
+C:\Users\aonana\Desktop\publish\SecureAccess\obj\Debug\net6.0\SecureAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aonana\Desktop\publish\SecureAccess\obj\Debug\net6.0\SecureAccess.AssemblyInfoInputs.cache
+C:\Users\aonana\Desktop\publish\SecureAccess\obj\Debug\net6.0\SecureAccess.AssemblyInfo.cs
+C:\Users\aonana\Desktop\publish\SecureAccess\obj\Debug\net6.0\SecureAccess.csproj.CoreCompileInputs.cache
+C:\Users\aonana\Desktop\publish\SecureAccess\obj\Debug\net6.0\SecureAccess.dll
+C:\Users\aonana\Desktop\publish\SecureAccess\obj\Debug\net6.0\ref\SecureAccess.dll
+C:\Users\aonana\Desktop\publish\SecureAccess\obj\Debug\net6.0\SecureAccess.pdb

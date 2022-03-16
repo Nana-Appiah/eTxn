@@ -53,10 +53,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PETAS.Data\PETAS.Data.csproj" />
     <ProjectReference Include="..\PETAS.Models\PETAS.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
 

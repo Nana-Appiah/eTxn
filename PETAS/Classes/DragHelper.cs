@@ -121,7 +121,7 @@ namespace PETAS.Classes
                 {
                     try
                     {
-                        var res = await config.Employees.Where(x => x.GroupId == obj.Id).ToListAsync();
+                        var res = await config.Employees.Where(x => x.GroupId == obj.GroupId).ToListAsync();
 
                         if (res.Count() > 0)
                         {
