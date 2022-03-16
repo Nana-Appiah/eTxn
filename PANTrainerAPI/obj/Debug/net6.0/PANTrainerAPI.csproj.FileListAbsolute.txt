@@ -2252,3 +2252,5 @@ C:\Users\aonana\Desktop\publish\PANTrainerAPI\obj\Debug\net6.0\PANTrainerAPI.dll
 C:\Users\aonana\Desktop\publish\PANTrainerAPI\obj\Debug\net6.0\ref\PANTrainerAPI.dll
 C:\Users\aonana\Desktop\publish\PANTrainerAPI\obj\Debug\net6.0\PANTrainerAPI.pdb
 C:\Users\aonana\Desktop\publish\PANTrainerAPI\obj\Debug\net6.0\PANTrainerAPI.genruntimeconfig.cache
+C:\Users\Blessings\Desktop\e\PANTrainerAPI\bin\Debug\net6.0\PETAS.Data.dll
+C:\Users\Blessings\Desktop\e\PANTrainerAPI\bin\Debug\net6.0\PETAS.Data.pdb

@@ -31,7 +31,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<PantrainerContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("PanamString"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PanTrainerConn"));
 });
 
 var app = builder.Build();
