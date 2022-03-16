@@ -1087,6 +1087,7 @@ G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.csp
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\ref\PETAS.dll
 G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\PETAS.pdb
+<<<<<<< HEAD
 C:\Users\Blessings\Desktop\e\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 C:\Users\Blessings\Desktop\e\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\Blessings\Desktop\e\PETAS\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
@@ -2184,3 +2185,13 @@ C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.csproj.CopyComplete
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.dll
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\ref\PETAS.dll
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.pdb
+=======
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\PETAS.Data.dll
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\PETAS.Data.pdb
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\PETAS.Data.dll.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\wwwroot\_framework\PETAS.Data.pdb.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\PETAS.Data.dll
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\bin\Debug\net6.0\PETAS.Data.pdb
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\ld+muk+i.gz
+G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\PETAS\obj\Debug\net6.0\build-gz\VeIge+a8.gz
+>>>>>>> 58570de38b21f84fbd50354a8535d031d37fa97a
