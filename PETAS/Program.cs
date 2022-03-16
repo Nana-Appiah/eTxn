@@ -70,6 +70,7 @@ builder.Services.AddScoped<ITrainingTypeService, TrainingTypeService>();
 builder.Services.AddScoped<ITrainingService, TrainingService>();
 
 builder.Services.AddScoped<IHRMSService, HRMSService>();
+builder.Services.AddScoped<IDragService, DragService>();
 
 builder.Services.AddBlazorDragDrop();
 

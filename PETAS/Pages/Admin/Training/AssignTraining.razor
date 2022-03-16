@@ -1,6 +1,7 @@
 ﻿@page "/admin/training/assigntraining"
 @inject IHRMSService hrms
 @inject ITrainingService trainingService
+@inject IDragService dragService
 
 @*<TitleComponent Title="Click on selection criteria below" />*@
 <Row>
@@ -177,29 +178,17 @@
     private int rowIndex = 0;
 
     private string dragType { get; set; } = string.Empty;
+    private object DraggedObject {get;set;}
 
-    void OnDropTarget(DragEventArgs ev, object obj)
-    {
-        try
-        {
-            var s = dragType;
-
-            var _files = ev.DataTransfer.Files;
-            var items = string.Empty;
-        }
-        catch(Exception xx)
-        {
-            
-        }
-    }
     void OnDragStart(DragEventArgs e, object o)
     {
         try
         {
             e.DataTransfer.EffectAllowed = "move";
-            var type = o.GetType().Name;
+            dragType = o.GetType().Name;
+            this.DraggedObject = o;
 
-            switch (type)
+            switch (dragType)
             {
                 case @"Department":
                     this.department = (Department) o;
@@ -217,13 +206,26 @@
         }
         catch(Exception x)
         {
+
+        }
+
+    }
+
+    async Task OnDropTarget(DragEventArgs ev, object objT)
+    {
+        try
+        {
+            //send action to the dragService
+            var bln = await dragService.AssignTrainingAsync(dragType, (Training)objT, DraggedObject);
+            if (bln)
+            {
+                StateHasChanged();
+            }
+        }
+        catch(Exception xx)
+        {
             
         }
-        
-    }
-    void Drag(DragEventArgs e)
-    {
-
     }
 
     protected override async Task OnInitializedAsync()
