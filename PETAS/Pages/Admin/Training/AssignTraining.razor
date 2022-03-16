@@ -10,6 +10,7 @@
 @using PETAS.Classes
 
 @*<TitleComponent Title="Click on selection criteria below" />*@
+
 <Row>
     <div class="container">
         <div class="row">
@@ -64,101 +65,108 @@
 
 </Row>
 <Divider />
-<Row>
-    <Column ColumnSize="ColumnSize.Is4">
-        <TitleComponent Title="Criteria" />
-        @if(departments.Count() > 0)
-        {
-            <Alert Color="Color.Primary" Visible="true">
-                <ListGroup>
-                    @foreach(var d in departments)
-                    {
-                        <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, d); }">
-                            <ListGroupItem Name="@d.Name">@d.Name</ListGroupItem>
-                        </div>
-                    }
-                </ListGroup>
-            </Alert>
-        }
-
-        @if(grades.Count() > 0)
-        {
-            <Alert Color="Color.Primary" Visible="true">
-                <ListGroup>
-                    @foreach(var gd in grades)
-                    {
-                        <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, gd); }">
-                            <ListGroupItem Name="@gd.Letter">@gd.Letter</ListGroupItem>
-                        </div>
-                    }
-                </ListGroup>
-            </Alert>
-        }
-
-        @if(groups.Count() > 0)
-        {
-            <Alert Color="Color.Primary" Visible="true">
-                <ListGroup>
-                    @foreach(var gr in groups)
-                    {
-                        <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, gr); }">
-                            <ListGroupItem id="@gr.GroupId" Name="@gr.Name">@gr.Name</ListGroupItem>
-                        </div>
-                    }
-                </ListGroup>
-            </Alert>
-        }
-
-        @if(jobTitles.Count() > 0)
-        {
-            <Alert Color="Color.Primary" Visible="true">
-                <ListGroup>
-                    @foreach(var jt in jobTitles)
-                    {
-                        <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, jt); }">
-                            <ListGroupItem id="@jt.JobTitleId" Name="@jt.Name">@jt.Name</ListGroupItem>
-                        </div>
-                    }
-                </ListGroup>
-            </Alert>
-        }
-    </Column>
-    <Column ColumnSize="ColumnSize.Is6">
-        <TitleComponent Title="Open Trainings" />
-        <Alert Color="Color.Primary" Visible>
-            @if(trainings.Count() > 0)
+@if((departments == null) || (trainings == null))
+{
+    <div class="spinner">Loading...</div>
+}
+else
+{
+    <Row>
+        <Column ColumnSize="ColumnSize.Is4">
+            <TitleComponent Title="Criteria" />
+            @if(departments.Count() > 0)
             {
-                <Table Striped="true" Hoverable="true" Responsive="true">
-                    <TableHeader>
-                        <TableRow>
-                            <TableHeaderCell>#</TableHeaderCell>
-                            <TableHeaderCell>Name</TableHeaderCell>
-                            <TableHeaderCell>Grouping</TableHeaderCell>
-                            <TableHeaderCell>Status</TableHeaderCell>
-                        </TableRow>
-                    </TableHeader>
-
-                    <TableBody>
-                        @foreach(var t in trainings)
+                <Alert Color="Color.Primary" Visible="true">
+                    <ListGroup>
+                        @foreach(var d in departments)
                         {
-                           <TableRow dropzone="move" ondragover="event.preventDefault();" @ondrop="(e => OnDropTarget(e,t))">
-                                <TableRowCell>@t.Id</TableRowCell>
-                                <TableRowCell>@t.TrainingName</TableRowCell>
-                                <TableRowCell>@t.TrainingGroup.GroupName</TableRowCell>
-                                <TableRowCell>@t.TrainingStatus.TrainingTypeStatus</TableRowCell>
-                            </TableRow>  
+                            <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, d); }">
+                                <ListGroupItem Name="@d.Name">@d.Name</ListGroupItem>
+                            </div>
                         }
-                    </TableBody>
-                </Table>
+                    </ListGroup>
+                </Alert>
             }
-        </Alert>
-    </Column>
-    <Column ColumnSize="ColumnSize.Is2">
-        <Alert Color="Color.Primary" Visible>
-            Is3
-        </Alert>
-    </Column>
-</Row>
+
+            @if(grades.Count() > 0)
+            {
+                <Alert Color="Color.Primary" Visible="true">
+                    <ListGroup>
+                        @foreach(var gd in grades)
+                        {
+                            <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, gd); }">
+                                <ListGroupItem Name="@gd.Letter">@gd.Letter</ListGroupItem>
+                            </div>
+                        }
+                    </ListGroup>
+                </Alert>
+            }
+
+            @if(groups.Count() > 0)
+            {
+                <Alert Color="Color.Primary" Visible="true">
+                    <ListGroup>
+                        @foreach(var gr in groups)
+                        {
+                            <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, gr); }">
+                                <ListGroupItem id="@gr.GroupId" Name="@gr.Name">@gr.Name</ListGroupItem>
+                            </div>
+                        }
+                    </ListGroup>
+                </Alert>
+            }
+
+            @if(jobTitles.Count() > 0)
+            {
+                <Alert Color="Color.Primary" Visible="true">
+                    <ListGroup>
+                        @foreach(var jt in jobTitles)
+                        {
+                            <div draggable="true" @ondragstart="eventArgs => { OnDragStart(eventArgs, jt); }">
+                                <ListGroupItem id="@jt.JobTitleId" Name="@jt.Name">@jt.Name</ListGroupItem>
+                            </div>
+                        }
+                    </ListGroup>
+                </Alert>
+            }
+        </Column>
+        <Column ColumnSize="ColumnSize.Is6">
+            <TitleComponent Title="Open Trainings" />
+            <Alert Color="Color.Primary" Visible>
+                @if(trainings.Count() > 0)
+                {
+                    <Table Striped="true" Hoverable="true" Responsive="true">
+                        <TableHeader>
+                            <TableRow>
+                                <TableHeaderCell>#</TableHeaderCell>
+                                <TableHeaderCell>Name</TableHeaderCell>
+                                <TableHeaderCell>Grouping</TableHeaderCell>
+                                <TableHeaderCell>Status</TableHeaderCell>
+                            </TableRow>
+                        </TableHeader>
+
+                        <TableBody>
+                            @foreach(var t in trainings)
+                            {
+                               <TableRow dropzone="move" ondragover="event.preventDefault();" @ondrop="(e => OnDropTarget(e,t))">
+                                    <TableRowCell>@t.Id</TableRowCell>
+                                    <TableRowCell>@t.TrainingName</TableRowCell>
+                                    <TableRowCell>@t.TrainingGroup.GroupName</TableRowCell>
+                                    <TableRowCell>@t.TrainingStatus.TrainingTypeStatus</TableRowCell>
+                                </TableRow>  
+                            }
+                        </TableBody>
+                    </Table>
+                }
+            </Alert>
+        </Column>
+        <Column ColumnSize="ColumnSize.Is2">
+            <Alert Color="Color.Primary" Visible>
+                Is3
+            </Alert>
+        </Column>
+    </Row>
+}
 
 
 @code{

@@ -8,9 +8,17 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HRMS.API
 build_property.RootNamespace = HRMS.API
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Blessings\Desktop\e\HRMS.API\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\Blessings\Desktop\e\HRMS.API
+=======
+build_property.ProjectDir = G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\HRMS.API\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = G:\Dev_Repository\Projects\Nana\Apps\PANTrainer\HRMS.API
+>>>>>>> 2c4d6cf567d3218e58d2c40e3e8815465e59e9d1
 build_property._RazorSourceGeneratorDebug = 

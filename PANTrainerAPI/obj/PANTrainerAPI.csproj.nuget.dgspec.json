@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Blessings\\Desktop\\e\\PANTrainerAPI\\PANTrainerAPI.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PANTrainerAPI\\PANTrainerAPI.csproj",
         "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Blessings\\Desktop\\e\\PANTrainerAPI\\obj\\",
+=======
+    "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PANTrainerAPI\\PANTrainerAPI.csproj": {}
+  },
+  "projects": {
+    "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PANTrainerAPI\\PANTrainerAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PANTrainerAPI\\PANTrainerAPI.csproj",
+        "projectName": "PANTrainerAPI",
+        "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PANTrainerAPI\\PANTrainerAPI.csproj",
+        "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
+        "outputPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PANTrainerAPI\\obj\\",
+>>>>>>> 2c4d6cf567d3218e58d2c40e3e8815465e59e9d1
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +42,19 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\PETAS.Data.csproj": {
                 "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\PETAS.Data.csproj"
               },
               "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj": {
                 "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj"
+=======
+              "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj": {
+                "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj"
+              },
+              "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj": {
+                "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj"
+>>>>>>> 2c4d6cf567d3218e58d2c40e3e8815465e59e9d1
               }
             }
           }
@@ -146,6 +168,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\PETAS.Data.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -154,6 +177,16 @@
         "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\PETAS.Data.csproj",
         "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\obj\\",
+=======
+    "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj",
+        "projectName": "PETAS.Data",
+        "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj",
+        "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
+        "outputPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\obj\\",
+>>>>>>> 2c4d6cf567d3218e58d2c40e3e8815465e59e9d1
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -170,8 +203,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj": {
                 "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj"
+=======
+              "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj": {
+                "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj"
+>>>>>>> 2c4d6cf567d3218e58d2c40e3e8815465e59e9d1
               }
             }
           }
@@ -214,6 +252,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -222,6 +261,16 @@
         "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj",
         "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\obj\\",
+=======
+    "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj",
+        "projectName": "PETAS.Models",
+        "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj",
+        "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
+        "outputPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\obj\\",
+>>>>>>> 2c4d6cf567d3218e58d2c40e3e8815465e59e9d1
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
