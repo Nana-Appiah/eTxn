@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qJD4gKUZ3LO/x7fgr8XkUUIGdrNPsPhBYUEBBqLb2TcaROM6tOPBcEmPb9v/NbO6ACdw9JV5n5lB0l9hUl/cwQ==",
+  "dgSpecHash": "4vx8rgDXBpgk9URApHt/M/plr0nuqSlT0C3cRNtBr9RUOspWdWJszEi7evZO0h9UK0dqXnTXXoOT2q3K+mLI/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aonana\\Desktop\\publish\\PETAS.Models\\PETAS.Models.csproj",
+  "projectFilePath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aonana\\.nuget\\packages\\exceldatareader\\3.7.0-develop00310\\exceldatareader.3.7.0-develop00310.nupkg.sha512",
     "C:\\Users\\aonana\\.nuget\\packages\\exceldatareader.dataset\\3.7.0-develop00310\\exceldatareader.dataset.3.7.0-develop00310.nupkg.sha512",

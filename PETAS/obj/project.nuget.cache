@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ny7QZqC7lQ1pzYLdBpr47Vpb3wH4DBhU62K0w2FDJtQQ9pCLpgcPkuZpwtfhv8zYMVr0NV3ldGRbKQWAu6sQiA==",
+  "dgSpecHash": "z2RxJrOFWhx16ln+C0lsuQrVexMRCvqneDr+28kdq5shdNOT2e7IKDeLVEfAzHkq+DPF/1kPQ9OpUcfC0igblA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aonana\\Desktop\\publish\\PETAS\\PETAS.csproj",
+  "projectFilePath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\PETAS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aonana\\.nuget\\packages\\blazor-dragdrop\\2.4.0\\blazor-dragdrop.2.4.0.nupkg.sha512",
     "C:\\Users\\aonana\\.nuget\\packages\\blazored.localstorage\\4.2.0\\blazored.localstorage.4.2.0.nupkg.sha512",
