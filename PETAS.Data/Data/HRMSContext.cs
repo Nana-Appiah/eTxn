@@ -55,11 +55,6 @@ namespace PETAS.Data.Data
             OnModelCreatingPartial(modelBuilder);
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder builder)
-        //{
-        //    builder.UseSqlServer(@"Data Source=10.150.0.242;Initial Catalog=HRMS;User ID=sa;Password=$Passw0rd");
-        //    //builder.UseSqlServer(@"Data Source=DESKTOP-9EO1DVH\\CONNECT;Initial Catalog=PANTrainer;User ID=sa;Password=Restoration@37");
-        //}
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

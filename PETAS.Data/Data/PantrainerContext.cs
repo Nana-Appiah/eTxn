@@ -178,7 +178,7 @@ namespace PETAS.Data.Data
 
                 entity.Property(e => e.AssessmentName).HasComment("the name of the assessment programme");
 
-                entity.Property(e => e.CreatedById).HasComment("the user creating the assessment");
+                entity.Property(e => e.CreatedBy).HasComment("the user creating the assessment");
 
                 entity.Property(e => e.CreatedDate).HasComment("the date the assessment was created");
 

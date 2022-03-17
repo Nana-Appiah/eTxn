@@ -11,6 +11,15 @@ using PETAS.Services;
 using Microsoft.Extensions.Http;
 using Plk.Blazor.DragDrop;
 
+using PETAS.Classes;
+using System;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
+
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
 #region edited code
@@ -51,6 +60,24 @@ builder.Services.AddHttpClient<HRMSClient>(client =>
     client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 });
 
+//adding Secure Access API
+builder.Services.AddHttpClient<SecureAccessClient>(sclient =>
+{
+    var apiUrl = new Uri(builder.Configuration["etasAPI"].ToString());
+    string _ContentType = "application/json";
+
+    //var accessTokenHandler = sclient.GetRequiredService<AutoDisplaySpinnerHttpMessageHandler>();
+    //accessTokenHandler.InnerHandler = new HttpClientHandler();
+
+    sclient.BaseAddress = apiUrl;
+    var _UserAgent = "d-fens HttpClient";
+    sclient.DefaultRequestHeaders.Add("User-Agent", _UserAgent);
+    sclient.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
+    sclient.DefaultRequestHeaders.Add(@"ApiKey", builder.Configuration["ApiKey"].ToString());
+    sclient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(_ContentType));
+
+});
+
 //adding a mail notification API Service
 builder.Services.AddHttpClient<MailClient>(mclient =>
 {
@@ -59,6 +86,7 @@ builder.Services.AddHttpClient<MailClient>(mclient =>
     mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[GET]");
     mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[PUT]");
     mclient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
 });
 
 //builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
@@ -71,7 +99,6 @@ builder.Services.AddScoped<IGroupService, GroupService>();
 builder.Services.AddScoped<IAssessmentSubjectService, AssessmentSubjectService>();
 builder.Services.AddScoped<IQuestionTypeService, QuestionTypeService>();
 
-builder.Services.AddScoped<ITestService, TestService>();
 builder.Services.AddScoped<IFileUploadService, FileUploadService>();
 builder.Services.AddScoped<IAssessmentQuestionPoolService, AssessmentQuestionPoolService>();
 builder.Services.AddScoped<IObjectiveService, ObjectiveService>();
@@ -82,6 +109,10 @@ builder.Services.AddScoped<ITrainingService, TrainingService>();
 builder.Services.AddScoped<IHRMSService, HRMSService>();
 builder.Services.AddScoped<IDragService, DragService>();
 builder.Services.AddScoped<IMailService, MailService>();
+builder.Services.AddScoped<ITrainingAssessmentService, TrainingAssessmentService>();
+builder.Services.AddScoped<IQAllotedService, QAllotedService>();
+
+builder.Services.AddScoped<ISecureAccessService, SecureAccessService>();
 
 builder.Services.AddBlazorDragDrop();
 

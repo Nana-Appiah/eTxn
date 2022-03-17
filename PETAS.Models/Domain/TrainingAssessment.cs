@@ -36,13 +36,13 @@ namespace PETAS.Models.Domain
         /// <summary>
         /// the pass mark for the assessment
         /// </summary>
-        [StringLength(10)]
-        public string PassAssessmentMark { get; set; }
+        //[StringLength(10)]
+        public int? PassAssessmentMark { get; set; }
         /// <summary>
         /// in case the training comprises more than ONE assessment, this is the mark derived for this assessment in respect of the overall training
         /// </summary>
-        [Column(TypeName = "numeric(9, 2)")]
-        public decimal? AllotedProratedMark { get; set; }
+        //[Column(TypeName = "numeric(9, 2)")]
+        public int? AllotedProratedMark { get; set; }
         /// <summary>
         /// the date the assessment was created
         /// </summary>
@@ -51,14 +51,14 @@ namespace PETAS.Models.Domain
         /// <summary>
         /// the user creating the assessment
         /// </summary>
-        [Column("CreatedByID")]
-        public int? CreatedById { get; set; }
+        [Column("CreatedBy")]
+        public string CreatedBy { get; set; }
         [Column(TypeName = "date")]
         public DateTime? AuthorizedDate { get; set; }
-        [Column("AuthorizedByID")]
-        public int? AuthorizedById { get; set; }
-        [Column("LastUpdatedByID")]
-        public int? LastUpdatedById { get; set; }
+        [Column("AuthorizedBy")]
+        public string AuthorizedBy { get; set; }
+        [Column("LastUpdatedBy")]
+        public string LastUpdatedBy { get; set; }
         [Column(TypeName = "date")]
         public DateTime? LastUpdatedDate { get; set; }
 

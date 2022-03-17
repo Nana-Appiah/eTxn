@@ -7,6 +7,7 @@
 @inject IConfiguration config
 @inject Blazored.LocalStorage.ILocalStorageService localStore
 
+@inject ISecureAccessService systemAccess
 
 <section class="login">
   <div class="container py-5 h-100">
@@ -109,15 +110,16 @@
 
             //the form has been validated. continue with the login process by making service call
             var s = config.GetConnectionString("SecureAccessConnectionString");
-            bool bln = true;
+            bool bln = false;
 
+            await systemAccess.Login(model);
             /*
             bln = await Task.Run(() =>
             {
                 return authUserService.Login(model, s);
             });
             */
-
+            
             if (bln)
             {
                 await notifier.Success(string.Format("{0} logged in successfully", model.userName), @"Login Success");

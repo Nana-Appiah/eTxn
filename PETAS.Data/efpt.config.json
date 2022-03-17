@@ -22,6 +22,10 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[AssignedTraining]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[CertificationAwarder]",
          "ObjectType": 0
       },
@@ -50,6 +54,18 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[TrainingCertification]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TrainingDomain]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TrainingGrouping]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[TrainingResource]",
          "ObjectType": 0
       },
@@ -72,6 +88,7 @@
    "UseDbContextSplitting": false,
    "UseFluentApiOnly": false,
    "UseHandleBars": false,
+   "UseHierarchyId": false,
    "UseInflector": true,
    "UseLegacyPluralizer": false,
    "UseManyToManyEntity": false,

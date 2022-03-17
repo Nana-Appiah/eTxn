@@ -21,6 +21,23 @@ namespace PETAS.Classes
         public string? emailAddress { get; set; }
         public DateTime? passwordExpires { get; set; }
 
-        
+        public string AppName { get; set; }
+        public List<string> AppPartList { get; set; }
+        public List<string> PermissionTypes { get; set; }
+
+        public bool BuildMenu { get; set; }
+
+        public User()
+        {
+            BuildMenu = false;
+        }
+    }
+
+    public class ApiResponse
+    {
+        public bool Status { get; set; }
+        public Object Entity { get; set; }
+        public string Message { get; set; }
+        public string ResponseCode { get; set; }
     }
 }

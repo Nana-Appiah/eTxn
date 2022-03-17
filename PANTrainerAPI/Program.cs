@@ -20,18 +20,25 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(CorsPolicy,
+                //builder => builder.AllowAnyOrigin()
+                //.AllowAnyMethod()
+                //.AllowAnyHeader()
+                //.SetPreflightMaxAge(TimeSpan.FromSeconds(5000))
+                //.SetIsOriginAllowed(x => true)
+
                 builder => builder.AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .SetPreflightMaxAge(TimeSpan.FromSeconds(5000))
-                .SetIsOriginAllowed(x => true)
+                   .WithMethods("POST", "GET", "HEAD", "OPTIONS", "DELETE")
+                     .WithHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Methods", "Access-Control-Allow-Headers", "Content-Disposition", "Content-Type", "Authorization", "Accept", "Origin", "Host", "api-user") //
+                     .SetPreflightMaxAge(TimeSpan.FromSeconds(5000))
+                     .SetIsOriginAllowed(x => true)
+                     
     );
 });
 
 
 builder.Services.AddDbContext<PantrainerContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("PanTrainerConn"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PanamString"));
 });
 
 var app = builder.Build();

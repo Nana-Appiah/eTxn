@@ -4,9 +4,15 @@
 @inject IObjectiveService oService
 @inject Blazored.LocalStorage.ILocalStorageService Lstore
 
+@inject ITrainingService tService
+@inject ITrainingAssessmentService tAssessmentService
+@inject IQAllotedService qService
+@inject IMessageService msg
+
 @inject IJSRuntime js
 
 @using PETAS.Models.Domain
+@using PETAS.Classes
 
 @if(subjects == null)
 {
@@ -92,11 +98,6 @@ else
                                     <Button Color="Color.Secondary" Clicked="ApprovedAllQuestions">Approve All</Button>
                                 </TableRowCell>
                             </TableRow>
-                            <TableRow>
-                                <TableRowCell>
-                                    <Button Color="Color.Primary" Clicked="ApproveQuestion">Build Assessment</Button>
-                                </TableRowCell>
-                            </TableRow>
                         </Table>
                     </Alert>
 
@@ -113,10 +114,80 @@ else
                             </ListGroup>
                         </Card>
                     }
+                    <div class="container">
+                        <div class="row">
+                            <Button Color="Color.Primary" Clicked="@ShowModal">Build Assessment</Button>
+                        </div> 
+                    </div>
                 }
             </Column>
         </Row>
     }
+
+    <Modal @ref="assessmentRef">
+                <ModalContent Centered>
+                    <ModalHeader>
+                        <ModalTitle>@modalTitleString</ModalTitle>
+                        <CloseButton />
+                    </ModalHeader>
+                    <ModalBody>
+                        <Validations @ref="validations" Mode="ValidationMode.Manual" >
+                            <Fields>
+                                @*<Validation Validator="ValidationRule.IsNotEmpty">*@
+                                    <Field>
+                                        <FieldLabel>Training</FieldLabel>
+                                        <Select TValue="int?" @bind-SelectedValue="@model.TrainingId">
+                                            <SelectItem Value="0">select...</SelectItem>
+                                            @foreach(var t in trainingList)
+                                            {
+                                                <SelectItem Value="@t.Id">@t.TrainingName</SelectItem>
+                                            }
+                                        </Select>
+                                    </Field>
+                                @*</Validation>*@
+                                <br />
+                                <br />
+                                @*<Validation Validator="ValidationRule.IsNotEmpty">*@
+                                    <Field>
+                                        <FieldLabel>Assessment</FieldLabel>
+                                        <TextEdit Placeholder="Assessment name" @bind-Text="@model.AssessmentName"  />
+                                    </Field>
+                                @*</Validation>*@
+                                <Validation Validator="@isNumeric">
+                                    <Field>
+                                        <FieldLabel>Marks</FieldLabel>
+                                        <NumericEdit TValue="int?" Placeholder="alloted marks" Min="10" Max="20" @bind-Value="@model.AllotedAssessmentMarks">
+                                            <Feedback>
+                                                <ValidationNone>Please a number</ValidationNone>
+                                                <ValidationSuccess>Good number</ValidationSuccess>
+                                                <ValidationError>Mark should be a number!</ValidationError>
+                                            </Feedback>
+                                        </NumericEdit>
+                                    </Field>
+                                </Validation>
+                                 <Validation Validator="@isNumeric">
+                                     <Field>
+                                        <FieldLabel>Pass Mark</FieldLabel>
+                                        <NumericEdit TValue="int?" Placeholder="alloted marks" Min="7" @bind-Value="@model.PassAssessmentMark">
+                                            <Feedback>
+                                                <ValidationNone>Please a number</ValidationNone>
+                                                <ValidationSuccess>Good number</ValidationSuccess>
+                                                <ValidationError>Pass mark is a number!</ValidationError>
+                                            </Feedback>
+                                        </NumericEdit>
+                                    </Field>
+                                 </Validation>  
+                                    
+                            </Fields>
+                        </Validations>
+                        
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button Color="Color.Primary" Clicked="@SaveAssessment">Save</Button>
+                        <Button Color="Color.Secondary" Clicked="@CloseModal">Close</Button>
+                    </ModalFooter>
+                </ModalContent>
+            </Modal>
 }
 
 @code{
@@ -134,17 +205,31 @@ else
     private const string uKey = @"userKey";
 
     private List<AssessmentQuestionPool> selectedQuestions = new List<AssessmentQuestionPool>();
+
+    private string modalTitleString = string.Empty;
+    private Modal assessmentRef;
+    private List<Training> trainingList;
+    private Validations validations;
+
+    private TrainingAssessment model = new TrainingAssessment();
+
     protected override async Task OnInitializedAsync()
     {
         try
         {
             subjects = await GetSubjectListAsync();
+            trainingList = await GetTrainingList();
             await base.OnInitializedAsync();
         }
         catch(Exception x)
         {
 
         }
+    }
+
+    private async Task<List<Training>> GetTrainingList()
+    {
+        return await tService.GetTrainingsAsync();
     }
 
     private async Task changedValueMCANS(int selected)
@@ -192,6 +277,70 @@ else
         styling.Background = Background.Success;
     }
 
+    private Task CloseModal()
+    {
+        return assessmentRef.Hide();
+    }
+    private Task ShowModal()
+    {
+        modalTitleString = @"Build Assessment";
+        return assessmentRef.Show();
+    }
+
+    void isNumeric(ValidatorEventArgs e)
+    {
+        int n;
+        try
+        {
+            if (string.IsNullOrEmpty(e.Value.ToString())){ e.Status = ValidationStatus.None; }
+            int.TryParse(e.Value.ToString(), out n);
+
+            if (n > 0){ e.Status = ValidationStatus.Success; }
+        }
+        catch(Exception x)
+        {
+            e.Status = ValidationStatus.Error;
+        }
+
+
+    }
+    async Task SaveAssessment()
+    {
+        //saves the assessment record together with the questions chosen
+        if ((selectedQuestions.Count() > 0) && (trainingList.Count() > 0) && (model.TrainingId > 0) && (model.AssessmentName != string.Empty))
+        //if (await validations.ValidateAll())
+        {
+            try
+            {
+                var usr = await Lstore.GetItemAsync<string>(Storage.userKey);
+                model.CreatedBy = usr;
+                model.CreatedDate = DateTime.Now;
+                model.AuthorizedBy = usr;
+                model.AuthorizedDate = DateTime.Now;
+                model.LastUpdatedBy = usr;
+                model.LastUpdatedDate = DateTime.Now;
+                model.AllotedProratedMark = model.AllotedAssessmentMarks;
+
+                var obj = await tAssessmentService.SaveTrainingAssessment(model);
+                if (obj != null)
+                {
+                    //save the alloted questions
+                    var respCode = await qService.SaveAllotedQuestionsAsync(new Training { Id = (int) model.TrainingId }, obj, selectedQuestions, MCANS_ANS_ID);
+                    if (respCode.Length > 0)
+                    {
+                        await CloseModal();
+                        msg.Info(respCode, @"Create Assessment");
+                        //clear the model
+                        StateHasChanged();
+                    }
+                }
+            }
+            catch(Exception x)
+            {
+                
+            }
+        }
+    }
     void OnQuestionSelected(ChangeEventArgs e, AssessmentQuestionPool o)
     {
         try
