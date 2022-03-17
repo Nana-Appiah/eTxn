@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "IROp7V9sYa4g8yXV+ZQ0DxOjVAJgJTUE7KlLKGiHSlh8d+qMa9EivXWpoVKRfNX/Xl1rUfZ08hyxNERxdFE1kQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Blessings\\Desktop\\e\\PANTrainerAPI\\PANTrainerAPI.csproj",
-=======
-  "dgSpecHash": "etWtnQ0bz+7xOT9pXkNAugJim3ubcB8cm/k9J7NyudkZbPWe9xN9HI/iQRqNIvB06x3n5BccNJZYV1rDWyTChQ==",
-  "success": true,
-  "projectFilePath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PANTrainerAPI\\PANTrainerAPI.csproj",
->>>>>>> 2c4d6cf567d3218e58d2c40e3e8815465e59e9d1
   "expectedPackageFiles": [
     "C:\\Users\\Blessings\\.nuget\\packages\\blazorise\\0.9.5.5\\blazorise.0.9.5.5.nupkg.sha512",
     "C:\\Users\\Blessings\\.nuget\\packages\\blazorise.bootstrap\\0.9.5.5\\blazorise.bootstrap.0.9.5.5.nupkg.sha512",
@@ -186,5 +180,12 @@
     "C:\\Users\\Blessings\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Blessings\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Blessings\\Desktop\\e\\PANTrainerAPI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -9339,19 +9339,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Blessings\\Desktop\\e\\PANTrainerAPI\\PANTrainerAPI.csproj",
       "projectName": "PANTrainerAPI",
       "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PANTrainerAPI\\PANTrainerAPI.csproj",
       "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Blessings\\Desktop\\e\\PANTrainerAPI\\obj\\",
-=======
-      "projectUniqueName": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PANTrainerAPI\\PANTrainerAPI.csproj",
-      "projectName": "PANTrainerAPI",
-      "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PANTrainerAPI\\PANTrainerAPI.csproj",
-      "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
-      "outputPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PANTrainerAPI\\obj\\",
->>>>>>> 2c4d6cf567d3218e58d2c40e3e8815465e59e9d1
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9368,19 +9360,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
             "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\PETAS.Data.csproj": {
               "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\PETAS.Data.csproj"
             },
             "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj": {
               "projectPath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Models\\PETAS.Models.csproj"
-=======
-            "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj": {
-              "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj"
-            },
-            "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj": {
-              "projectPath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj"
->>>>>>> 2c4d6cf567d3218e58d2c40e3e8815465e59e9d1
             }
           }
         }
@@ -9493,5 +9477,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Blessings\\Desktop\\e\\PANTrainerAPI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "cGltTHhWapATzyRZT5ux+9QGvZvh4bq8nsvWKjLZxKtLwMi5o9rx5bRPB51pnEO2lmkm1j67sh13ohFGO6EMJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\PETAS.Data.csproj",
-=======
-  "dgSpecHash": "+dSHg0OVLQk1AXxrD6+Pd4YFXwaWr/YDFLSV0qahSDL4TA+krJ3ZJPihdsJK50aUBqFx/hm1rMNnFNtNXGNDxw==",
-  "success": true,
-  "projectFilePath": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj",
->>>>>>> 2c4d6cf567d3218e58d2c40e3e8815465e59e9d1
   "expectedPackageFiles": [
     "C:\\Users\\Blessings\\.nuget\\packages\\exceldatareader\\3.7.0-develop00310\\exceldatareader.3.7.0-develop00310.nupkg.sha512",
     "C:\\Users\\Blessings\\.nuget\\packages\\exceldatareader.dataset\\3.7.0-develop00310\\exceldatareader.dataset.3.7.0-develop00310.nupkg.sha512",
@@ -53,5 +47,12 @@
     "C:\\Users\\Blessings\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\Blessings\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Blessings\\Desktop\\e\\PETAS.Data\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
