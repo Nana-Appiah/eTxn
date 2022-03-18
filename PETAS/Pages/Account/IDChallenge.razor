@@ -2,7 +2,7 @@
 @layout LoginLayout
 @inject NavigationManager navManager
 @inject PETAS.Services.IUserAccountService authUserService
-@inject INotificationService notifier
+@inject IMessageService msg
 
 @inject IConfiguration config
 @inject Blazored.LocalStorage.ILocalStorageService localStore
@@ -47,7 +47,7 @@
                             </Addon>
                             <Addon AddonType="AddonType.Body">
                                 <Validation Validator="@ValidationRule.IsNotEmpty">
-                                    <TextEdit Placeholder="enter username" @bind-text="@model.userName">
+                                    <TextEdit Placeholder="enter username" @bind-text="@model.username">
                                         <Feedback>
                                             <ValidationError>Please enter a user name</ValidationError>
                                         </Feedback>
@@ -62,7 +62,7 @@
                             </Addon>
                             <Addon AddonType="AddonType.Body">
                                 <Validation Validator="@ValidationRule.IsNotEmpty">
-                                    <TextEdit Role="TextRole.Password" Placeholder="enter password" @bind-text="@model.userPassword">
+                                    <TextEdit Role="TextRole.Password" Placeholder="enter password" @bind-text="@model.pass">
                                         <Feedback>
                                             <ValidationError>Please enter a user password</ValidationError>
                                         </Feedback>
@@ -110,30 +110,19 @@
 
             //the form has been validated. continue with the login process by making service call
             var s = config.GetConnectionString("SecureAccessConnectionString");
-            bool bln = false;
 
-            await systemAccess.Login(model);
-            /*
-            bln = await Task.Run(() =>
-            {
-                return authUserService.Login(model, s);
-            });
-            */
+            var obj = await systemAccess.Login(model);
             
-            if (bln)
+            if (obj != null)
             {
-                await notifier.Success(string.Format("{0} logged in successfully", model.userName), @"Login Success");
-                await localStore.SetItemAsync(userKey, model.userName);
+                await msg.Info(string.Format("{0} logged in successfully", model.username), @"Login Success");
+                await localStore.SetItemAsync(userKey, model.username);
                 navManager.NavigateTo(@"dashboard/");
             }
             else
             {
-                await notifier.Warning(string.Format("Unsuccessful log in for {0}. Please try again", model.userName), @"Login Failure");
+                await msg.Warning(string.Format("Unsuccessful log in for {0}. Please try again", model.username), @"Login Failure");
             }
-
-         }
-        
+         }   
     }
-
-    
 }

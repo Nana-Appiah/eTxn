@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zX7NTOje+SEUDpDO/H22fWVHCcAN5hWcRlm91ha/O4E=",
+  "Hash": "SrBMCPxrXF4xtiLwL5InXyuwuZfhyWle7EOA5xmQwxE=",
   "Source": "PETAS",
   "BasePath": "PETAS",
   "Mode": "Root",
@@ -1972,6 +1972,23 @@
       "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.1\\runtimes\\browser-wasm\\lib\\net6.0\\netstandard.dll"
     },
     {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.Bson.dll",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/Newtonsoft.Json.Bson.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\lib\\netstandard1.3\\Newtonsoft.Json.Bson.dll"
+    },
+    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.dll",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -3194,6 +3211,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.1\\runtimes\\browser-wasm\\lib\\net6.0\\System.Net.Http.dll"
+    },
+    {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Http.Formatting.dll",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/System.Net.Http.Formatting.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\aonana\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\lib\\netstandard2.0\\System.Net.Http.Formatting.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Http.Json.dll",
@@ -6647,6 +6681,23 @@
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll"
     },
     {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\Douubt2w.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/Newtonsoft.Json.Bson.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.Bson.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Newtonsoft.Json.Bson.dll"
+    },
+    {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\dsHUtKKe.gz",
       "SourceId": "PETAS",
       "SourceType": "Computed",
@@ -8107,6 +8158,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Resources.Reader.dll"
+    },
+    {
+      "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\p+mnjCxx.gz",
+      "SourceId": "PETAS",
+      "SourceType": "Computed",
+      "ContentRoot": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "PETAS",
+      "RelativePath": "_framework/System.Net.Http.Formatting.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Http.Formatting.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Http.Formatting.dll"
     },
     {
       "Identity": "G:\\Dev_Repository\\Projects\\Nana\\Apps\\PANTrainer\\PETAS\\obj\\Debug\\net6.0\\build-gz\\p0q9LdqG.gz",

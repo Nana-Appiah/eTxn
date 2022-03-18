@@ -41,7 +41,7 @@ namespace PETAS.Services
 
             try
             {
-                var res = await http.GetAsync("api/security/gethashedpassword?password=" + LoginInformation.userPassword);
+                var res = await http.GetAsync("api/security/gethashedpassword?password=" + LoginInformation.pass);
                 var str = await res.Content.ReadAsStringAsync();
 
                 return true;

@@ -20,6 +20,7 @@
       "DocumentFormat.OpenXml.dll": "sha256-+tHM9m6rziNAUKqM0OwykUdJUITuKd8Q+i2GiMSFYhc=",
       "ExcelDataReader.dll": "sha256-WaFSKBhveFI2Dke6K+ssWHvdpgBWFNoASHPhA+ESrSQ=",
       "ExcelDataReader.DataSet.dll": "sha256-zdJHf8lW4a9P3Lf8NznL7kJc97m8HLVI0Dr+5zRHUkQ=",
+      "System.Net.Http.Formatting.dll": "sha256-7zKFggP3JjqldnuuTpRWf6Gzze3iFLqHYDAJwcF7Jk8=",
       "Microsoft.AspNetCore.Authentication.Abstractions.dll": "sha256-iw51tdKcETC5QqlJLWett1iPlLZgUrRdZfkV7EoaD4k=",
       "Microsoft.AspNetCore.Authentication.Core.dll": "sha256-NP2svkDxlIVJsMiWAmj552NCYo4j7YnOUr2+jkz5+pc=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-hGbT4jDhpi63093bjGt+4XVJ3Z9t1FVbmgNmYYmpiNY=",
@@ -78,6 +79,7 @@
       "Microsoft.Net.Http.Headers.dll": "sha256-P66ftDrXwc6ayND8uYzIk0CPQy1GjNZAPHx9RMhi3V4=",
       "Microsoft.Win32.SystemEvents.dll": "sha256-56MWX7GCuiW+O0EPzkUo0jj6T\/mhpVB6x+UFQtaS2qE=",
       "Newtonsoft.Json.dll": "sha256-cs8pHUurDt0IqbB8YXPh560au3q3J\/1wRL9jBddRVmE=",
+      "Newtonsoft.Json.Bson.dll": "sha256-tgbl3XemJCyh8d9xfrU9lQWuVpBDMLl1wI1PLb6MMxk=",
       "System.Configuration.ConfigurationManager.dll": "sha256-Rmj4lST8tNcZUOCtfg1W5eXbLHDjla1J99tqgWTMUNY=",
       "System.Diagnostics.DiagnosticSource.dll": "sha256-gTWkX8rf7Sqyf\/apswPUMYZmmKbT\/TyiCqsHrmObhvw=",
       "System.Drawing.Common.dll": "sha256-E+\/s4U4Xt\/iFr\/+Dd7ZSqXXAOJZKgnOAW4C5r7OPcHc=",
@@ -264,7 +266,7 @@
       "System.Private.CoreLib.dll": "sha256-9NtEbYixyog7vUmeYXyyqzfBXUYl8wxoVQ26Ji7sNRg=",
       "PETAS.Data.dll": "sha256-ADevyteFuiygmus4lMf+yCz45gSMNZl3Cgyz9WJW0NM=",
       "PETAS.Models.dll": "sha256-aRBKIVCyd1qU1awGikC+59z6Lbbjne8npE4JA9U1AQU=",
-      "PETAS.dll": "sha256-lhtvVur5gn1msOCqZwE9HQ2gxplKOxaDpr4xctOsh88="
+      "PETAS.dll": "sha256-FT2v2aPvqyHTaVLLZScyrWk1010LbFzk5Dtjd1LH7JY="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -272,7 +274,7 @@
     "pdb": {
       "PETAS.Data.pdb": "sha256-Y4XoL6x1yEA4t49QhDf8uxEbsUxVfgZZSwYiQ2UHpaU=",
       "PETAS.Models.pdb": "sha256-Pdubw0hHr0\/FNt+UplcKuFd85+B3wAwSSTkWASm+bqU=",
-      "PETAS.pdb": "sha256-lLW+ISbRWJW1sh5riKs7eeq75mLwRS3Aeldbuik2FkA="
+      "PETAS.pdb": "sha256-FdypdEWMT6hl1HeRAZxxYWXdiWmwuY0vN5Iikib7wIs="
     },
     "runtime": {
       "dotnet.6.0.1.ykymvr902e.js": "sha256-awQsJ\/WxYhouHPuE+i3eJqjA4XClQlr2rD6nKvW80ww=",

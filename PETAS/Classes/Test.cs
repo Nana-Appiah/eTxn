@@ -14,7 +14,7 @@ namespace PETAS.Classes
 
                 var obj = new ServiceClient(ServiceClient.EndpointConfiguration.CustomBinding_IService);
                 //var task = await obj.IsAuthorizedAsync(AuthenticationModeEnum.Forms, oUser.userName, oUser.userPassword, accesscode, accesscode, accesscode);
-                var task = await obj.GetUserTicketAsync(AuthenticationModeEnum.Forms, oUser.userName, oUser.userPassword, accesscode);
+                var task = await obj.GetUserTicketAsync(AuthenticationModeEnum.Forms, oUser.username, oUser.pass, accesscode);
 
                 //return task;
             }

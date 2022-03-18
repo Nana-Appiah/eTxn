@@ -7,6 +7,8 @@ using PETAS.Classes;
 using PETAS.Models.Domain;
 using PETAS.Models.Domain.HRMS;
 using System.Net.Http.Headers;
+using Newtonsoft;
+using Newtonsoft.Json;
 
 namespace PETAS.Services
 {
@@ -47,11 +49,14 @@ namespace PETAS.Services
                             var obj = new MailStub()
                             {
                                 to = e.EmailAddress,
-                                subject = $"TRAINING ENROLLMENT: {trainingObj.TrainingName}",
-                                body = $"Hello\r\nPlease log in to the Training Portal and take the above - mentioned test\r\nThank you."
+                                subject = @"TRAINING ENROLLMENT",
+                                body = @"Testing",
+                                cc = string.Empty,
+                                bcc = string.Empty
                             };
-                            
-                            var status = await http.PostAsJsonAsync("v1/MailSender", obj);
+
+                            string output = JsonConvert.SerializeObject(obj);
+                            var status = await http.PostAsJsonAsync("v1/MailSender", output);
                         }
                         catch(Exception ee)
                         {

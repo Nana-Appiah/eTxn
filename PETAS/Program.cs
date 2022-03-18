@@ -46,6 +46,8 @@ builder.Services.AddSingleton(new HttpClient
 
 #endregion
 
+string _ContentType = "application/json";
+
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
@@ -57,23 +59,20 @@ builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(baseAPIA
 builder.Services.AddHttpClient<HRMSClient>(client =>
 {
     client.BaseAddress = new Uri(builder.Configuration["HRMSApiUrl"].ToString());
-    client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+    client.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
+    client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue(_ContentType));
 });
 
 //adding Secure Access API
 builder.Services.AddHttpClient<SecureAccessClient>(sclient =>
 {
-    var apiUrl = new Uri(builder.Configuration["etasAPI"].ToString());
-    string _ContentType = "application/json";
-
-    //var accessTokenHandler = sclient.GetRequiredService<AutoDisplaySpinnerHttpMessageHandler>();
-    //accessTokenHandler.InnerHandler = new HttpClientHandler();
+    var apiUrl = new Uri(builder.Configuration["ApiEndpoint"].ToString());
 
     sclient.BaseAddress = apiUrl;
     var _UserAgent = "d-fens HttpClient";
     sclient.DefaultRequestHeaders.Add("User-Agent", _UserAgent);
     sclient.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
-    sclient.DefaultRequestHeaders.Add(@"ApiKey", builder.Configuration["ApiKey"].ToString());
+    //sclient.DefaultRequestHeaders.Add(@"ApiKey", builder.Configuration["ApiKey"].ToString());
     sclient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(_ContentType));
 
 });
@@ -82,10 +81,10 @@ builder.Services.AddHttpClient<SecureAccessClient>(sclient =>
 builder.Services.AddHttpClient<MailClient>(mclient =>
 {
     mclient.BaseAddress = new Uri(builder.Configuration["MailClientApiUrl"].ToString());
-    mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[POST]");
-    mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[GET]");
-    mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[PUT]");
-    mclient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+    mclient.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
+    //mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[GET]");
+    //mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[PUT]");
+    mclient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue(_ContentType));
 
 });
 

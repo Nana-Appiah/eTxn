@@ -3,12 +3,14 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Net.Http.Headers;
 using PETAS.Classes;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace PETAS.Services
 {
     public interface ISecureAccessService
     {
-        Task Login(User model);
+        Task<User> Login(User model);
     }
 
     public class SecureAccessService: ISecureAccessService
@@ -21,56 +23,28 @@ namespace PETAS.Services
             http = secureAccessClient.http;
         }
 
-        private const string APPLICATION_NAME = "ETAS";
-        private List<string> applicationParts
-        {
-            get
-            {
-                return new List<string>
-                {
-                    "student",
-                    "admin"
-                };
-            }
-        }
-        private List<string> appPermissions
-        {
-            get
-            {
-                return new List<string>
-                {
-                    "create",
-                    "read",
-                    "update",
-                    "delete"
-                };
-            }
-        }
-
-        public async Task Login(User model)
+        
+        public async Task<User> Login(User model)
         {
             try
             {
-                model.AppPartList = applicationParts;
-                model.PermissionTypes = appPermissions;
-                model.AppName = APPLICATION_NAME;
+                var posted = await http.PostAsJsonAsync("api/User", new string[] { model.username, model.pass });
+                var result = await posted.Content.ReadFromJsonAsync<bool>();
 
-                var posted = await http.PostAsJsonAsync("users/login", model);
-                var result = await posted.Content.ReadFromJsonAsync<ApiResponse>();
-
-                if (result.Status)
+                if (result)
                 {
-
+                    return model;
                 }
-                //var result = await _httpHelper.Post<ApiResponse>($"users/login", model);
+                else 
+                {
+                    //return new user with Id=0
+                    return null;
+                }
             }
             catch (Exception ex)
             {
-                string error = $"error: {ex.Message}";
+                return null;
             }
-            
-
-
         }
 
     }
