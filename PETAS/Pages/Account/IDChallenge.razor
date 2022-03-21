@@ -111,8 +111,8 @@
             //the form has been validated. continue with the login process by making service call
             var s = config.GetConnectionString("SecureAccessConnectionString");
 
-            var obj = await systemAccess.Login(model);
-            
+            //var obj = await systemAccess.Login(model);
+            var obj = new PETAS.Classes.User  {  };
             if (obj != null)
             {
                 await msg.Info(string.Format("{0} logged in successfully", model.username), @"Login Success");
