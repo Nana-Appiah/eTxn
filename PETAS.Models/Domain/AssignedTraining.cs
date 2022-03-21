@@ -34,6 +34,11 @@ namespace PETAS.Models.Domain
         [Column("TrainingID")]
         public int? TrainingId { get; set; }
         /// <summary>
+        /// the status of the scheduled training
+        /// </summary>
+        [Column("TrainingStatusID")]
+        public int? TrainingStatusID { get; set; }
+        /// <summary>
         /// the one doing the assignment
         /// </summary>
         [StringLength(50)]

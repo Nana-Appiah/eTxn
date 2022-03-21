@@ -147,6 +147,7 @@ namespace PANTrainerAPI.Controllers
                 LastName = objEmployee.LastName,
                 EmailAddress = objEmployee.EmailAddress,
                 TrainingId = (int?)objTraining.Id,
+                TrainingStatusID = 1,   //PENDING
                 AssignedBy = strUser,
                 AssignedDate = DateTime.Now,
                 ApprovedBy = strUser,

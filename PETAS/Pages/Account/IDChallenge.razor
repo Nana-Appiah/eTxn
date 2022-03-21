@@ -117,7 +117,7 @@
             {
                 await msg.Info(string.Format("{0} logged in successfully", model.username), @"Login Success");
                 await localStore.SetItemAsync(userKey, model.username);
-                navManager.NavigateTo(@"dashboard/");
+                navManager.NavigateTo(@"/PETAS/");
             }
             else
             {
