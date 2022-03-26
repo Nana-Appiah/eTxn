@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yILVHbbAz3+H7Scap36ZbxV8PaKZbJPYGgkMVir6NxYc8TmbROnzFVsPTibXEZOp0NFwHNRuagxh5GRMRtx2fg==",
+  "dgSpecHash": "1mSBo0/HNw5SP/UWUzXpcwYOptoeNPt+BZXuo8PJPZofvbHNZrrsI3pLn+/kq9r9nEVONGbL8CmoiD449u3CVA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Blessings\\Desktop\\e\\PETAS\\PETAS.csproj",
   "expectedPackageFiles": [
@@ -198,7 +198,8 @@
     "C:\\Users\\Blessings\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Blessings\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\Blessings\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\Blessings\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Blessings\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Blessings\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.0\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
