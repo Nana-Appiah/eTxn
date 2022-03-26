@@ -34,7 +34,7 @@ options.AddPolicy(Cors,
 
 builder.Services.AddDbContext<HRMSContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("HRMSConnstring"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PanTrainerHRMSConn"));
 });
 
 var app = builder.Build();
