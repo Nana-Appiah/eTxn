@@ -59,5 +59,21 @@ namespace HRMS.API.Controllers
             return await config.Employees.Where(x => x.JobTitleId == Tid)
                                           .Where(x => x.StatusId == 1).ToListAsync();
         }
+    
+        //GET api/Employees/5
+        [HttpGet("{username}")]
+        public async Task<ActionResult<Employee>> GetEmployee(string username)
+        {
+            if (username == string.Empty)
+            {
+                return NotFound();
+            }
+
+            //username = string.Format("{0}@{1}", username, @"panafricansl.com");
+
+            var obj = await config.Employees.Where(e => e.EmailAddress.Contains(username)).FirstOrDefaultAsync();
+            return Ok(obj);
+        }
+
     }
 }

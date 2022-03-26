@@ -15,6 +15,8 @@ namespace PETAS.Services
         public Task<List<Grade>> GetGradeAsync();
         public Task<List<Group>> GetGroupAsync();
         public Task<List<JobTitle>> GetJobTitlesAsync();
+        public Task<Employee> GetEmployee(string username);
+    
     }
 
     public class HRMSService: IHRMSService
@@ -50,6 +52,12 @@ namespace PETAS.Services
         public async Task<List<JobTitle>> GetJobTitlesAsync()
         {
             return await http.GetFromJsonAsync<List<JobTitle>>("api/JobTitles");
+        }
+
+        public async Task<Employee> GetEmployee(string username)
+        {
+            //service gets an employee's record
+            return await http.GetFromJsonAsync<Employee>("api/Employees" + "/" + username);
         }
 
     }
