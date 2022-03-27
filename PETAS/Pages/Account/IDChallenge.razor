@@ -111,19 +111,27 @@
             //the form has been validated. continue with the login process by making service call
             var s = config.GetConnectionString("SecureAccessConnectionString");
 
-            //var obj = await systemAccess.Login(model);
-            var emp = await hrms.GetEmployee(model.username);
-            var obj = new PETAS.Classes.User  { username = @"nappiah"  };
-            if ((obj != null) && (emp != null))
+            var b = await systemAccess.Login(model);
+            if (b == null)
             {
-                await msg.Info(string.Format("{0} logged in successfully", model.username), @"Login Success");
-                await localStore.SetItemAsync(userKey, model.username);
-                navManager.NavigateTo(@"/");
+                await msg.Warning(string.Format("Unsuccessful login for {0}", model.username), @"Login Failure");
             }
             else
             {
-                await msg.Warning(string.Format("Unsuccessful log in for {0}. Please try again", model.username), @"Login Failure");
+                var emp = await hrms.GetEmployee(model.username);
+                var obj = new PETAS.Classes.User  { username = @"nappiah"  };
+                if ((obj != null) && (emp != null))
+                {
+                    await msg.Info(string.Format("{0} logged in successfully", model.username), @"Login Success");
+                    await localStore.SetItemAsync(userKey, model.username);
+                    navManager.NavigateTo(@"/");
+                }
+                else
+                {
+                    await msg.Warning(string.Format("Unsuccessful log in for {0}. Please try again", model.username), @"Login Failure");
+                }
             }
+            
          }   
     }
 }
