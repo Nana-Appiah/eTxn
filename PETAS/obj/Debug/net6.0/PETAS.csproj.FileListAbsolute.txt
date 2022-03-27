@@ -2192,6 +2192,12 @@ C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.csproj.CopyComplete
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.dll
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\ref\PETAS.dll
 C:\Users\Blessings\Desktop\e\PETAS\obj\Debug\net6.0\PETAS.pdb
+C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.csproj.AssemblyReference.cache
+C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfoInputs.cache
+C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfo.cs
+C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.csproj.CoreCompileInputs.cache
+C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\aonana\Desktop\publish\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.boot.json
 C:\Users\aonana\Desktop\publish\PETAS\bin\Debug\net6.0\wwwroot\_framework\blazor.webassembly.js
 C:\Users\aonana\Desktop\publish\PETAS\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
@@ -3002,12 +3008,6 @@ C:\Users\aonana\Desktop\publish\PETAS\bin\Debug\net6.0\PETAS.Data.dll
 C:\Users\aonana\Desktop\publish\PETAS\bin\Debug\net6.0\PETAS.Models.dll
 C:\Users\aonana\Desktop\publish\PETAS\bin\Debug\net6.0\PETAS.Data.pdb
 C:\Users\aonana\Desktop\publish\PETAS\bin\Debug\net6.0\PETAS.Models.pdb
-C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.csproj.AssemblyReference.cache
-C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfoInputs.cache
-C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.AssemblyInfo.cs
-C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.csproj.CoreCompileInputs.cache
-C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\PETAS.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\build-gz\Ga8OckJB.gz
 C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\build-gz\Rd8p8us8.gz
 C:\Users\aonana\Desktop\publish\PETAS\obj\Debug\net6.0\build-gz\504sucqR.gz

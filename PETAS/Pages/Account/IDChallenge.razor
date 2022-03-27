@@ -6,7 +6,7 @@
 
 @inject IConfiguration config
 @inject Blazored.LocalStorage.ILocalStorageService localStore
-
+@inject IHRMSService hrms
 @inject ISecureAccessService systemAccess
 
 <section class="login">
@@ -112,8 +112,9 @@
             var s = config.GetConnectionString("SecureAccessConnectionString");
 
             //var obj = await systemAccess.Login(model);
-            var obj = new PETAS.Classes.User  {  };
-            if (obj != null)
+            var emp = await hrms.GetEmployee(model.username);
+            var obj = new PETAS.Classes.User  { username = @"nappiah"  };
+            if ((obj != null) && (emp != null))
             {
                 await msg.Info(string.Format("{0} logged in successfully", model.username), @"Login Success");
                 await localStore.SetItemAsync(userKey, model.username);
