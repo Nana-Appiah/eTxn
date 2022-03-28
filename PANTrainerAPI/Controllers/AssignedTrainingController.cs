@@ -25,6 +25,7 @@ namespace PANTrainerAPI.Controllers
         {
             //end point gets assigned trainings...using the employee ID
             var aList = await config.AssignedTrainings.Where(a => a.EmployeeId == eID).ToListAsync();
+
             return aList;
         }
 

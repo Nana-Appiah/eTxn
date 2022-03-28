@@ -123,6 +123,12 @@ namespace PETAS.Services
         public async Task<List<JobTitle>> GetJobTitlesAsync() { return new List<JobTitle>(); }
 
         public async Task<Employee> GetEmployee(string username) { return new Employee(); }
+        
+        public async Task<JobTitle> getEmployeeJobTitle(int? jobTitleID)
+        {
+            return new JobTitle();
+        }
+
         #endregion
 
     }

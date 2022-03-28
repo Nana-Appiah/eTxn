@@ -1,4 +1,9 @@
-﻿
+﻿@inject Blazored.LocalStorage.ILocalStorageService store
+@inject IHRMSService hrms
+
+
+@using PETAS.Classes
+
 		<div class="app-header header-shadow">
             <div class="app-header__logo">
                 <div class="logo-src"></div>
@@ -75,10 +80,16 @@
                                 </div>
                                 <div class="widget-content-left  ml-3 header-user-info">
                                     <div class="widget-heading">
-                                        Alina Mclourd
+                                        @if(objEmployee != null)
+                                        {
+                                            @employeeName
+                                        }                               
                                     </div>
                                     <div class="widget-subheading">
-                                        VP People Manager
+                                        @if(oJobTitle != null)
+                                        {
+                                            @oJobTitle.Name
+                                        }
                                     </div>
                                 </div>
 								
@@ -90,3 +101,33 @@
             </div>
         </div>        
 		
+@code{
+    private Employee objEmployee;
+    private JobTitle oJobTitle;
+    private int? pendingCount;
+    private int? finishedCount;
+    private int? cancelledCount;
+
+    private string employeeName = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetEmployeeData();
+        await base.OnInitializedAsync();
+    }
+
+    private async Task GetEmployeeData()
+    {
+        objEmployee = await store.GetItemAsync<Employee>(Storage.employeeData);
+        employeeName = $"{objEmployee.FirstName} {objEmployee.LastName}";
+
+        oJobTitle = await getEmployeeJobTitle(objEmployee.JobTitleId);
+    }
+
+    private async Task<JobTitle> getEmployeeJobTitle(int? jtID)
+    {
+        return await hrms.getEmployeeJobTitle(jtID);
+    }
+    
+
+}

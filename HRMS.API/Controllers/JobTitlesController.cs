@@ -28,5 +28,14 @@ namespace HRMS.API.Controllers
             return await config.JobTitles.ToListAsync();
         }
 
+        //GET api/jobtitle/id
+        [HttpGet("{jID}")]
+        public async Task<ActionResult<JobTitle>> GetJobTitle(int jID)
+        {
+            //gets the job title for a supplied employee ID
+            var obj = await config.JobTitles.Where(jt => jt.JobTitleId == jID).FirstOrDefaultAsync();
+            return obj;
+        }
+
     }
 }

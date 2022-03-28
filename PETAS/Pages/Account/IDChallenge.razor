@@ -8,6 +8,9 @@
 @inject Blazored.LocalStorage.ILocalStorageService localStore
 @inject IHRMSService hrms
 @inject ISecureAccessService systemAccess
+@inject ITrainingService admService
+
+@using PETAS.Classes
 
 <section class="login">
   <div class="container py-5 h-100">
@@ -112,26 +115,35 @@
             var s = config.GetConnectionString("SecureAccessConnectionString");
 
             var b = await systemAccess.Login(model);
-            if (b == null)
+            //if (b == null)
+            //{
+            //    await msg.Warning(string.Format("Unsuccessful login for {0}", model.username), @"Login Failure");
+            //}
+            //else
+            //{
+            var emp = await hrms.GetEmployee(model.username);
+            var obj = new PETAS.Classes.User  { username = @"nappiah"  };
+            if ((obj != null) && (emp != null))
             {
-                await msg.Warning(string.Format("Unsuccessful login for {0}", model.username), @"Login Failure");
-            }
-            else
-            {
-                var emp = await hrms.GetEmployee(model.username);
-                var obj = new PETAS.Classes.User  { username = @"nappiah"  };
-                if ((obj != null) && (emp != null))
-                {
-                    await msg.Info(string.Format("{0} logged in successfully", model.username), @"Login Success");
-                    await localStore.SetItemAsync(userKey, model.username);
-                    navManager.NavigateTo(@"/");
+                var blnUser = await admService.IsAdministrator(model.username);
+                await msg.Info(string.Format("{0} logged in successfully", model.username), @"Login Success");
+                await localStore.SetItemAsync(userKey, model.username);
+                await localStore.SetItemAsync(Storage.employeeData, emp);
+
+                if (blnUser)
+                    {
+                        navManager.NavigateTo(@"/admin/training/configuration");
+                    }
+                    else
+                    {
+                        navManager.NavigateTo(@"/student/studentcenter");
+                    }
                 }
                 else
                 {
                     await msg.Warning(string.Format("Unsuccessful log in for {0}. Please try again", model.username), @"Login Failure");
                 }
-            }
-            
+            //}
          }   
     }
 }

@@ -62,7 +62,6 @@ C:\Users\Blessings\Desktop\e\PETAS.Models\bin\Debug\net6.0\PETAS.Models.deps.jso
 C:\Users\Blessings\Desktop\e\PETAS.Models\bin\Debug\net6.0\PETAS.Models.dll
 C:\Users\Blessings\Desktop\e\PETAS.Models\bin\Debug\net6.0\ref\PETAS.Models.dll
 C:\Users\Blessings\Desktop\e\PETAS.Models\bin\Debug\net6.0\PETAS.Models.pdb
-C:\Users\Blessings\Desktop\e\PETAS.Models\obj\Debug\net6.0\PETAS.Models.csproj.AssemblyReference.cache
 C:\Users\Blessings\Desktop\e\PETAS.Models\obj\Debug\net6.0\PETAS.Models.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Blessings\Desktop\e\PETAS.Models\obj\Debug\net6.0\PETAS.Models.AssemblyInfoInputs.cache
 C:\Users\Blessings\Desktop\e\PETAS.Models\obj\Debug\net6.0\PETAS.Models.AssemblyInfo.cs

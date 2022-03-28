@@ -26,8 +26,6 @@ namespace PETAS.Data.Models
         /// </summary>
         [Column("TrainingAssessmentID")]
         public int? TrainingAssessmentId { get; set; }
-        [Column("QuestionID")]
-        public int? QuestionId { get; set; }
         /// <summary>
         /// the type of questions. foreign key to the dbo.QuestionTypeLookup table entity
         /// </summary>
