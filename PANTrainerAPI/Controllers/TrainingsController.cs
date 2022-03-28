@@ -39,7 +39,10 @@ namespace PANTrainerAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Training>> GetTraining(int id)
         {
-            var training = await _context.Training.FindAsync(id);
+            var training = await _context.Training.Where(x => x.Id == id)
+                                                       .Include(t => t.TrainingStatus)
+                                                        .Include(t => t.TrainingGroup)
+                                                        .Include(t => t.TrainingCertification).FirstOrDefaultAsync();
 
             if (training == null)
             {
@@ -170,7 +173,7 @@ namespace PANTrainerAPI.Controllers
             }
 
             var list = await _context.AdmLists.Where(x => x.IsActive == 1).ToListAsync();
-            var bln = list.Exists(x => x.UserName == username);
+            var bln = list.Exists(x => x.UserName.Contains(username));
             return bln;
         }
 

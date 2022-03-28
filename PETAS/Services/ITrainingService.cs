@@ -12,6 +12,8 @@ namespace PETAS.Services
     {
         public Task<List<Training>> GetTrainingsAsync();
 
+        public Task<Training> GetTraining(int? tID);
+
         public Task<bool> SaveTrainingAsync(Training obj, TrainingType ttype, TrainingGrouping tgroup, TrainingCertification tcert);
         public Task<string> AssignTrainingAsync(Training training, List<Employee> empList, string user);
 
@@ -80,6 +82,11 @@ namespace PETAS.Services
         public async Task<List<AssignedTraining>> GetAssignedTrainings(int? employeeID)
         {
             return await http.GetFromJsonAsync<List<AssignedTraining>>("api/AssignedTraining" + "/" + employeeID);
+        }
+
+        public async Task<Training> GetTraining(int? tID)
+        {
+            return await http.GetFromJsonAsync<Training>("api/Trainings" + "/" + tID);
         }
 
     }

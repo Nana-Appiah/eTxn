@@ -59,5 +59,55 @@ namespace PANTrainerAPI.Controllers
 
             return CreatedAtAction("GetQAlloted", new { id = obj.Id }, obj);
         }
+    
+        //GET: api/QAlloted
+        [HttpGet("{trainingID}/{questionTypeID}")]
+        public async Task<int[]> GetAllotedQuestionIDs(int? trainingID, int? questionTypeID)
+        {
+            try
+            {
+                var list = await config.Qalloteds.Where(t => t.TrainingId == trainingID)
+                                                    .Where(q => q.QuestionTypeId == questionTypeID).ToListAsync();
+
+                int counter = 0;
+                int? questionCount = list[0].Alloted;
+                int[] selectedQuestions = new int[(int)questionCount];
+
+                int?[] res = new int?[list.Count()];
+
+                if (list.Count() > 0)
+                {
+                    for (int i = 0; i <= list.Count() - 1; i++)
+                    {
+                        res[i] = list[i].QuestionId;
+                    }
+                }
+
+                var min = res.Min();
+                var max = res.Max();
+
+                Random r = new Random();
+
+                //getting questions in a random fashion
+                while(counter < (int)questionCount)
+                {
+                    var generatedQuestionNo = r.Next((int)min, (int)max);
+
+                    //check if the question no exists in the original questions pulled up
+                    if ((!selectedQuestions.Contains(generatedQuestionNo)) && (res.Contains(generatedQuestionNo)))
+                    {
+                        selectedQuestions[counter] = generatedQuestionNo;
+                        counter++;
+                    }
+                }
+
+                return selectedQuestions;
+            }
+            catch(Exception xx)
+            {
+                return null;
+            }
+            
+        }
     }
 }

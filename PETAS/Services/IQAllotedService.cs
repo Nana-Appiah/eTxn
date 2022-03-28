@@ -11,6 +11,8 @@ namespace PETAS.Services
     public interface IQAllotedService
     {
         public Task<string> SaveAllotedQuestionsAsync(Training trainingObj, TrainingAssessment tAssessment, List<AssessmentQuestionPool> questions, int qTypeID);
+
+        public Task<int[]> GetSelectedQuestions(int? trainingId, int? questiontypeId);
     }
 
     public class QAllotedService: IQAllotedService
@@ -56,6 +58,12 @@ namespace PETAS.Services
             {
                 return $"error: {ex.Message}";
             }
+        }
+
+        public async Task<int[]> GetSelectedQuestions(int? trainingId, int? questiontypeId)
+        {
+            var res = await http.GetFromJsonAsync<int[]>("api/QAlloted" + "/" + trainingId + "/" + questiontypeId);
+            return res.ToArray();
         }
 
     }
