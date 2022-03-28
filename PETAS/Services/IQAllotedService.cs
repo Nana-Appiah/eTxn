@@ -12,7 +12,7 @@ namespace PETAS.Services
     {
         public Task<string> SaveAllotedQuestionsAsync(Training trainingObj, TrainingAssessment tAssessment, List<AssessmentQuestionPool> questions, int qTypeID);
 
-        public Task<int[]> GetSelectedQuestions(int? trainingId, int? questiontypeId);
+        public Task<List<AssessmentQuestionPool>> GetSelectedQuestions(int? trainingId, int? questiontypeId);
     }
 
     public class QAllotedService: IQAllotedService
@@ -60,10 +60,60 @@ namespace PETAS.Services
             }
         }
 
-        public async Task<int[]> GetSelectedQuestions(int? trainingId, int? questiontypeId)
+        public async Task<List<AssessmentQuestionPool>> GetSelectedQuestions(int? trainingId, int? questiontypeId)
         {
-            var res = await http.GetFromJsonAsync<int[]>("api/QAlloted" + "/" + trainingId + "/" + questiontypeId);
-            return res.ToArray();
+            var res = await http.GetFromJsonAsync<List<Qalloted>>("api/QAlloted" + "/" + trainingId + "/" + questiontypeId);
+            var questions = await getQuestions(res);
+            return questions;
+        }
+
+        private async Task<List<AssessmentQuestionPool>> getQuestions(List<Qalloted> list)
+        {
+            List<AssessmentQuestionPool> questionList = new List<AssessmentQuestionPool>();
+
+            int counter = 0;
+            int? questionCount = list[0].Alloted;
+            int[] selectedQuestions = new int[(int)questionCount];
+
+            int?[] res = new int?[list.Count()];
+
+            if (list.Count() > 0)
+            {
+                for (int i = 0; i <= list.Count() - 1; i++)
+                {
+                    res[i] = list[i].QuestionId;
+                }
+            }
+
+            var min = res.Min();
+            var max = res.Max();
+
+            Random r = new Random();
+
+            //getting questions in a random fashion
+            while(counter < (int)questionCount)
+            {
+                var generatedQuestionNo = r.Next((int)min, (int)max);
+
+                //check if the question no exists in the original questions pulled up
+                if ((!selectedQuestions.Contains(generatedQuestionNo)) && (res.Contains(generatedQuestionNo)))
+                {
+                    selectedQuestions[counter] = generatedQuestionNo;
+                    counter++;
+                }
+            }
+
+            //after getting selected question numbers, fetch question
+            foreach(var item in selectedQuestions)
+            {
+                var q = await http.GetFromJsonAsync<AssessmentQuestionPool>("api/Questions" + "/" + item);
+                if (q != null)
+                {
+                    questionList.Add(q);
+                }
+            }
+
+            return questionList;
         }
 
     }

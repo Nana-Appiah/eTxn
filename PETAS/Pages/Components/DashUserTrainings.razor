@@ -70,18 +70,33 @@ else
         </tbody>
     </table>
 
-    <Modal @ref="modalQuestions">
-        <ModalContent Centered>
-            <ModalHeader>
-                <ModalTitle>Assessment</ModalTitle>
-            </ModalHeader>
-        </ModalContent>
-        <ModalBody>
-            <Carousel @bind-SelectedSlide="@selectedSlide" Autoplay="false">
-
-            </Carousel>
+    <Modal @ref="@modalQuestions" ShowBackdrop="false" Opening="@OnOpened">
+    <ModalContent Centered="true" Size="ModalSize.Default" Scrollable="true" Fullscreen="true">
+        <ModalHeader>
+            Assessment
+            <CloseButton />
+        </ModalHeader>
+        <ModalBody MaxHeight="150">
+            @if(questions != null)
+            {
+                <div class="card mb-3 widget-content bg-midnight-bloom">
+                    <div class="widget-content-wrapper text-white">
+                        <div class="widget-content-left">
+                            <div class="widget-heading">Question header</div>
+                            <div class="widget-subheading">Question Text</div>
+                        </div>
+                        <div class="widget-content-right">
+                            <div class="widget-numbers text-white"><span>something here</span></div>
+                        </div>
+                    </div>
+                </div>
+            }    
         </ModalBody>
-    </Modal>
+        <ModalFooter>
+            <Button onclick="@HideModal">Close</Button>
+        </ModalFooter>
+    </ModalContent>
+</Modal>
 
 </div>
 
@@ -92,6 +107,7 @@ else
     private List<Training> pendingTrainings;
     private Modal modalQuestions;
     private string selectedSlide;
+    List<AssessmentQuestionPool> questions;
 
     protected override async Task OnInitializedAsync()
     {
@@ -120,10 +136,16 @@ else
         return result;
     }
 
+    private Task OnOpened(ModalOpeningEventArgs e)
+    {
+        //var questions = qservice.GetSelectedQuestions(3, 1);
+        return Task.CompletedTask;
+    }
     private async Task ShowTestModal()
     {
-        var questions = await qservice.GetSelectedQuestions(3, 1);
-        modalQuestions.Show();
+        modalQuestions.Visible = true;
+        questions = await qservice.GetSelectedQuestions(3, 1);
+        await modalQuestions.Show();
     }
 
     private Task HideModal()
