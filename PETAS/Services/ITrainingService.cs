@@ -14,6 +14,10 @@ namespace PETAS.Services
 
         public Task<bool> SaveTrainingAsync(Training obj, TrainingType ttype, TrainingGrouping tgroup, TrainingCertification tcert);
         public Task<string> AssignTrainingAsync(Training training, List<Employee> empList, string user);
+
+        public Task<bool> IsAdministrator(string user);
+
+        public Task<List<AssignedTraining>> GetAssignedTrainings(int? employeeID);
     }
 
     public class TrainingService: ITrainingService
@@ -30,6 +34,12 @@ namespace PETAS.Services
             var postBody = new { ttype, tgroup, tcert, obj };
             var status = await http.PostAsJsonAsync("api/Trainings/PostTrainingRecord", postBody);
             return await status.Content.ReadFromJsonAsync<bool>();
+        }
+
+        public async Task<bool> IsAdministrator(string user)
+        {
+            //method is responsible for determinining if the user is an administrator
+            return await http.GetFromJsonAsync<bool>("api/Trainings/Administrator" + "/" + user);
         }
 
         public async Task<List<Training>> GetTrainingsAsync()
@@ -65,6 +75,11 @@ namespace PETAS.Services
             {
                 return @"No data";
             }
+        }
+
+        public async Task<List<AssignedTraining>> GetAssignedTrainings(int? employeeID)
+        {
+            return await http.GetFromJsonAsync<List<AssignedTraining>>("api/AssignedTraining" + "/" + employeeID);
         }
 
     }

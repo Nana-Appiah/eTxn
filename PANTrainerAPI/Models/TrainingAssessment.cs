@@ -51,14 +51,17 @@ namespace PANTrainerAPI.Models
         /// <summary>
         /// the user creating the assessment
         /// </summary>
-        [Column("CreatedByID")]
-        public int? CreatedById { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string CreatedBy { get; set; }
         [Column(TypeName = "date")]
         public DateTime? AuthorizedDate { get; set; }
-        [Column("AuthorizedByID")]
-        public int? AuthorizedById { get; set; }
-        [Column("LastUpdatedByID")]
-        public int? LastUpdatedById { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string AuthorizedBy { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string LastUpdatedBy { get; set; }
         [Column(TypeName = "date")]
         public DateTime? LastUpdatedDate { get; set; }
 

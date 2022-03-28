@@ -19,6 +19,7 @@ namespace PETAS.Data.Data
         {
         }
 
+        public virtual DbSet<AdmList> AdmLists { get; set; }
         public virtual DbSet<AssessmentQuestionPool> AssessmentQuestionPools { get; set; }
         public virtual DbSet<AssessmentSubject> AssessmentSubjects { get; set; }
         public virtual DbSet<AssignedTraining> AssignedTrainings { get; set; }
@@ -39,6 +40,21 @@ namespace PETAS.Data.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<AdmList>(entity =>
+            {
+                entity.Property(e => e.AdminId).HasComment("primary key");
+
+                entity.Property(e => e.EmployeeId).HasComment("the ID of the employee");
+
+                entity.Property(e => e.FirstName).HasComment("the first name of the employee");
+
+                entity.Property(e => e.IsActive).HasComment("flag determining if the profile is active or not");
+
+                entity.Property(e => e.LastName).HasComment("the last name of the employee");
+
+                entity.Property(e => e.UserName).HasComment("the user name of the employee");
+            });
+
             modelBuilder.Entity<AssessmentQuestionPool>(entity =>
             {
                 entity.Property(e => e.Id).HasComment("primary key of the table entity");
@@ -73,6 +89,8 @@ namespace PETAS.Data.Data
                 entity.Property(e => e.AssignedDate).HasComment("the assigned date");
 
                 entity.Property(e => e.TrainingId).HasComment("the ID of the scheduled training");
+
+                entity.Property(e => e.TrainingStatusID).HasComment("the status of the training");
             });
 
             modelBuilder.Entity<CertificationAwarder>(entity =>

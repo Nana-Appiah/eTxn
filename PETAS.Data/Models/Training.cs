@@ -12,6 +12,7 @@ namespace PETAS.Data.Models
     {
         public Training()
         {
+            AssignedTrainings = new HashSet<AssignedTraining>();
             TrainingAssessments = new HashSet<TrainingAssessment>();
             TrainingResources = new HashSet<TrainingResource>();
         }
@@ -97,6 +98,8 @@ namespace PETAS.Data.Models
         [ForeignKey(nameof(TrainingType))]
         [InverseProperty("Training")]
         public virtual TrainingType TrainingTypeNavigation { get; set; }
+        [InverseProperty(nameof(AssignedTraining.Training))]
+        public virtual ICollection<AssignedTraining> AssignedTrainings { get; set; }
         [InverseProperty(nameof(TrainingAssessment.Training))]
         public virtual ICollection<TrainingAssessment> TrainingAssessments { get; set; }
         [InverseProperty(nameof(TrainingResource.Training))]

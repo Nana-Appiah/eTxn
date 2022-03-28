@@ -16,7 +16,8 @@ namespace PETAS.Services
         public Task<List<Group>> GetGroupAsync();
         public Task<List<JobTitle>> GetJobTitlesAsync();
         public Task<Employee> GetEmployee(string username);
-    
+
+        public Task<JobTitle> getEmployeeJobTitle(int? jobTitleID);
     }
 
     public class HRMSService: IHRMSService
@@ -58,6 +59,12 @@ namespace PETAS.Services
         {
             //service gets an employee's record
             return await http.GetFromJsonAsync<Employee>("api/Employees" + "/" + username);
+        }
+
+        public async Task<JobTitle> getEmployeeJobTitle(int? jobTitleID)
+        {
+            //service gets an employee's job title, using jobTitleID
+            return await http.GetFromJsonAsync<JobTitle>("api/JobTitles" + "/" + jobTitleID);
         }
 
     }

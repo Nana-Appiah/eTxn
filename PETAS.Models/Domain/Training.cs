@@ -98,5 +98,9 @@ namespace PETAS.Models.Domain
         public virtual ICollection<TrainingAssessment> TrainingAssessments { get; set; }
         [InverseProperty(nameof(TrainingResource.Training))]
         public virtual ICollection<TrainingResource> TrainingResources { get; set; }
+
+
+        [InverseProperty(nameof(AssignedTraining.TrainingId))]
+        public virtual ICollection<AssignedTraining> AssignedTrainings { get; set; }
     }
 }

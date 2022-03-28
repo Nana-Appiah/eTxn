@@ -160,5 +160,19 @@ namespace PANTrainerAPI.Controllers
             return true;
         }
 
+        [HttpGet("Administrator/{username}")]
+        public async Task<bool> isAdmin(string username)
+        {
+            //endpoint determines if user is on the administrator list in the database
+            if (username == string.Empty)
+            {
+                return false;
+            }
+
+            var list = await _context.AdmLists.Where(x => x.IsActive == 1).ToListAsync();
+            var bln = list.Exists(x => x.UserName == username);
+            return bln;
+        }
+
     }
 }

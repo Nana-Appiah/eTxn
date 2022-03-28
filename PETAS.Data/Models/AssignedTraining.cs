@@ -34,6 +34,11 @@ namespace PETAS.Data.Models
         [Column("TrainingID")]
         public int? TrainingId { get; set; }
         /// <summary>
+        /// the status of the training
+        /// </summary>
+        [Column("TrainingStatusID")]
+        public int? TrainingStatusId { get; set; }
+        /// <summary>
         /// the one doing the assignment
         /// </summary>
         [StringLength(50)]
@@ -55,5 +60,9 @@ namespace PETAS.Data.Models
         /// </summary>
         [Column(TypeName = "date")]
         public DateTime? ApprovedDate { get; set; }
+
+        [ForeignKey(nameof(TrainingId))]
+        [InverseProperty("AssignedTrainings")]
+        public virtual Training Training { get; set; }
     }
 }
