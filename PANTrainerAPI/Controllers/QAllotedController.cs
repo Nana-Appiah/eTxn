@@ -62,13 +62,14 @@ namespace PANTrainerAPI.Controllers
     
         //GET: api/QAlloted
         [HttpGet("{trainingID}/{questionTypeID}")]
-        public async Task<List<Qalloted>> GetAllotedQuestionIDs(int? trainingID, int? questionTypeID)
+        public async Task<ActionResult<List<Qalloted>>> GetAllotedQuestionIDs(int? trainingID, int? questionTypeID)
         {
             try
             {
                 var list = await config.Qalloteds.Where(t => t.TrainingId == trainingID)
                                                     .Where(q => q.QuestionTypeId == questionTypeID).ToListAsync();
-                return list;
+                                                    
+                return Ok(list);
             }
             catch(Exception xx)
             {

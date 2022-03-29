@@ -12,7 +12,10 @@ namespace PETAS.Services
     {
         public Task<string> SaveAllotedQuestionsAsync(Training trainingObj, TrainingAssessment tAssessment, List<AssessmentQuestionPool> questions, int qTypeID);
 
-        public Task<List<AssessmentQuestionPool>> GetSelectedQuestions(int? trainingId, int? questiontypeId);
+        public Task<List<Qalloted>> GetSelectedQuestions(int? trainingId, int? questiontypeId);
+
+        public Task<List<AssessmentQuestionPool>> getRandomQuestions(List<Qalloted> list);
+
     }
 
     public class QAllotedService: IQAllotedService
@@ -60,14 +63,12 @@ namespace PETAS.Services
             }
         }
 
-        public async Task<List<AssessmentQuestionPool>> GetSelectedQuestions(int? trainingId, int? questiontypeId)
+        public async Task<List<Qalloted>> GetSelectedQuestions(int? trainingId, int? questiontypeId)
         {
-            var res = await http.GetFromJsonAsync<List<Qalloted>>("api/QAlloted" + "/" + trainingId + "/" + questiontypeId);
-            var questions = await getQuestions(res);
-            return questions;
+            return await http.GetFromJsonAsync<List<Qalloted>>("api/QAlloted" + "/" + trainingId + "/" + questiontypeId);
         }
 
-        private async Task<List<AssessmentQuestionPool>> getQuestions(List<Qalloted> list)
+        public async Task<List<AssessmentQuestionPool>> getRandomQuestions(List<Qalloted> list)
         {
             List<AssessmentQuestionPool> questionList = new List<AssessmentQuestionPool>();
 
@@ -109,7 +110,8 @@ namespace PETAS.Services
                 var q = await http.GetFromJsonAsync<AssessmentQuestionPool>("api/Questions" + "/" + item);
                 if (q != null)
                 {
-                    questionList.Add(q);
+                    AssessmentQuestionPool obj = q;
+                    questionList.Add(obj);
                 }
             }
 

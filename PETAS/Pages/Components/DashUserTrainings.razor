@@ -1,5 +1,6 @@
 ﻿@inject ITrainingService trainings
 @inject IQAllotedService qservice
+@inject NavigationManager nav
 
 @inject Blazored.LocalStorage.ILocalStorageService store
 
@@ -14,12 +15,6 @@ else
     
 
 <div class="card-header">Active Trainings
-    @*<div class="btn-actions-pane-right">
-        <div role="group" class="btn-group-sm btn-group">
-            <button class="active btn btn-focus">Last Week</button>
-            <button class="btn btn-focus">All Month</button>
-        </div>
-    </div>*@
 </div>
 
 <div class="table-responsive">
@@ -70,7 +65,7 @@ else
         </tbody>
     </table>
 
-    <Modal @ref="@modalQuestions" ShowBackdrop="false" Opening="@OnOpened">
+    <Modal @ref="@modalQuestions" ShowBackdrop="false">
     <ModalContent Centered="true" Size="ModalSize.Default" Scrollable="true" Fullscreen="true">
         <ModalHeader>
             Assessment
@@ -79,15 +74,28 @@ else
         <ModalBody MaxHeight="150">
             @if(questions != null)
             {
-                <div class="card mb-3 widget-content bg-midnight-bloom">
-                    <div class="widget-content-wrapper text-white">
-                        <div class="widget-content-left">
-                            <div class="widget-heading">Question header</div>
-                            <div class="widget-subheading">Question Text</div>
+                <div class="card mb-3 text-white bg-success" style="width: 50rem; margin: 3rem auto">
+                  <div class="row g-0">
+                        <div class="col-md-4">
+                          <img
+                            src="https://www.kindacode.com/wp-content/uploads/2021/08/man.jpg"
+                            class="img-fluid rounded-start"
+                            alt="Profile Picture"
+                          />
                         </div>
-                        <div class="widget-content-right">
-                            <div class="widget-numbers text-white"><span>something here</span></div>
-                        </div>
+
+                        <div class="col-md-8">
+                              <div class="card-body">
+                                <h3 class="card-title">Assessment</h3>
+                                <p class="card-text">
+                                  Graduated from college with a computer science major. 20 years of
+                                  software experience.
+                                </p>
+                                <p class="card-text">
+                                  <small>Skills: CSS, Javascript, bootstrap, React</small>
+                                </p>
+                             </div>
+                       </div>
                     </div>
                 </div>
             }    
@@ -136,16 +144,13 @@ else
         return result;
     }
 
-    private Task OnOpened(ModalOpeningEventArgs e)
+    private Task ShowTestModal()
     {
-        //var questions = qservice.GetSelectedQuestions(3, 1);
+        //modalQuestions.Visible = true;
+        //questions = await qservice.GetSelectedQuestions(3, 1);
+        //await modalQuestions.Show();
+        nav.NavigateTo(@"/student/studentdashboard");
         return Task.CompletedTask;
-    }
-    private async Task ShowTestModal()
-    {
-        modalQuestions.Visible = true;
-        questions = await qservice.GetSelectedQuestions(3, 1);
-        await modalQuestions.Show();
     }
 
     private Task HideModal()
