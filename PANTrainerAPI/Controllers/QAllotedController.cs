@@ -5,6 +5,8 @@ using Newtonsoft.Json.Linq;
 using PETAS.Data.Data;
 using PETAS.Models.Domain;
 
+using System.Diagnostics;
+
 namespace PANTrainerAPI.Controllers
 {
     [Route("api/[controller]")]
@@ -35,29 +37,38 @@ namespace PANTrainerAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Qalloted>> PostAllotedQuestion(JObject data)
         {
+
             if (data == null)
             {
                 return BadRequest();
             }
 
-            var oTraining = data["trainingObj"].ToObject<Training>();
-            var oTAssessment = data["tAssessment"].ToObject<TrainingAssessment>();
-            var oQuestions = data["question"].ToObject<AssessmentQuestionPool>();
-            var questionTypeID = int.Parse(data["qTypeID"].ToString());
-
-            var obj = new Qalloted
+            try
             {
-                TrainingId = oTraining.Id,
-                TrainingAssessmentId = oTAssessment.Id,
-                QuestionId = oQuestions.Id,
-                QuestionTypeId = questionTypeID,
-                Alloted = oTAssessment.AllotedAssessmentMarks
-            };
+                var oTraining = data["trainingObj"].ToObject<Training>();
+                var oTAssessment = data["tAssessment"].ToObject<TrainingAssessment>();
+                var oQuestions = data["question"].ToObject<AssessmentQuestionPool>();
+                var questionTypeID = int.Parse(data["qTypeID"].ToString());
 
-            config.Qalloteds.Add(obj);
-            await config.SaveChangesAsync();
+                var obj = new Qalloted
+                {
+                    TrainingId = oTraining.Id,
+                    TrainingAssessmentId = oTAssessment.Id,
+                    QuestionId = oQuestions.Id,
+                    QuestionTypeId = questionTypeID,
+                    Alloted = oTAssessment.AllotedAssessmentMarks
+                };
 
-            return CreatedAtAction("GetQAlloted", new { id = obj.Id }, obj);
+                config.Qalloteds.Add(obj);
+                await config.SaveChangesAsync();
+
+                return CreatedAtAction("GetQAlloted", new { id = obj.Id }, obj);
+            }
+            catch(Exception xx)
+            {
+                Debug.Print($"error: {xx.Message}");
+                return null;
+            }   
         }
     
         //GET: api/QAlloted

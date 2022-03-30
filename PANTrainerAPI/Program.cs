@@ -31,6 +31,7 @@ builder.Services.AddCors(options =>
                      .WithHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Methods", "Access-Control-Allow-Headers", "Content-Disposition", "Content-Type", "Authorization", "Accept", "Origin", "Host", "api-user") //
                      .SetPreflightMaxAge(TimeSpan.FromSeconds(5000))
                      .SetIsOriginAllowed(x => true)
+                     .WithExposedHeaders("*")
                      
     );
 });
@@ -38,7 +39,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddDbContext<PantrainerContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("PanamString"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PanTrainerConn"));
 });
 
 var app = builder.Build();

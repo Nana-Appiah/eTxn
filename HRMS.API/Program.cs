@@ -34,13 +34,14 @@ builder.Services.AddCors(options =>
                      .WithHeaders("Access-Control-Allow-Origin", "Access-Control-Allow-Methods", "Access-Control-Allow-Headers", "Content-Disposition", "Content-Type", "Authorization", "Accept", "Origin", "Host", "api-user") //
                      .SetPreflightMaxAge(TimeSpan.FromSeconds(5000))
                      .SetIsOriginAllowed(x => true)
+                     .WithExposedHeaders("*")
             );
 });
 
 
 builder.Services.AddDbContext<HRMSContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("HRMSConnstring"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PanTrainerHRMSConn"));
 });
 
 var app = builder.Build();

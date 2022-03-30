@@ -4,7 +4,8 @@
 @inject IQAllotedService qservice
 @inject IObjectiveService oservice
 
-@if((questions == null) ||(objectives == null))
+@*@if((questions == null) ||(objectives == null))*@
+@if(questions == null)
 {
     <div class="spinner">Loading...</div>
 }

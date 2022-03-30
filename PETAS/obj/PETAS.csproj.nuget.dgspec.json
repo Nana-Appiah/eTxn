@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aonana\\Desktop\\copy\\PETAS\\PETAS.csproj": {}
+    "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS\\PETAS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Data\\PETAS.Data.csproj": {
+    "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Data\\PETAS.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj",
         "projectName": "PETAS.Data",
-        "projectPath": "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Data\\PETAS.Data.csproj",
-        "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Data\\obj\\",
+        "projectPath": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj",
+        "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\aonana\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Models\\PETAS.Models.csproj": {
-                "projectPath": "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Models\\PETAS.Models.csproj"
+              "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj": {
+                "projectPath": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj"
               }
             }
           }
@@ -72,25 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Models\\PETAS.Models.csproj": {
+    "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Models\\PETAS.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj",
         "projectName": "PETAS.Models",
-        "projectPath": "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Models\\PETAS.Models.csproj",
-        "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Models\\obj\\",
+        "projectPath": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj",
+        "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\aonana\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -144,25 +136,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\aonana\\Desktop\\copy\\PETAS\\PETAS.csproj": {
+    "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS\\PETAS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aonana\\Desktop\\copy\\PETAS\\PETAS.csproj",
+        "projectUniqueName": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS\\PETAS.csproj",
         "projectName": "PETAS",
-        "projectPath": "C:\\Users\\aonana\\Desktop\\copy\\PETAS\\PETAS.csproj",
-        "packagesPath": "C:\\Users\\aonana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aonana\\Desktop\\copy\\PETAS\\obj\\",
+        "projectPath": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS\\PETAS.csproj",
+        "packagesPath": "C:\\Users\\Blessings\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\aonana\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Blessings\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -176,11 +164,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Data\\PETAS.Data.csproj": {
-                "projectPath": "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Data\\PETAS.Data.csproj"
+              "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj": {
+                "projectPath": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Data\\PETAS.Data.csproj"
               },
-              "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Models\\PETAS.Models.csproj": {
-                "projectPath": "C:\\Users\\aonana\\Desktop\\copy\\PETAS.Models\\PETAS.Models.csproj"
+              "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj": {
+                "projectPath": "C:\\Users\\Blessings\\Documents\\Projects\\PASL\\Apps\\PANTrainer\\PETAS.Models\\PETAS.Models.csproj"
               }
             }
           }
@@ -294,7 +282,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[6.0.3, 6.0.3]"
+              "version": "[6.0.0, 6.0.0]"
             }
           ],
           "frameworkReferences": {
@@ -302,7 +290,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

@@ -72,7 +72,6 @@ builder.Services.AddHttpClient<SecureAccessClient>(sclient =>
     var _UserAgent = "d-fens HttpClient";
     sclient.DefaultRequestHeaders.Add("User-Agent", _UserAgent);
     sclient.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
-    //sclient.DefaultRequestHeaders.Add(@"ApiKey", builder.Configuration["ApiKey"].ToString());
     sclient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(_ContentType));
 
 });
@@ -82,8 +81,6 @@ builder.Services.AddHttpClient<MailClient>(mclient =>
 {
     mclient.BaseAddress = new Uri(builder.Configuration["MailClientApiUrl"].ToString());
     mclient.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
-    //mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[GET]");
-    //mclient.DefaultRequestHeaders.Add("access-control-allow-methods", "[PUT]");
     mclient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue(_ContentType));
 
 });

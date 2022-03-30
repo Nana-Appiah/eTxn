@@ -140,7 +140,7 @@ namespace PANTrainerAPI.Controllers
             }
         }
 
-        [HttpPut("ApproveAllSelectedQuestions")]
+        [HttpPost("ApproveAllQuestions")]
         public async Task<string> ApproveAllSelectedQuestions(JObject data)
         {
             //endpoint is responsible for approving all selected questions

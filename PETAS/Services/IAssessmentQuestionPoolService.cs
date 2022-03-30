@@ -1,4 +1,6 @@
 ﻿using PETAS.Models.Domain;
+using System.Net;
+using System.Net.Http;
 using System.Net.Http.Json;
 
 namespace PETAS.Services
@@ -39,7 +41,7 @@ namespace PETAS.Services
         public async Task<string> ApproveAllQuestionsAsync(List<AssessmentQuestionPool> questionPools, string usrName)
         {
             var postBody = new { questionPools, usrName };
-            var result = await http.PutAsJsonAsync("api/AssessmentQuestionPools/ApproveAllSelectedQuestions", postBody);
+            var result = await http.PostAsJsonAsync("api/AssessmentQuestionPools/ApproveAllQuestions", postBody);
             return await result.Content.ReadFromJsonAsync<string>();
         }
 
